@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BD87EDE19DCEEF700657CBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87EDD19DCEEF700657CBE /* Foundation.framework */; };
+		9BD87EE019DCEEF700657CBE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87EDF19DCEEF700657CBE /* CoreGraphics.framework */; };
+		9BD87EE219DCEEF700657CBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87EE119DCEEF700657CBE /* UIKit.framework */; };
+		9BD87EE819DCEEF700657CBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BD87EE619DCEEF700657CBE /* InfoPlist.strings */; };
+		9BD87EEA19DCEEF700657CBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87EE919DCEEF700657CBE /* main.m */; };
+		9BD87EEE19DCEEF700657CBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87EED19DCEEF700657CBE /* AppDelegate.m */; };
+		9BD87EF119DCEEF700657CBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD87EEF19DCEEF700657CBE /* Main.storyboard */; };
+		9BD87EF619DCEEF700657CBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD87EF519DCEEF700657CBE /* Images.xcassets */; };
+		9BD87EFD19DCEEF700657CBE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87EFC19DCEEF700657CBE /* XCTest.framework */; };
+		9BD87EFE19DCEEF700657CBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87EDD19DCEEF700657CBE /* Foundation.framework */; };
+		9BD87EFF19DCEEF700657CBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87EE119DCEEF700657CBE /* UIKit.framework */; };
+		9BD87F0719DCEEF700657CBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BD87F0519DCEEF700657CBE /* InfoPlist.strings */; };
+		9BD87F0919DCEEF700657CBE /* RetailMasterHackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87F0819DCEEF700657CBE /* RetailMasterHackTests.m */; };
+		9BD87F1919DCF04600657CBE /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BD87F1719DCF04600657CBE /* Simplify.bundle */; };
+		9BD87F1A19DCF04600657CBE /* Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87F1819DCF04600657CBE /* Simplify.framework */; };
+		9BD87F2419DCF55D00657CBE /* SIMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87F2319DCF55D00657CBE /* SIMAppDelegate.m */; };
+		9BD87F2719DCF56D00657CBE /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87F2619DCF56D00657CBE /* SIMProductViewController.m */; };
+		9BD87F2E19DCF67700657CBE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87F2D19DCF67700657CBE /* QuartzCore.framework */; };
+		A4F397BC19DE1956000AEE67 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397BB19DE1956000AEE67 /* Parse.framework */; };
+		A4F397C019DE1988000AEE67 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397BF19DE1988000AEE67 /* AudioToolbox.framework */; };
+		A4F397C219DE1990000AEE67 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C119DE1990000AEE67 /* CFNetwork.framework */; };
+		A4F397C419DE199F000AEE67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C319DE199F000AEE67 /* CoreLocation.framework */; };
+		A4F397C619DE19A6000AEE67 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C519DE19A6000AEE67 /* libz.dylib */; };
+		A4F397C819DE19AD000AEE67 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C719DE19AD000AEE67 /* MobileCoreServices.framework */; };
+		A4F397CA19DE19B4000AEE67 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C919DE19B4000AEE67 /* QuartzCore.framework */; };
+		A4F397CC19DE19BB000AEE67 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397CB19DE19BB000AEE67 /* Security.framework */; };
+		A4F397CE19DE19C1000AEE67 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397CD19DE19C1000AEE67 /* StoreKit.framework */; };
+		A4F397D019DE19C9000AEE67 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397CF19DE19C9000AEE67 /* SystemConfiguration.framework */; };
+		C375381B19DE23B90086E36E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C375381A19DE23B90086E36E /* Social.framework */; };
+		C375381D19DE23BE0086E36E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C375381C19DE23BE0086E36E /* Accounts.framework */; };
+		C375381F19DE24110086E36E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C375381E19DE24110086E36E /* Bolts.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BD87F0019DCEEF700657CBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BD87ED219DCEEF700657CBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BD87ED919DCEEF700657CBE;
+			remoteInfo = RetailMasterHack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9BD87EDA19DCEEF700657CBE /* RetailMasterHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailMasterHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD87EDD19DCEEF700657CBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9BD87EDF19DCEEF700657CBE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9BD87EE119DCEEF700657CBE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9BD87EE519DCEEF700657CBE /* RetailMasterHack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RetailMasterHack-Info.plist"; sourceTree = "<group>"; };
+		9BD87EE719DCEEF700657CBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BD87EE919DCEEF700657CBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BD87EEB19DCEEF700657CBE /* RetailMasterHack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RetailMasterHack-Prefix.pch"; sourceTree = "<group>"; };
+		9BD87EEC19DCEEF700657CBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9BD87EED19DCEEF700657CBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9BD87EF019DCEEF700657CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BD87EF519DCEEF700657CBE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9BD87EFB19DCEEF700657CBE /* RetailMasterHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailMasterHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD87EFC19DCEEF700657CBE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9BD87F0419DCEEF700657CBE /* RetailMasterHackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RetailMasterHackTests-Info.plist"; sourceTree = "<group>"; };
+		9BD87F0619DCEEF700657CBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BD87F0819DCEEF700657CBE /* RetailMasterHackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetailMasterHackTests.m; sourceTree = "<group>"; };
+		9BD87F1719DCF04600657CBE /* Simplify.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Simplify.bundle; sourceTree = "<group>"; };
+		9BD87F1819DCF04600657CBE /* Simplify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simplify.framework; sourceTree = "<group>"; };
+		9BD87F2219DCF55D00657CBE /* SIMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMAppDelegate.h; sourceTree = "<group>"; };
+		9BD87F2319DCF55D00657CBE /* SIMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMAppDelegate.m; sourceTree = "<group>"; };
+		9BD87F2519DCF56D00657CBE /* SIMProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMProductViewController.h; sourceTree = "<group>"; };
+		9BD87F2619DCF56D00657CBE /* SIMProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMProductViewController.m; sourceTree = "<group>"; };
+		9BD87F2D19DCF67700657CBE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		A4F397BB19DE1956000AEE67 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		A4F397BF19DE1988000AEE67 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A4F397C119DE1990000AEE67 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A4F397C319DE199F000AEE67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A4F397C519DE19A6000AEE67 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A4F397C719DE19AD000AEE67 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A4F397C919DE19B4000AEE67 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A4F397CB19DE19BB000AEE67 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A4F397CD19DE19C1000AEE67 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A4F397CF19DE19C9000AEE67 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C375381A19DE23B90086E36E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		C375381C19DE23BE0086E36E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		C375381E19DE24110086E36E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BD87ED719DCEEF700657CBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD87EDE19DCEEF700657CBE /* Foundation.framework in Frameworks */,
+				C375381D19DE23BE0086E36E /* Accounts.framework in Frameworks */,
+				C375381B19DE23B90086E36E /* Social.framework in Frameworks */,
+				A4F397D019DE19C9000AEE67 /* SystemConfiguration.framework in Frameworks */,
+				A4F397CE19DE19C1000AEE67 /* StoreKit.framework in Frameworks */,
+				A4F397CC19DE19BB000AEE67 /* Security.framework in Frameworks */,
+				A4F397CA19DE19B4000AEE67 /* QuartzCore.framework in Frameworks */,
+				A4F397C819DE19AD000AEE67 /* MobileCoreServices.framework in Frameworks */,
+				A4F397C619DE19A6000AEE67 /* libz.dylib in Frameworks */,
+				A4F397C419DE199F000AEE67 /* CoreLocation.framework in Frameworks */,
+				9BD87EE019DCEEF700657CBE /* CoreGraphics.framework in Frameworks */,
+				A4F397C219DE1990000AEE67 /* CFNetwork.framework in Frameworks */,
+				A4F397C019DE1988000AEE67 /* AudioToolbox.framework in Frameworks */,
+				9BD87F2E19DCF67700657CBE /* QuartzCore.framework in Frameworks */,
+				9BD87EE219DCEEF700657CBE /* UIKit.framework in Frameworks */,
+				C375381F19DE24110086E36E /* Bolts.framework in Frameworks */,
+				A4F397BC19DE1956000AEE67 /* Parse.framework in Frameworks */,
+				9BD87F1A19DCF04600657CBE /* Simplify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD87EF819DCEEF700657CBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD87EFD19DCEEF700657CBE /* XCTest.framework in Frameworks */,
+				9BD87EFF19DCEEF700657CBE /* UIKit.framework in Frameworks */,
+				9BD87EFE19DCEEF700657CBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BD87ED119DCEEF700657CBE = {
+			isa = PBXGroup;
+			children = (
+				9BD87F2219DCF55D00657CBE /* SIMAppDelegate.h */,
+				9BD87F2319DCF55D00657CBE /* SIMAppDelegate.m */,
+				9BD87F2519DCF56D00657CBE /* SIMProductViewController.h */,
+				9BD87F2619DCF56D00657CBE /* SIMProductViewController.m */,
+				9BD87EE319DCEEF700657CBE /* RetailMasterHack */,
+				9BD87F0219DCEEF700657CBE /* RetailMasterHackTests */,
+				9BD87EDC19DCEEF700657CBE /* Frameworks */,
+				9BD87EDB19DCEEF700657CBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BD87EDB19DCEEF700657CBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BD87EDA19DCEEF700657CBE /* RetailMasterHack.app */,
+				9BD87EFB19DCEEF700657CBE /* RetailMasterHackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BD87EDC19DCEEF700657CBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+<<<<<<< HEAD
+				C375381E19DE24110086E36E /* Bolts.framework */,
+				C375381C19DE23BE0086E36E /* Accounts.framework */,
+				C375381A19DE23B90086E36E /* Social.framework */,
+				A4F397CF19DE19C9000AEE67 /* SystemConfiguration.framework */,
+				A4F397CD19DE19C1000AEE67 /* StoreKit.framework */,
+				A4F397CB19DE19BB000AEE67 /* Security.framework */,
+				A4F397C919DE19B4000AEE67 /* QuartzCore.framework */,
+				A4F397C719DE19AD000AEE67 /* MobileCoreServices.framework */,
+				A4F397C519DE19A6000AEE67 /* libz.dylib */,
+				A4F397C319DE199F000AEE67 /* CoreLocation.framework */,
+				A4F397C119DE1990000AEE67 /* CFNetwork.framework */,
+				A4F397BF19DE1988000AEE67 /* AudioToolbox.framework */,
+				A4F397BB19DE1956000AEE67 /* Parse.framework */,
+				9BD87F2A19DCF67700657CBE /* SimplifyMerchantSDK.xcodeproj */,
+=======
+>>>>>>> master
+				9BD87F2D19DCF67700657CBE /* QuartzCore.framework */,
+				9BD87F1719DCF04600657CBE /* Simplify.bundle */,
+				9BD87F1819DCF04600657CBE /* Simplify.framework */,
+				9BD87EDD19DCEEF700657CBE /* Foundation.framework */,
+				9BD87EDF19DCEEF700657CBE /* CoreGraphics.framework */,
+				9BD87EE119DCEEF700657CBE /* UIKit.framework */,
+				9BD87EFC19DCEEF700657CBE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BD87EE319DCEEF700657CBE /* RetailMasterHack */ = {
+			isa = PBXGroup;
+			children = (
+				9BD87EEC19DCEEF700657CBE /* AppDelegate.h */,
+				9BD87EED19DCEEF700657CBE /* AppDelegate.m */,
+				9BD87EEF19DCEEF700657CBE /* Main.storyboard */,
+				9BD87EF519DCEEF700657CBE /* Images.xcassets */,
+				9BD87EE419DCEEF700657CBE /* Supporting Files */,
+			);
+			path = RetailMasterHack;
+			sourceTree = "<group>";
+		};
+		9BD87EE419DCEEF700657CBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BD87EE519DCEEF700657CBE /* RetailMasterHack-Info.plist */,
+				9BD87EE619DCEEF700657CBE /* InfoPlist.strings */,
+				9BD87EE919DCEEF700657CBE /* main.m */,
+				9BD87EEB19DCEEF700657CBE /* RetailMasterHack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BD87F0219DCEEF700657CBE /* RetailMasterHackTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BD87F0819DCEEF700657CBE /* RetailMasterHackTests.m */,
+				9BD87F0319DCEEF700657CBE /* Supporting Files */,
+			);
+			path = RetailMasterHackTests;
+			sourceTree = "<group>";
+		};
+		9BD87F0319DCEEF700657CBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BD87F0419DCEEF700657CBE /* RetailMasterHackTests-Info.plist */,
+				9BD87F0519DCEEF700657CBE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BD87ED919DCEEF700657CBE /* RetailMasterHack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BD87F0C19DCEEF700657CBE /* Build configuration list for PBXNativeTarget "RetailMasterHack" */;
+			buildPhases = (
+				9BD87ED619DCEEF700657CBE /* Sources */,
+				9BD87ED719DCEEF700657CBE /* Frameworks */,
+				9BD87ED819DCEEF700657CBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RetailMasterHack;
+			productName = RetailMasterHack;
+			productReference = 9BD87EDA19DCEEF700657CBE /* RetailMasterHack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BD87EFA19DCEEF700657CBE /* RetailMasterHackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BD87F0F19DCEEF700657CBE /* Build configuration list for PBXNativeTarget "RetailMasterHackTests" */;
+			buildPhases = (
+				9BD87EF719DCEEF700657CBE /* Sources */,
+				9BD87EF819DCEEF700657CBE /* Frameworks */,
+				9BD87EF919DCEEF700657CBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BD87F0119DCEEF700657CBE /* PBXTargetDependency */,
+			);
+			name = RetailMasterHackTests;
+			productName = RetailMasterHackTests;
+			productReference = 9BD87EFB19DCEEF700657CBE /* RetailMasterHackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BD87ED219DCEEF700657CBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = RetailMaster;
+				TargetAttributes = {
+					9BD87EFA19DCEEF700657CBE = {
+						TestTargetID = 9BD87ED919DCEEF700657CBE;
+					};
+				};
+			};
+			buildConfigurationList = 9BD87ED519DCEEF700657CBE /* Build configuration list for PBXProject "RetailMasterHack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BD87ED119DCEEF700657CBE;
+			productRefGroup = 9BD87EDB19DCEEF700657CBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BD87ED919DCEEF700657CBE /* RetailMasterHack */,
+				9BD87EFA19DCEEF700657CBE /* RetailMasterHackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BD87ED819DCEEF700657CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD87F1919DCF04600657CBE /* Simplify.bundle in Resources */,
+				9BD87EF619DCEEF700657CBE /* Images.xcassets in Resources */,
+				9BD87EE819DCEEF700657CBE /* InfoPlist.strings in Resources */,
+				9BD87EF119DCEEF700657CBE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD87EF919DCEEF700657CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD87F0719DCEEF700657CBE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BD87ED619DCEEF700657CBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD87F2419DCF55D00657CBE /* SIMAppDelegate.m in Sources */,
+				9BD87EEE19DCEEF700657CBE /* AppDelegate.m in Sources */,
+				9BD87F2719DCF56D00657CBE /* SIMProductViewController.m in Sources */,
+				9BD87EEA19DCEEF700657CBE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD87EF719DCEEF700657CBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD87F0919DCEEF700657CBE /* RetailMasterHackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BD87F0119DCEEF700657CBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BD87ED919DCEEF700657CBE /* RetailMasterHack */;
+			targetProxy = 9BD87F0019DCEEF700657CBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BD87EE619DCEEF700657CBE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BD87EE719DCEEF700657CBE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BD87EEF19DCEEF700657CBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BD87EF019DCEEF700657CBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BD87F0519DCEEF700657CBE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BD87F0619DCEEF700657CBE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BD87F0A19DCEEF700657CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9BD87F0B19DCEEF700657CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BD87F0D19DCEEF700657CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jackxu1/Downloads/simplify,
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RetailMasterHack/RetailMasterHack-Prefix.pch";
+				INFOPLIST_FILE = "RetailMasterHack/RetailMasterHack-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Simplify.framework/Headers/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9BD87F0E19DCEEF700657CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jackxu1/Downloads/simplify,
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RetailMasterHack/RetailMasterHack-Prefix.pch";
+				INFOPLIST_FILE = "RetailMasterHack/RetailMasterHack-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Simplify.framework/Headers/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9BD87F1019DCEEF700657CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RetailMasterHack.app/RetailMasterHack";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RetailMasterHack/RetailMasterHack-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RetailMasterHackTests/RetailMasterHackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9BD87F1119DCEEF700657CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RetailMasterHack.app/RetailMasterHack";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RetailMasterHack/RetailMasterHack-Prefix.pch";
+				INFOPLIST_FILE = "RetailMasterHackTests/RetailMasterHackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BD87ED519DCEEF700657CBE /* Build configuration list for PBXProject "RetailMasterHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD87F0A19DCEEF700657CBE /* Debug */,
+				9BD87F0B19DCEEF700657CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BD87F0C19DCEEF700657CBE /* Build configuration list for PBXNativeTarget "RetailMasterHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD87F0D19DCEEF700657CBE /* Debug */,
+				9BD87F0E19DCEEF700657CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BD87F0F19DCEEF700657CBE /* Build configuration list for PBXNativeTarget "RetailMasterHackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD87F1019DCEEF700657CBE /* Debug */,
+				9BD87F1119DCEEF700657CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BD87ED219DCEEF700657CBE /* Project object */;
+}
