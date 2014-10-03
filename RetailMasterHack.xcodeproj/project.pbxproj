@@ -25,6 +25,18 @@
 		9BD87F2419DCF55D00657CBE /* SIMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87F2319DCF55D00657CBE /* SIMAppDelegate.m */; };
 		9BD87F2719DCF56D00657CBE /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87F2619DCF56D00657CBE /* SIMProductViewController.m */; };
 		9BD87F2E19DCF67700657CBE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87F2D19DCF67700657CBE /* QuartzCore.framework */; };
+		A4F397B619DE194A000AEE67 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397B519DE194A000AEE67 /* Bolts.framework */; };
+		A4F397BC19DE1956000AEE67 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397BB19DE1956000AEE67 /* Parse.framework */; };
+		A4F397BE19DE195E000AEE67 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397BD19DE195D000AEE67 /* ParseFacebookUtils.framework */; };
+		A4F397C019DE1988000AEE67 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397BF19DE1988000AEE67 /* AudioToolbox.framework */; };
+		A4F397C219DE1990000AEE67 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C119DE1990000AEE67 /* CFNetwork.framework */; };
+		A4F397C419DE199F000AEE67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C319DE199F000AEE67 /* CoreLocation.framework */; };
+		A4F397C619DE19A6000AEE67 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C519DE19A6000AEE67 /* libz.dylib */; };
+		A4F397C819DE19AD000AEE67 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C719DE19AD000AEE67 /* MobileCoreServices.framework */; };
+		A4F397CA19DE19B4000AEE67 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397C919DE19B4000AEE67 /* QuartzCore.framework */; };
+		A4F397CC19DE19BB000AEE67 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397CB19DE19BB000AEE67 /* Security.framework */; };
+		A4F397CE19DE19C1000AEE67 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397CD19DE19C1000AEE67 /* StoreKit.framework */; };
+		A4F397D019DE19C9000AEE67 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397CF19DE19C9000AEE67 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +96,18 @@
 		9BD87F2619DCF56D00657CBE /* SIMProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMProductViewController.m; sourceTree = "<group>"; };
 		9BD87F2A19DCF67700657CBE /* SimplifyMerchantSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SimplifyMerchantSDK.xcodeproj; sourceTree = "<group>"; };
 		9BD87F2D19DCF67700657CBE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		A4F397B519DE194A000AEE67 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		A4F397BB19DE1956000AEE67 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		A4F397BD19DE195D000AEE67 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		A4F397BF19DE1988000AEE67 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A4F397C119DE1990000AEE67 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A4F397C319DE199F000AEE67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A4F397C519DE19A6000AEE67 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A4F397C719DE19AD000AEE67 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A4F397C919DE19B4000AEE67 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A4F397CB19DE19BB000AEE67 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A4F397CD19DE19C1000AEE67 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A4F397CF19DE19C9000AEE67 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +115,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BD87F2E19DCF67700657CBE /* QuartzCore.framework in Frameworks */,
+				A4F397D019DE19C9000AEE67 /* SystemConfiguration.framework in Frameworks */,
+				A4F397CE19DE19C1000AEE67 /* StoreKit.framework in Frameworks */,
+				A4F397CC19DE19BB000AEE67 /* Security.framework in Frameworks */,
+				A4F397CA19DE19B4000AEE67 /* QuartzCore.framework in Frameworks */,
+				A4F397C819DE19AD000AEE67 /* MobileCoreServices.framework in Frameworks */,
+				A4F397C619DE19A6000AEE67 /* libz.dylib in Frameworks */,
+				A4F397C419DE199F000AEE67 /* CoreLocation.framework in Frameworks */,
 				9BD87EE019DCEEF700657CBE /* CoreGraphics.framework in Frameworks */,
+				A4F397C219DE1990000AEE67 /* CFNetwork.framework in Frameworks */,
+				A4F397C019DE1988000AEE67 /* AudioToolbox.framework in Frameworks */,
+				9BD87F2E19DCF67700657CBE /* QuartzCore.framework in Frameworks */,
 				9BD87EE219DCEEF700657CBE /* UIKit.framework in Frameworks */,
+				A4F397BC19DE1956000AEE67 /* Parse.framework in Frameworks */,
+				A4F397B619DE194A000AEE67 /* Bolts.framework in Frameworks */,
 				9BD87EDE19DCEEF700657CBE /* Foundation.framework in Frameworks */,
+				A4F397BE19DE195E000AEE67 /* ParseFacebookUtils.framework in Frameworks */,
 				9BD87F1A19DCF04600657CBE /* Simplify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +174,18 @@
 		9BD87EDC19DCEEF700657CBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4F397CF19DE19C9000AEE67 /* SystemConfiguration.framework */,
+				A4F397CD19DE19C1000AEE67 /* StoreKit.framework */,
+				A4F397CB19DE19BB000AEE67 /* Security.framework */,
+				A4F397C919DE19B4000AEE67 /* QuartzCore.framework */,
+				A4F397C719DE19AD000AEE67 /* MobileCoreServices.framework */,
+				A4F397C519DE19A6000AEE67 /* libz.dylib */,
+				A4F397C319DE199F000AEE67 /* CoreLocation.framework */,
+				A4F397C119DE1990000AEE67 /* CFNetwork.framework */,
+				A4F397BF19DE1988000AEE67 /* AudioToolbox.framework */,
+				A4F397BD19DE195D000AEE67 /* ParseFacebookUtils.framework */,
+				A4F397BB19DE1956000AEE67 /* Parse.framework */,
+				A4F397B519DE194A000AEE67 /* Bolts.framework */,
 				9BD87F2A19DCF67700657CBE /* SimplifyMerchantSDK.xcodeproj */,
 				9BD87F2D19DCF67700657CBE /* QuartzCore.framework */,
 				9BD87F1719DCF04600657CBE /* Simplify.bundle */,
@@ -551,6 +599,7 @@
 				9BD87F0E19DCEEF700657CBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BD87F0F19DCEEF700657CBE /* Build configuration list for PBXNativeTarget "RetailMasterHackTests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +608,7 @@
 				9BD87F1119DCEEF700657CBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
