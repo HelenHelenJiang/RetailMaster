@@ -22,7 +22,6 @@
 		9BD87F0919DCEEF700657CBE /* RetailMasterHackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87F0819DCEEF700657CBE /* RetailMasterHackTests.m */; };
 		9BD87F1919DCF04600657CBE /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BD87F1719DCF04600657CBE /* Simplify.bundle */; };
 		9BD87F1A19DCF04600657CBE /* Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87F1819DCF04600657CBE /* Simplify.framework */; };
-		9BD87F2419DCF55D00657CBE /* SIMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87F2319DCF55D00657CBE /* SIMAppDelegate.m */; };
 		9BD87F2719DCF56D00657CBE /* SIMProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD87F2619DCF56D00657CBE /* SIMProductViewController.m */; };
 		9BD87F2E19DCF67700657CBE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD87F2D19DCF67700657CBE /* QuartzCore.framework */; };
 		A4F397BC19DE1956000AEE67 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F397BB19DE1956000AEE67 /* Parse.framework */; };
@@ -48,27 +47,6 @@
 			remoteGlobalIDString = 9BD87ED919DCEEF700657CBE;
 			remoteInfo = RetailMasterHack;
 		};
-		9BD87F3319DCF67700657CBE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BD87F2A19DCF67700657CBE /* SimplifyMerchantSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 49748F5F191849C600738BC9;
-			remoteInfo = Simplify;
-		};
-		9BD87F3519DCF67700657CBE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BD87F2A19DCF67700657CBE /* SimplifyMerchantSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 49748F6F191849C600738BC9;
-			remoteInfo = SimplifyMerchantSDKTests;
-		};
-		9BD87F3719DCF67700657CBE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BD87F2A19DCF67700657CBE /* SimplifyMerchantSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4977D05D191AB89C00AC621F;
-			remoteInfo = SimplifyResources;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -91,11 +69,8 @@
 		9BD87F0819DCEEF700657CBE /* RetailMasterHackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetailMasterHackTests.m; sourceTree = "<group>"; };
 		9BD87F1719DCF04600657CBE /* Simplify.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Simplify.bundle; sourceTree = "<group>"; };
 		9BD87F1819DCF04600657CBE /* Simplify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simplify.framework; sourceTree = "<group>"; };
-		9BD87F2219DCF55D00657CBE /* SIMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMAppDelegate.h; sourceTree = "<group>"; };
-		9BD87F2319DCF55D00657CBE /* SIMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMAppDelegate.m; sourceTree = "<group>"; };
 		9BD87F2519DCF56D00657CBE /* SIMProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMProductViewController.h; sourceTree = "<group>"; };
 		9BD87F2619DCF56D00657CBE /* SIMProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIMProductViewController.m; sourceTree = "<group>"; };
-		9BD87F2A19DCF67700657CBE /* SimplifyMerchantSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SimplifyMerchantSDK.xcodeproj; sourceTree = "<group>"; };
 		9BD87F2D19DCF67700657CBE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
 		A4F397BB19DE1956000AEE67 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A4F397BF19DE1988000AEE67 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -154,8 +129,6 @@
 		9BD87ED119DCEEF700657CBE = {
 			isa = PBXGroup;
 			children = (
-				9BD87F2219DCF55D00657CBE /* SIMAppDelegate.h */,
-				9BD87F2319DCF55D00657CBE /* SIMAppDelegate.m */,
 				9BD87F2519DCF56D00657CBE /* SIMProductViewController.h */,
 				9BD87F2619DCF56D00657CBE /* SIMProductViewController.m */,
 				9BD87EE319DCEEF700657CBE /* RetailMasterHack */,
@@ -190,7 +163,6 @@
 				A4F397C119DE1990000AEE67 /* CFNetwork.framework */,
 				A4F397BF19DE1988000AEE67 /* AudioToolbox.framework */,
 				A4F397BB19DE1956000AEE67 /* Parse.framework */,
-				9BD87F2A19DCF67700657CBE /* SimplifyMerchantSDK.xcodeproj */,
 				9BD87F2D19DCF67700657CBE /* QuartzCore.framework */,
 				9BD87F1719DCF04600657CBE /* Simplify.bundle */,
 				9BD87F1819DCF04600657CBE /* Simplify.framework */,
@@ -241,16 +213,6 @@
 				9BD87F0519DCEEF700657CBE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9BD87F2B19DCF67700657CBE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9BD87F3419DCF67700657CBE /* libSimplify.a */,
-				9BD87F3619DCF67700657CBE /* SimplifyMerchantSDKTests.xctest */,
-				9BD87F3819DCF67700657CBE /* Simplify.bundle */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,12 +278,6 @@
 			mainGroup = 9BD87ED119DCEEF700657CBE;
 			productRefGroup = 9BD87EDB19DCEEF700657CBE /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 9BD87F2B19DCF67700657CBE /* Products */;
-					ProjectRef = 9BD87F2A19DCF67700657CBE /* SimplifyMerchantSDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				9BD87ED919DCEEF700657CBE /* RetailMasterHack */,
@@ -329,30 +285,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		9BD87F3419DCF67700657CBE /* libSimplify.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSimplify.a;
-			remoteRef = 9BD87F3319DCF67700657CBE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9BD87F3619DCF67700657CBE /* SimplifyMerchantSDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SimplifyMerchantSDKTests.xctest;
-			remoteRef = 9BD87F3519DCF67700657CBE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9BD87F3819DCF67700657CBE /* Simplify.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Simplify.bundle;
-			remoteRef = 9BD87F3719DCF67700657CBE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9BD87ED819DCEEF700657CBE /* Resources */ = {
@@ -381,7 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BD87F2419DCF55D00657CBE /* SIMAppDelegate.m in Sources */,
 				9BD87EEE19DCEEF700657CBE /* AppDelegate.m in Sources */,
 				9BD87F2719DCF56D00657CBE /* SIMProductViewController.m in Sources */,
 				9BD87EEA19DCEEF700657CBE /* main.m in Sources */,
