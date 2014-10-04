@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
         <!--Product View Controller-->
@@ -161,6 +161,7 @@
                         <segue destination="L0y-sz-H4a" kind="relationship" relationship="viewControllers" id="0Kb-Lu-9R0"/>
                         <segue destination="5d3-sx-DFP" kind="relationship" relationship="viewControllers" id="S1j-dO-mto"/>
                         <segue destination="43V-mg-7D0" kind="relationship" relationship="viewControllers" id="xaG-JG-gdg"/>
+                        <segue destination="NsW-Qm-qyr" kind="relationship" relationship="viewControllers" id="fjc-Py-Cw6"/>
                         <segue destination="A9z-GL-7MO" kind="relationship" relationship="viewControllers" id="dfY-o5-1um"/>
                     </connections>
                 </tabBarController>
@@ -181,7 +182,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUk-UP-9EM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="579" y="318"/>
+            <point key="canvasLocation" x="579" y="242"/>
+        </scene>
+        <!--Navigation Controller - History-->
+        <scene sceneID="OYZ-Ag-6mw">
+            <objects>
+                <navigationController id="NsW-Qm-qyr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" id="lFE-yU-bZV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qij-e7-ifb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oyc-xJ-fAL" kind="relationship" relationship="rootViewController" id="CsQ-dn-zVZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogJ-fg-q8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="923"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="8Ce-Dl-8vi">
+            <objects>
+                <viewController id="oyc-xJ-fAL" customClass="HistoryViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7KT-cW-ngM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnl-52-xlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032" y="921"/>
         </scene>
         <!--Checkout View Controller - Checkout-->
         <scene sceneID="nMP-GN-ttd">
@@ -207,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxl-TS-qyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="1139"/>
+            <point key="canvasLocation" x="999" y="1717"/>
         </scene>
         <!--Navigation Controller - Checkout-->
         <scene sceneID="sdC-fp-pKq">
@@ -224,7 +252,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19R-VD-C23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="579" y="1139"/>
+            <point key="canvasLocation" x="545" y="1717"/>
         </scene>
         <!--Navigation Controller - Shopping-->
         <scene sceneID="F5F-xW-70y">
