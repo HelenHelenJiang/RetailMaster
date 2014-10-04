@@ -52,8 +52,6 @@
     
     [self.tableview setTableFooterView:self.tableViewBottomView];
     
-    
-    
     [self.view addSubview:self.tableViewBottomView];
     
     self.totalPriceLabel.text = [NSString stringWithFormat:@"$%0.2f", [self getTotalPrice]];
