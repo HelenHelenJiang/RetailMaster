@@ -54,56 +54,64 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSString *sectionName;
+//    NSString *sectionName;
     switch (section)
     {
         case 0:
-            sectionName = @"Shopping List";
-            break;
+            return self.shoppingLists.count;
         case 1:
-            sectionName = @"Pickup Time";
-            break;
+            return 2;
         default:
-            sectionName = @"";
-            break;
+            return 0;
     }
-    return sectionName;
-    return self.shoppingLists.count;
+//    return sectionName;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-      static NSString *CheckOutCellIdentifier = @"CheckOutCellIdentifier";
-      CheckoutItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CheckOutCellIdentifier];
-  
-      if (cell == nil)
-      {
-          NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CheckoutItemTableViewCell" owner:self options:nil];
-          cell = (CheckoutItemTableViewCell *)[nib objectAtIndex:0];
-      }
-  
-//    UITableViewCell *cell;
-//    
-//    static NSString *cellIdentifier = @"Cell";
-//    
-//    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-//    
-//    if(cell == nil) {
-//        
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-//    }
-    
-    Item *item = self.shoppingLists[indexPath.row];
-//    cell.textLabel.text = item.itemDescription;
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
-    
-    cell.itemNameLabel.text = item.name;
-    cell.orderQuantityLabel.text = @"1";
-    cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", item.price];
-    
-//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    return cell;
+    if (indexPath.section == 0)
+    {
+        static NSString *CheckOutCellIdentifier = @"CheckOutCellIdentifier";
+        CheckoutItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CheckOutCellIdentifier];
+        
+        if (cell == nil)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CheckoutItemTableViewCell" owner:self options:nil];
+            cell = (CheckoutItemTableViewCell *)[nib objectAtIndex:0];
+        }
+        
+        
+        
+        Item *item = self.shoppingLists[indexPath.row];
+        //    cell.textLabel.text = item.itemDescription;
+        //    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
+        
+        cell.itemNameLabel.text = item.name;
+        cell.orderQuantityLabel.text = @"1";
+        cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", item.price];
+        
+        //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        return cell;
+    }
+    else if (indexPath.section == 1)
+    {
+        UITableViewCell *cell;
+        
+        static NSString *cellIdentifier = @"Cell";
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if(cell == nil) {
+        
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        }
+        
+        cell.textLabel.text = @"From to";
+        
+        return cell;
+    }
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
