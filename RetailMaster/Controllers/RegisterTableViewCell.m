@@ -22,6 +22,7 @@
 - (void)awakeFromNib
 {
     // Initialization code
+    self.inputTextField.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -29,6 +30,19 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [textField resignFirstResponder];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:textField.text forKey:self.catLabel.text];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
 }
 
 @end

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Product View Controller-->
@@ -123,8 +123,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="dwn-SR-N1m">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CVv-gD-D8h"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jJs-pe-fKG"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CVv-gD-D8h">
+                            <connections>
+                                <action selector="cancelEvent:" destination="ixP-GS-XoS" id="zvu-Co-8C5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jJs-pe-fKG">
+                            <connections>
+                                <action selector="saveEvent:" destination="ixP-GS-XoS" id="Rg2-rS-pgS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsZ-qx-BZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
