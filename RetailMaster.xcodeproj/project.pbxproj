@@ -282,6 +282,8 @@
 		C3C5328D19E0356500C8A340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9B1E401A19E04209008D8349 /* WelcomeViewController.h */,
+				9B1E401B19E04209008D8349 /* WelcomeViewController.m */,
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
 				C3C5328F19E0356500C8A340 /* SIMProductViewController.m */,
 				C3153C9419E03E9800C7498A /* CheckoutViewController.h */,
@@ -434,6 +436,7 @@
 				C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */,
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
 				C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */,
+				9B1E401C19E04209008D8349 /* WelcomeViewController.m in Sources */,
 				C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */,
 				C3C5329019E0356500C8A340 /* SIMProductViewController.m in Sources */,
 				A4026A7019E0477500BF648F /* ItemViewController.m in Sources */,
@@ -573,6 +576,7 @@
 					"$(SRCROOT)/Simplify.framework/Headers",
 				);
 				INFOPLIST_FILE = RetailMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -594,6 +598,7 @@
 					"$(SRCROOT)/Simplify.framework/Headers",
 				);
 				INFOPLIST_FILE = RetailMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
