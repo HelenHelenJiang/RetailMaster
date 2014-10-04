@@ -32,8 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CategoryNames = [[NSArray alloc] initWithObjects:@"Bakery",@"Diary",@"Frozen",@"Fruit",@"Kitchen",@"Raw Meat",@"Sea Food",nil];
-    CategoryImages = [[NSArray alloc] initWithObjects:@"bakery.jpg",@"frozen.jpg",@"kitchen.jpg",@"rawMeat.jpg",@"fruit.jpg",@"seafood.jpg",nil];
+    CategoryNames = [[NSArray alloc] initWithObjects:@"Bakery",@"Diary",@"Frozen",@"Fruit",@"Kitchen",@"Raw Meat",@"Sea Food",@"Vegetable", nil];
+    CategoryImages = [[NSArray alloc] initWithObjects:@"bakery.jpg",@"diary.jpg",@"frozen.jpg",@"fruit.jpg",@"kitchen.jpg",@"rawMeat.jpg",@"seafood.jpg",@"vege.jpg", nil];
     // Do any additional setup after loading the view.
 }
 
