@@ -18,6 +18,11 @@
 		C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9519E03E9800C7498A /* CheckoutViewController.m */; };
 		C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */; };
 		C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */; };
+		C3A5884719E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A5884219E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.m */; };
+		C3A5884819E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A5884319E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.xib */; };
+		C3A5884919E05C1100CDD6EB /* PickupTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A5884519E05C1100CDD6EB /* PickupTimeTableViewCell.m */; };
+		C3A5884A19E05C1100CDD6EB /* PickupTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A5884619E05C1100CDD6EB /* PickupTimeTableViewCell.xib */; };
+		C3A5884C19E05C8800CDD6EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A5884B19E05C8800CDD6EB /* Foundation.framework */; };
 		C3C5326519E0322C00C8A340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326419E0322C00C8A340 /* main.m */; };
 		C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326719E0322C00C8A340 /* AppDelegate.m */; };
 		C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326A19E0322C00C8A340 /* ViewController.m */; };
@@ -77,6 +82,13 @@
 		C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutItemTableViewCell.h; sourceTree = "<group>"; };
 		C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutItemTableViewCell.m; sourceTree = "<group>"; };
 		C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutItemTableViewCell.xib; sourceTree = "<group>"; };
+		C3A5884119E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutPayButtonTableViewCell.h; sourceTree = "<group>"; };
+		C3A5884219E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutPayButtonTableViewCell.m; sourceTree = "<group>"; };
+		C3A5884319E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutPayButtonTableViewCell.xib; sourceTree = "<group>"; };
+		C3A5884419E05C1100CDD6EB /* PickupTimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickupTimeTableViewCell.h; sourceTree = "<group>"; };
+		C3A5884519E05C1100CDD6EB /* PickupTimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickupTimeTableViewCell.m; sourceTree = "<group>"; };
+		C3A5884619E05C1100CDD6EB /* PickupTimeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickupTimeTableViewCell.xib; sourceTree = "<group>"; };
+		C3A5884B19E05C8800CDD6EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3C5325F19E0322C00C8A340 /* RetailMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C5326319E0322C00C8A340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C5326419E0322C00C8A340 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A5884C19E05C8800CDD6EB /* Foundation.framework in Frameworks */,
 				C3C532AC19E036FF00C8A340 /* Accounts.framework in Frameworks */,
 				C3C532AA19E036F100C8A340 /* Social.framework in Frameworks */,
 				C3C532A819E036ED00C8A340 /* SystemConfiguration.framework in Frameworks */,
@@ -147,6 +160,7 @@
 		66BBA7A9F999DA0069CF24D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3A5884B19E05C8800CDD6EB /* Foundation.framework */,
 				C3C532AB19E036FF00C8A340 /* Accounts.framework */,
 				C3C532A919E036F100C8A340 /* Social.framework */,
 				C3C532A719E036ED00C8A340 /* SystemConfiguration.framework */,
@@ -199,6 +213,12 @@
 			isa = PBXGroup;
 			children = (
 				C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */,
+				C3A5884119E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.h */,
+				C3A5884219E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.m */,
+				C3A5884319E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.xib */,
+				C3A5884419E05C1100CDD6EB /* PickupTimeTableViewCell.h */,
+				C3A5884519E05C1100CDD6EB /* PickupTimeTableViewCell.m */,
+				C3A5884619E05C1100CDD6EB /* PickupTimeTableViewCell.xib */,
 				C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */,
 				C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */,
 				A4026A7A19E04CB700BF648F /* ItemDetailView.h */,
@@ -388,6 +408,8 @@
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
 				C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */,
+				C3A5884A19E05C1100CDD6EB /* PickupTimeTableViewCell.xib in Resources */,
+				C3A5884819E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.xib in Resources */,
 				C3C5327019E0322C00C8A340 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A5884719E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.m in Sources */,
 				C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */,
 				C3153C8D19E03AFF00C7498A /* Item.m in Sources */,
 				C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */,
@@ -448,6 +471,7 @@
 				C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */,
 				C3C5329019E0356500C8A340 /* SIMProductViewController.m in Sources */,
 				A4026A7619E04AD700BF648F /* ItemViewController.m in Sources */,
+				C3A5884919E05C1100CDD6EB /* PickupTimeTableViewCell.m in Sources */,
 				A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,
 				A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */,
