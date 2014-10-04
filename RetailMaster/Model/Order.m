@@ -17,6 +17,7 @@
 @dynamic orderPickupDate;
 @dynamic orderPickupLocation;
 @dynamic orderPrice;
+@dynamic isPaid;
 
 + (NSString *)parseClassName
 {

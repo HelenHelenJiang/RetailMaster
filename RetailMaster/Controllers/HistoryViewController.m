@@ -69,7 +69,7 @@
     Order *order = self.orders[indexPath.row];
     
     cell.orderNumberLabel.text = order.orderNumber;
-    cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", order.orderPrice];
+    cell.orderPriceLabel.text = [NSString stringWithFormat:@"%0.2f", [order.orderPrice doubleValue]];
     cell.orderPickupLocationLabel.text = order.orderPickupLocation;
     
 //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

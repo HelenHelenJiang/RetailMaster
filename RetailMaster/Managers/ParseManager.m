@@ -51,6 +51,12 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             NSLog(@"Successfully retrieved %lu items", (unsigned long)objects.count);
+            
+            [objects enumerateObjectsUsingBlock:^(Item *item, NSUInteger index, BOOL *stop){
+                if (!item.orderCount)
+                    item.orderCount = 1;
+            }];
+            
             if (completion)
                 completion(YES, objects);
             
@@ -65,7 +71,7 @@
 - (void)fetchOrdersFromUserID:(NSString *)userid Limit:(NSInteger)limit Skip:(NSInteger)skip Completion:(void (^)(BOOL success, NSArray *orders))completion
 {
     PFQuery *query = [PFQuery queryWithClassName:[Order parseClassName]];
-    //    [query orderByDescending:@"termId"];
+    [query orderByDescending:@"createdAt"];
 //    [query whereKey:@"catagory" equalTo:catagory];
 //    query.limit = limit;
 //    query.skip = skip;
@@ -81,6 +87,17 @@
                 completion(NO, nil);
         }
     }];
+}
+
+- (NSString *)parseOrderToString:(Order *)order
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    [order.orderedObjects enumerateObjectsUsingBlock:^(Item *item, NSUInteger index, BOOL *stop){
+        [array addObject:[NSString stringWithFormat:@"%@ : %i", item.name, item.orderCount]];
+    }];
+    
+    return [array componentsJoinedByString:@", "];
 }
 
 NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

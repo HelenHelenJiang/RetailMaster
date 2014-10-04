@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class Order;
+
 @interface ParseManager : NSObject
 
 + (instancetype)sharedManager;
@@ -19,5 +21,6 @@
 - (void)fetchOrdersFromUserID:(NSString *)userid Limit:(NSInteger)limit Skip:(NSInteger)skip Completion:(void (^)(BOOL success, NSArray *orders))completion;
 
 - (NSString *)randomStringWithLength:(int)len;
+- (NSString *)parseOrderToString:(Order *)order;
 
 @end

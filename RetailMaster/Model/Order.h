@@ -15,6 +15,7 @@
 @property (retain) NSString *orderNumber;
 @property (retain) NSArray *orderedObjects;
 @property (retain) NSNumber *orderPrice;
+@property (retain) NSNumber *isPaid;
 @property (retain) NSString *orderPickupLocation;
 @property (retain) NSDate *orderPickupDate;
 
