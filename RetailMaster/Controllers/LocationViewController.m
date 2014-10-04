@@ -7,6 +7,7 @@
 //
 
 #import "LocationViewController.h"
+#import "LocationCell.h"
 
 @interface LocationViewController ()
 
@@ -34,6 +35,37 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 4;    //count number of row from counting array hear cataGorry is An Array
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *MyIdentifier = @"Cell";
+    
+    LocationCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[LocationCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                            reuseIdentifier:MyIdentifier];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;
+}
+
+
 
 /*
 #pragma mark - Navigation
