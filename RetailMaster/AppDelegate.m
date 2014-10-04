@@ -28,7 +28,7 @@
                   clientKey:@"LJp1vLvGyzXpz0fmbJYyPDD0rR1JfVb8zLY4kAQL"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    //[[ParseManager sharedManager] updateItem];
+//    [[ParseManager sharedManager] updateItem];
     
     return YES;
 }
