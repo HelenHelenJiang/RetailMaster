@@ -10,7 +10,6 @@
 		9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1E401E19E05A79008D8349 /* WelcomeViewController.m */; };
 		9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BA19E0777E008732AA /* RegisterViewController.m */; };
 		9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */; };
-		A4026A7619E04AD700BF648F /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7519E04AD700BF648F /* ItemViewController.m */; };
 		A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7819E04AF400BF648F /* CollectionViewCell.m */; };
 		A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A8419E0548B00BF648F /* CategoryViewController.m */; };
 		A4026A8719E05DFE00BF648F /* bakery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8619E05DFE00BF648F /* bakery.jpg */; };
@@ -91,8 +90,6 @@
 		9BADE8BA19E0777E008732AA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewCell.h; sourceTree = "<group>"; };
 		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewCell.m; sourceTree = "<group>"; };
-		A4026A7419E04AD700BF648F /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
-		A4026A7519E04AD700BF648F /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
 		A4026A7719E04AF400BF648F /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		A4026A7819E04AF400BF648F /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		A4026A8319E0548B00BF648F /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
@@ -394,8 +391,6 @@
 				C3153C9519E03E9800C7498A /* CheckoutViewController.m */,
 				A4026A8319E0548B00BF648F /* CategoryViewController.h */,
 				A4026A8419E0548B00BF648F /* CategoryViewController.m */,
-				A4026A7419E04AD700BF648F /* ItemViewController.h */,
-				A4026A7519E04AD700BF648F /* ItemViewController.m */,
 				C345A04019E06ACC00041E63 /* OrderConformationViewController.h */,
 				C345A04119E06ACC00041E63 /* OrderConformationViewController.m */,
 				C345A04219E06ACC00041E63 /* OrderConformationViewController.xib */,
@@ -576,7 +571,6 @@
 				C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */,
 				C3C5329019E0356500C8A340 /* SIMProductViewController.m in Sources */,
 				C345A05719E0849E00041E63 /* HistoryViewController.m in Sources */,
-				A4026A7619E04AD700BF648F /* ItemViewController.m in Sources */,
 				A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,
 				A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */,
