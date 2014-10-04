@@ -9,6 +9,7 @@
 #import "CategoryViewController.h"
 #import "ItemViewController.h"
 #import "CategoryViewCell.h"
+#import "ItemsViewController.h"
 
 @interface CategoryViewController ()
 
@@ -66,7 +67,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"CategoryToItem"]) {
         NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
-        ItemViewController *itemController = [segue destinationViewController];
+        ItemsViewController *itemController = [segue destinationViewController];
         NSArray* NamesForQuery = [[NSArray alloc] initWithObjects:@"Bakery",@"Dairy",@"Frozen",@"Fruit",@"Kitchen",@"RawMeat",@"SeaFood",@"Vegetable", nil];
         itemController.catName = [NamesForQuery objectAtIndex:selectedIndexPath.row];
     }
