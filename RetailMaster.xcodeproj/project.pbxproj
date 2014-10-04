@@ -13,6 +13,13 @@
 		A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7819E04AF400BF648F /* CollectionViewCell.m */; };
 		A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7B19E04CB700BF648F /* ItemDetailView.m */; };
 		A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A8419E0548B00BF648F /* CategoryViewController.m */; };
+		A4026A8719E05DFE00BF648F /* bakery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8619E05DFE00BF648F /* bakery.jpg */; };
+		A4026A8919E05E1300BF648F /* seafood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8819E05E1300BF648F /* seafood.jpg */; };
+		A4026A8B19E05E3000BF648F /* fruit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8A19E05E3000BF648F /* fruit.jpg */; };
+		A4026A8D19E05E9400BF648F /* frozen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8C19E05E9400BF648F /* frozen.jpg */; };
+		A4026A8F19E05EDB00BF648F /* kitchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8E19E05EDA00BF648F /* kitchen.jpg */; };
+		A4026A9119E05F1B00BF648F /* rawMeat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A9019E05F1B00BF648F /* rawMeat.jpg */; };
+		A4026A9419E05FFA00BF648F /* CategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A9319E05FFA00BF648F /* CategoryViewCell.m */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -20,6 +27,11 @@
 		C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9519E03E9800C7498A /* CheckoutViewController.m */; };
 		C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */; };
 		C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */; };
+		C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */; };
+		C345A03A19E0667300041E63 /* CheckoutPayButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */; };
+		C345A03E19E066D600041E63 /* PickupTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A03C19E066D600041E63 /* PickupTimeTableViewCell.m */; };
+		C345A03F19E066D600041E63 /* PickupTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A03D19E066D600041E63 /* PickupTimeTableViewCell.xib */; };
+		C3A5884C19E05C8800CDD6EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A5884B19E05C8800CDD6EB /* Foundation.framework */; };
 		C3C5326519E0322C00C8A340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326419E0322C00C8A340 /* main.m */; };
 		C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326719E0322C00C8A340 /* AppDelegate.m */; };
 		C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326A19E0322C00C8A340 /* ViewController.m */; };
@@ -72,6 +84,14 @@
 		A4026A7B19E04CB700BF648F /* ItemDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailView.m; sourceTree = "<group>"; };
 		A4026A8319E0548B00BF648F /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		A4026A8419E0548B00BF648F /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		A4026A8619E05DFE00BF648F /* bakery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bakery.jpg; sourceTree = "<group>"; };
+		A4026A8819E05E1300BF648F /* seafood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seafood.jpg; sourceTree = "<group>"; };
+		A4026A8A19E05E3000BF648F /* fruit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruit.jpg; sourceTree = "<group>"; };
+		A4026A8C19E05E9400BF648F /* frozen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frozen.jpg; sourceTree = "<group>"; };
+		A4026A8E19E05EDA00BF648F /* kitchen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitchen.jpg; sourceTree = "<group>"; };
+		A4026A9019E05F1B00BF648F /* rawMeat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rawMeat.jpg; sourceTree = "<group>"; };
+		A4026A9219E05FFA00BF648F /* CategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewCell.h; sourceTree = "<group>"; };
+		A4026A9319E05FFA00BF648F /* CategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewCell.m; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -83,6 +103,13 @@
 		C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutItemTableViewCell.h; sourceTree = "<group>"; };
 		C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutItemTableViewCell.m; sourceTree = "<group>"; };
 		C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutItemTableViewCell.xib; sourceTree = "<group>"; };
+		C345A03619E0667300041E63 /* CheckoutPayButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutPayButtonTableViewCell.h; sourceTree = "<group>"; };
+		C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutPayButtonTableViewCell.m; sourceTree = "<group>"; };
+		C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutPayButtonTableViewCell.xib; sourceTree = "<group>"; };
+		C345A03B19E066D600041E63 /* PickupTimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickupTimeTableViewCell.h; sourceTree = "<group>"; };
+		C345A03C19E066D600041E63 /* PickupTimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickupTimeTableViewCell.m; sourceTree = "<group>"; };
+		C345A03D19E066D600041E63 /* PickupTimeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickupTimeTableViewCell.xib; sourceTree = "<group>"; };
+		C3A5884B19E05C8800CDD6EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3C5325F19E0322C00C8A340 /* RetailMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C5326319E0322C00C8A340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C5326419E0322C00C8A340 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -121,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A5884C19E05C8800CDD6EB /* Foundation.framework in Frameworks */,
 				C3C532AC19E036FF00C8A340 /* Accounts.framework in Frameworks */,
 				C3C532AA19E036F100C8A340 /* Social.framework in Frameworks */,
 				C3C532A819E036ED00C8A340 /* SystemConfiguration.framework in Frameworks */,
@@ -153,6 +181,7 @@
 		66BBA7A9F999DA0069CF24D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3A5884B19E05C8800CDD6EB /* Foundation.framework */,
 				C3C532AB19E036FF00C8A340 /* Accounts.framework */,
 				C3C532A919E036F100C8A340 /* Social.framework */,
 				C3C532A719E036ED00C8A340 /* SystemConfiguration.framework */,
@@ -204,11 +233,19 @@
 		C3153C9919E0403900C7498A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C345A03619E0667300041E63 /* CheckoutPayButtonTableViewCell.h */,
+				C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */,
+				C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */,
+				C345A03B19E066D600041E63 /* PickupTimeTableViewCell.h */,
+				C345A03C19E066D600041E63 /* PickupTimeTableViewCell.m */,
+				C345A03D19E066D600041E63 /* PickupTimeTableViewCell.xib */,
 				C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */,
 				C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */,
 				C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */,
 				A4026A7A19E04CB700BF648F /* ItemDetailView.h */,
 				A4026A7B19E04CB700BF648F /* ItemDetailView.m */,
+				A4026A9219E05FFA00BF648F /* CategoryViewCell.h */,
+				A4026A9319E05FFA00BF648F /* CategoryViewCell.m */,
 				A4026A7719E04AF400BF648F /* CollectionViewCell.h */,
 				A4026A7819E04AF400BF648F /* CollectionViewCell.m */,
 			);
@@ -258,7 +295,13 @@
 		C3C5326219E0322C00C8A340 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A4026A8619E05DFE00BF648F /* bakery.jpg */,
+				A4026A8C19E05E9400BF648F /* frozen.jpg */,
+				A4026A8E19E05EDA00BF648F /* kitchen.jpg */,
+				A4026A9019E05F1B00BF648F /* rawMeat.jpg */,
+				A4026A8A19E05E3000BF648F /* fruit.jpg */,
 				C3C5326319E0322C00C8A340 /* Info.plist */,
+				A4026A8819E05E1300BF648F /* seafood.jpg */,
 				C3C5326419E0322C00C8A340 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -303,11 +346,11 @@
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
 				C3C5328F19E0356500C8A340 /* SIMProductViewController.m */,
 				C3153C9419E03E9800C7498A /* CheckoutViewController.h */,
+				C3153C9519E03E9800C7498A /* CheckoutViewController.m */,
 				A4026A8319E0548B00BF648F /* CategoryViewController.h */,
 				A4026A8419E0548B00BF648F /* CategoryViewController.m */,
 				A4026A7419E04AD700BF648F /* ItemViewController.h */,
 				A4026A7519E04AD700BF648F /* ItemViewController.m */,
-				C3153C9519E03E9800C7498A /* CheckoutViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -394,11 +437,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4026A8719E05DFE00BF648F /* bakery.jpg in Resources */,
+				A4026A8F19E05EDB00BF648F /* kitchen.jpg in Resources */,
 				C3C5328B19E0337600C8A340 /* Simplify.bundle in Resources */,
+				A4026A8919E05E1300BF648F /* seafood.jpg in Resources */,
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
+				C345A03F19E066D600041E63 /* PickupTimeTableViewCell.xib in Resources */,
 				C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */,
+				A4026A9119E05F1B00BF648F /* rawMeat.jpg in Resources */,
 				C3C5327019E0322C00C8A340 /* Images.xcassets in Resources */,
+				A4026A8B19E05E3000BF648F /* fruit.jpg in Resources */,
+				C345A03A19E0667300041E63 /* CheckoutPayButtonTableViewCell.xib in Resources */,
+				A4026A8D19E05E9400BF648F /* frozen.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,8 +502,10 @@
 			files = (
 				C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */,
 				C3153C8D19E03AFF00C7498A /* Item.m in Sources */,
+				C345A03E19E066D600041E63 /* PickupTimeTableViewCell.m in Sources */,
 				C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */,
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
+				C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */,
 				A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */,
 				9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */,
 				C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */,
@@ -463,6 +516,7 @@
 				A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,
 				A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */,
+				A4026A9419E05FFA00BF648F /* CategoryViewCell.m in Sources */,
 				C3153C9319E03BB800C7498A /* ParseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
