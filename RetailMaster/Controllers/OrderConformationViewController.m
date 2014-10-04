@@ -40,6 +40,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Confirmation";
+    
     self.tableview.dataSource = self;
     self.tableview.delegate = self;
     
@@ -85,9 +87,9 @@
         case 0:
             return self.orderedItems.count;
         case 1:
-            return 1;
+            return 3;
         case 2:
-            return 1;
+            return 0;
         default:
             return 0;
     }
@@ -135,11 +137,27 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
         }
         
-        //        Building *item = self.buildings[indexPath.row];
-        cell.textLabel.text = @"Pickup Date: ";
-        cell.detailTextLabel.text = @"";
-        
-        //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        if (indexPath.row == 0)
+        {
+            //        Building *item = self.buildings[indexPath.row];
+            cell.textLabel.text = @"Pickup Date: ";
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"EEEE, MMM d, hh:mm a"];
+            NSString *currentTime = [dateFormatter stringFromDate:self.self.order.orderPickupDate];
+            
+            cell.detailTextLabel.text = currentTime;
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0f];
+        }
+        else if (indexPath.row == 1)
+        {
+            cell.textLabel.text = @"Pickup Location: ";
+            cell.detailTextLabel.text = self.order.orderPickupLocation;
+        }
+        else
+        {
+            cell.textLabel.text = @"Order #: ";
+            cell.detailTextLabel.text = [self randomStringWithLength:7];
+        }
         
         return cell;
     }
@@ -147,7 +165,7 @@
     {
         UITableViewCell *cell;
         
-        static NSString *cellIdentifier = @"PickupLocation";
+        static NSString *cellIdentifier = @"OrderNumber";
         
         cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         
@@ -157,8 +175,8 @@
         }
         
         //        Building *item = self.buildings[indexPath.row];
-        cell.textLabel.text = @"Pickup Location: ";
-        cell.detailTextLabel.text = @"";
+        cell.textLabel.text = @"Order #: ";
+        cell.detailTextLabel.text = [self randomStringWithLength:7];
         
         //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
@@ -178,6 +196,20 @@
 - (IBAction)confirmBtnPressed:(id)sender
 {
     
+}
+
+NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+- (NSString *)randomStringWithLength:(int)len
+{
+    
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+    
+    for (int i=0; i<len; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length]) % [letters length]]];
+    }
+    
+    return randomString;
 }
 
 @end

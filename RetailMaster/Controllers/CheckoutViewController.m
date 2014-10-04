@@ -13,6 +13,7 @@
 #import "PickupTimeTableViewCell.h"
 #import "CheckoutPayButtonTableViewCell.h"
 #import "OrderConformationViewController.h"
+#import "Order.h"
 
 @interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -36,6 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Checkout";
+    
     // Do any additional setup after loading the view from its nib.
     self.shoppingLists = [NSMutableArray array];
     self.tableView.delegate = self;
@@ -320,6 +323,15 @@
     OrderConformationViewController *orderVC = [[OrderConformationViewController alloc] init];
     
     orderVC.orderedItems = self.shoppingLists;
+    
+    Order *order = [Order object];
+    order.orderedObjects = self.shoppingLists;
+    order.orderPickupDate = self.pickupDate;
+    order.orderPickupLocation = @"Toronto?";
+    order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
+    [order saveInBackground];
+    
+    orderVC.order = order;
     
     [self.navigationController pushViewController:orderVC animated:YES];
 }
