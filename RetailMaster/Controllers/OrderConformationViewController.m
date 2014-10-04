@@ -9,6 +9,7 @@
 #import "OrderConformationViewController.h"
 #import "CheckoutItemTableViewCell.h"
 #import "Item.h"
+#import "ParseManager.h"
 
 @interface OrderConformationViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -108,8 +109,6 @@
             cell = (CheckoutItemTableViewCell *)[nib objectAtIndex:0];
         }
         
-        
-        
         Item *item = self.orderedItems[indexPath.row];
         //    cell.textLabel.text = item.itemDescription;
         //    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
@@ -195,9 +194,20 @@
 
 - (IBAction)confirmBtnPressed:(id)sender
 {
+    self.order.isPaid = [NSNumber numberWithBool:true];
+    self.order[@"OrderNumber"] = self.order.orderNumber;
+    self.order[@"Price"] = [NSString stringWithFormat:@"%0.2f", [self.order.orderPrice doubleValue]];
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"hh:mm a"];
+    NSString *currentTime = [dateFormatter stringFromDate:self.self.order.orderPickupDate];
+    self.order[@"PickUpTime"] = currentTime;
+    self.order[@"OrderList"] = [[ParseManager sharedManager] parseOrderToString:self.order];
+    
+    [self.order saveInBackgroundWithBlock:^(BOOL successed, NSError *error){
+        
+    }];
 }
-
 
 
 @end

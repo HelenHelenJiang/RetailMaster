@@ -348,6 +348,7 @@
     order.orderPickupLocation = @"Toronto?";
     order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
     order.orderNumber = [[ParseManager sharedManager] randomStringWithLength:7];
+    order.isPaid = [NSNumber numberWithBool:false];
     [order saveInBackground];
     
     orderVC.order = order;
