@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CategoryViewController : UICollectionViewController<UICollectionViewDelegate, UICollectionViewDelegate>
+@interface CategoryViewController : UICollectionViewController<UICollectionViewDelegate, UICollectionViewDelegate>{
+    NSArray *CategoryNames;
+    NSArray *CategoryImages;
+}
+
+
+
 
 @end

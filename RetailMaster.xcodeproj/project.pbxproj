@@ -11,6 +11,13 @@
 		A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7819E04AF400BF648F /* CollectionViewCell.m */; };
 		A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7B19E04CB700BF648F /* ItemDetailView.m */; };
 		A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A8419E0548B00BF648F /* CategoryViewController.m */; };
+		A4026A8719E05DFE00BF648F /* bakery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8619E05DFE00BF648F /* bakery.jpg */; };
+		A4026A8919E05E1300BF648F /* seafood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8819E05E1300BF648F /* seafood.jpg */; };
+		A4026A8B19E05E3000BF648F /* fruit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8A19E05E3000BF648F /* fruit.jpg */; };
+		A4026A8D19E05E9400BF648F /* frozen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8C19E05E9400BF648F /* frozen.jpg */; };
+		A4026A8F19E05EDB00BF648F /* kitchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A8E19E05EDA00BF648F /* kitchen.jpg */; };
+		A4026A9119E05F1B00BF648F /* rawMeat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4026A9019E05F1B00BF648F /* rawMeat.jpg */; };
+		A4026A9419E05FFA00BF648F /* CategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A9319E05FFA00BF648F /* CategoryViewCell.m */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -71,6 +78,14 @@
 		A4026A7B19E04CB700BF648F /* ItemDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailView.m; sourceTree = "<group>"; };
 		A4026A8319E0548B00BF648F /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		A4026A8419E0548B00BF648F /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		A4026A8619E05DFE00BF648F /* bakery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bakery.jpg; sourceTree = "<group>"; };
+		A4026A8819E05E1300BF648F /* seafood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seafood.jpg; sourceTree = "<group>"; };
+		A4026A8A19E05E3000BF648F /* fruit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruit.jpg; sourceTree = "<group>"; };
+		A4026A8C19E05E9400BF648F /* frozen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frozen.jpg; sourceTree = "<group>"; };
+		A4026A8E19E05EDA00BF648F /* kitchen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitchen.jpg; sourceTree = "<group>"; };
+		A4026A9019E05F1B00BF648F /* rawMeat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rawMeat.jpg; sourceTree = "<group>"; };
+		A4026A9219E05FFA00BF648F /* CategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewCell.h; sourceTree = "<group>"; };
+		A4026A9319E05FFA00BF648F /* CategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewCell.m; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -223,6 +238,8 @@
 				C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */,
 				A4026A7A19E04CB700BF648F /* ItemDetailView.h */,
 				A4026A7B19E04CB700BF648F /* ItemDetailView.m */,
+				A4026A9219E05FFA00BF648F /* CategoryViewCell.h */,
+				A4026A9319E05FFA00BF648F /* CategoryViewCell.m */,
 				A4026A7719E04AF400BF648F /* CollectionViewCell.h */,
 				A4026A7819E04AF400BF648F /* CollectionViewCell.m */,
 			);
@@ -272,7 +289,13 @@
 		C3C5326219E0322C00C8A340 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A4026A8619E05DFE00BF648F /* bakery.jpg */,
+				A4026A8C19E05E9400BF648F /* frozen.jpg */,
+				A4026A8E19E05EDA00BF648F /* kitchen.jpg */,
+				A4026A9019E05F1B00BF648F /* rawMeat.jpg */,
+				A4026A8A19E05E3000BF648F /* fruit.jpg */,
 				C3C5326319E0322C00C8A340 /* Info.plist */,
+				A4026A8819E05E1300BF648F /* seafood.jpg */,
 				C3C5326419E0322C00C8A340 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -404,13 +427,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4026A8719E05DFE00BF648F /* bakery.jpg in Resources */,
+				A4026A8F19E05EDB00BF648F /* kitchen.jpg in Resources */,
 				C3C5328B19E0337600C8A340 /* Simplify.bundle in Resources */,
+				A4026A8919E05E1300BF648F /* seafood.jpg in Resources */,
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
 				C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */,
-				C3A5884A19E05C1100CDD6EB /* PickupTimeTableViewCell.xib in Resources */,
-				C3A5884819E05C1100CDD6EB /* CheckoutPayButtonTableViewCell.xib in Resources */,
+				A4026A9119E05F1B00BF648F /* rawMeat.jpg in Resources */,
 				C3C5327019E0322C00C8A340 /* Images.xcassets in Resources */,
+				A4026A8B19E05E3000BF648F /* fruit.jpg in Resources */,
+				A4026A8D19E05E9400BF648F /* frozen.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +502,7 @@
 				A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,
 				A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */,
+				A4026A9419E05FFA00BF648F /* CategoryViewCell.m in Sources */,
 				C3153C9319E03BB800C7498A /* ParseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
