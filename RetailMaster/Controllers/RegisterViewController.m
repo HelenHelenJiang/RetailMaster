@@ -7,7 +7,7 @@
 //
 
 #import "RegisterViewController.h"
-
+#import "RegisterTableViewCell.h"
 @interface RegisterViewController ()
 
 @end
@@ -34,6 +34,31 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 5;    //count number of row from counting array hear cataGorry is An Array
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *MyIdentifier = @"Cell";
+    
+    RegisterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[RegisterTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                       reuseIdentifier:MyIdentifier];
+    }
+    
+    cell.catLabel.text = @"test";
+    return cell;
+}
+
 
 /*
 #pragma mark - Navigation

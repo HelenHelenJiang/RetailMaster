@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1E401E19E05A79008D8349 /* WelcomeViewController.m */; };
-		9B1E402519E06468008D8349 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1E402419E06468008D8349 /* RegisterViewController.m */; };
+		9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BA19E0777E008732AA /* RegisterViewController.m */; };
+		9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */; };
 		A4026A7619E04AD700BF648F /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7519E04AD700BF648F /* ItemViewController.m */; };
 		A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7819E04AF400BF648F /* CollectionViewCell.m */; };
 		A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7B19E04CB700BF648F /* ItemDetailView.m */; };
@@ -76,8 +77,10 @@
 		7B144EFB121791A0400F8BC5 /* Pods-RetailMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailMaster/Pods-RetailMaster.debug.xcconfig"; sourceTree = "<group>"; };
 		9B1E401D19E05A79008D8349 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = ../WelcomeViewController.h; sourceTree = "<group>"; };
 		9B1E401E19E05A79008D8349 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = ../WelcomeViewController.m; sourceTree = "<group>"; };
-		9B1E402319E06468008D8349 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		9B1E402419E06468008D8349 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		9BADE8B919E0777E008732AA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		9BADE8BA19E0777E008732AA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewCell.h; sourceTree = "<group>"; };
+		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewCell.m; sourceTree = "<group>"; };
 		A4026A7419E04AD700BF648F /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
 		A4026A7519E04AD700BF648F /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
 		A4026A7719E04AF400BF648F /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -344,10 +347,12 @@
 		C3C5328D19E0356500C8A340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9BADE8B919E0777E008732AA /* RegisterViewController.h */,
+				9BADE8BA19E0777E008732AA /* RegisterViewController.m */,
+				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
+				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
 				9B1E401D19E05A79008D8349 /* WelcomeViewController.h */,
 				9B1E401E19E05A79008D8349 /* WelcomeViewController.m */,
-				9B1E402319E06468008D8349 /* RegisterViewController.h */,
-				9B1E402419E06468008D8349 /* RegisterViewController.m */,
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
 				C3C5328F19E0356500C8A340 /* SIMProductViewController.m */,
 				C3153C9419E03E9800C7498A /* CheckoutViewController.h */,
@@ -517,12 +522,13 @@
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
 				C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */,
 				A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */,
+				9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */,
 				9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */,
+				9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */,
 				C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */,
 				C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */,
 				C3C5329019E0356500C8A340 /* SIMProductViewController.m in Sources */,
 				A4026A7619E04AD700BF648F /* ItemViewController.m in Sources */,
-				9B1E402519E06468008D8349 /* RegisterViewController.m in Sources */,
 				A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,
 				A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */,
