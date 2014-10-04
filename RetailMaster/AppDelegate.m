@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "Item.h"
+
+#import "ParseManager.h"
 
 @interface AppDelegate ()
 
@@ -17,10 +20,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Parse class
+    [Item registerSubclass];
+    
     // Override point for customization after application launch.
     [Parse setApplicationId:@"wS8MIO5z0tCiJyIIU7XaBtNiwcyLPdjJkqIetfHP"
                   clientKey:@"LJp1vLvGyzXpz0fmbJYyPDD0rR1JfVb8zLY4kAQL"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [[ParseManager sharedManager] updateItem];
     
     return YES;
 }

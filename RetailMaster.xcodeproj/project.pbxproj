@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
+		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
+		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
+		C3153C9319E03BB800C7498A /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9219E03BB800C7498A /* ParseManager.m */; };
 		C3C5326519E0322C00C8A340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326419E0322C00C8A340 /* main.m */; };
 		C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326719E0322C00C8A340 /* AppDelegate.m */; };
 		C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326A19E0322C00C8A340 /* ViewController.m */; };
@@ -48,6 +51,12 @@
 		36F973BDB82A946BEEA8476A /* Pods-RetailMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailMaster/Pods-RetailMaster.release.xcconfig"; sourceTree = "<group>"; };
 		5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RetailMaster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B144EFB121791A0400F8BC5 /* Pods-RetailMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailMaster/Pods-RetailMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		C3153C8F19E03B9E00C7498A /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		C3153C9119E03BB800C7498A /* ParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseManager.h; sourceTree = "<group>"; };
+		C3153C9219E03BB800C7498A /* ParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseManager.m; sourceTree = "<group>"; };
 		C3C5325F19E0322C00C8A340 /* RetailMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C5326319E0322C00C8A340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C5326419E0322C00C8A340 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,9 +153,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C3153C8919E03A4500C7498A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C3153C8E19E03B9E00C7498A /* DataManager.h */,
+				C3153C8F19E03B9E00C7498A /* DataManager.m */,
+				C3153C9119E03BB800C7498A /* ParseManager.h */,
+				C3153C9219E03BB800C7498A /* ParseManager.m */,
+			);
+			name = Managers;
+			path = RetailMaster/Managers;
+			sourceTree = "<group>";
+		};
+		C3153C8A19E03AF600C7498A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3153C8B19E03AFF00C7498A /* Item.h */,
+				C3153C8C19E03AFF00C7498A /* Item.m */,
+			);
+			name = Model;
+			path = RetailMaster/Model;
+			sourceTree = "<group>";
+		};
 		C3C5325619E0322C00C8A340 = {
 			isa = PBXGroup;
 			children = (
+				C3153C8A19E03AF600C7498A /* Model */,
+				C3153C8919E03A4500C7498A /* Managers */,
 				C3C5328819E0337600C8A340 /* ThirdParty */,
 				C3C5326119E0322C00C8A340 /* RetailMaster */,
 				C3C5327B19E0322C00C8A340 /* RetailMasterTests */,
@@ -364,10 +397,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3153C8D19E03AFF00C7498A /* Item.m in Sources */,
+				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
 				C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */,
 				C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */,
 				C3C5329019E0356500C8A340 /* SIMProductViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,
+				C3153C9319E03BB800C7498A /* ParseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
