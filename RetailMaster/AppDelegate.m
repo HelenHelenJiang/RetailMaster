@@ -27,7 +27,7 @@
     [Parse setApplicationId:@"wS8MIO5z0tCiJyIIU7XaBtNiwcyLPdjJkqIetfHP"
                   clientKey:@"LJp1vLvGyzXpz0fmbJYyPDD0rR1JfVb8zLY4kAQL"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
+    [self uploadData];
 //    [[ParseManager sharedManager] updateItem];
     
     return YES;
@@ -56,29 +56,11 @@
 }
 
 -(void)uploadData{
-    PFObject *milk = [PFObject objectWithClassName:@"Diary"];
-    milk[@"score"] = @1337;
-    milk[@"playerName"] = @"Sean Plott";
-    milk[@"cheatMode"] = @NO;
-    [milk saveInBackground];
-    
-    PFObject *cheese = [PFObject objectWithClassName:@"Diary"];
-    cheese[@"score"] = @1337;
-    cheese[@"playerName"] = @"Sean Plott";
-    cheese[@"cheatMode"] = @NO;
-    [cheese saveInBackground];
-    
-    PFObject *yogurt = [PFObject objectWithClassName:@"Diary"];
-    yogurt[@"score"] = @1337;
-    yogurt[@"playerName"] = @"Sean Plott";
-    yogurt[@"cheatMode"] = @NO;
-    [yogurt saveInBackground];
-    
-    PFObject *soyMilk = [PFObject objectWithClassName:@"Diary"];
-    soyMilk[@"score"] = @1337;
-    soyMilk[@"playerName"] = @"Sean Plott";
-    soyMilk[@"cheatMode"] = @NO;
-    [soyMilk saveInBackground];
+    PFObject *HelenTest = [PFObject objectWithClassName:@"HelenTest"];
+    HelenTest[@"nutrition"] = @[@230,@"37g",@"3g",@"3g",@"0mg",@"160mg",@"2mcg",@"5mcg"];
+    HelenTest[@"playerName"] = @"Sean Plott";
+    HelenTest[@"cheatMode"] = @NO;
+    [HelenTest saveInBackground];
     
 }
 
