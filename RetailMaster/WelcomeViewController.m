@@ -39,8 +39,9 @@
     
     if (isRegistered) {
         
-        NSString *name  = [defualts objectForKey:@"name"];
-        welcomeLabel.text = [NSString stringWithFormat:@"Hi %@",name];
+        NSArray *array  = [defualts objectForKey:@"customerInfo"];
+        NSString *nameString = [array objectAtIndex:0];
+        welcomeLabel.text = [NSString stringWithFormat:@"Hi %@!",nameString];
         
     } else {
         
@@ -68,7 +69,6 @@
     if (isRegistered) {
         [locationButton setTitle:@"LOL" forState:UIControlStateNormal];
     } else {
-        
         [locationButton setTitle:@"pick a retail store location" forState:UIControlStateNormal];
     }
     
@@ -81,6 +81,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
  #pragma mark - Navigation
