@@ -14,4 +14,6 @@
 
 - (void)updateItem;
 
+- (void)fetchItemsWithCatagory:(NSString *)catagory Limit:(NSInteger)limit Skip:(NSInteger)skip Completion:(void (^)(BOOL success, NSArray *items))completion;
+
 @end
