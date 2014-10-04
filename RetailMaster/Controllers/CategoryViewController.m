@@ -7,7 +7,6 @@
 //
 
 #import "CategoryViewController.h"
-#import "ItemViewController.h"
 #import "CategoryViewCell.h"
 #import "ItemsViewController.h"
 
