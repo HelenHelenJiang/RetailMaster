@@ -58,9 +58,20 @@
         cell = [[RegisterTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:MyIdentifier];
     }
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.catLabel.text = [self.nameTitleArray objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (IBAction)cancelEvent:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+- (IBAction)saveEvent:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 
