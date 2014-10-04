@@ -10,7 +10,7 @@
 
 @interface PickupTimeTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *fromTimeLabel;
-@property (strong, nonatomic) IBOutlet UILabel *toTimeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end

@@ -17,6 +17,7 @@
 
 @property (strong, nonatomic) UIToolbar *datePickToolbar;
 @property (strong, nonatomic) UIDatePicker *datePick;
+@property (strong, nonatomic) NSDate *pickupDate;
 
 @end
 
@@ -38,6 +39,8 @@
     self.shoppingLists = [NSMutableArray array];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.pickupDate = [NSDate date];
     
     //    self.tableView.backgroundColor = [UIColor blackColor];
     
@@ -135,7 +138,18 @@
             cell = (PickupTimeTableViewCell *)[nib objectAtIndex:0];
         }
         
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"hh:mm a"];
+        NSString *currentTime = [dateFormatter stringFromDate:self.pickupDate];
         
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"EEEE, MMM d"];
+        NSString *prettyVersion = [dateFormat stringFromDate:self.pickupDate];
+        
+        NSLog(@"%@", prettyVersion);
+        
+        cell.dateLabel.text = prettyVersion;
+        cell.timeLabel.text = currentTime;
         
         //        Item *item = self.shoppingLists[indexPath.row];
         //    cell.textLabel.text = item.itemDescription;
@@ -179,7 +193,9 @@
             cell = (CheckoutPayButtonTableViewCell *)[nib objectAtIndex:0];
         }
         
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
+        [cell.payButton addTarget:self action:@selector(payButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         //        Item *item = self.shoppingLists[indexPath.row];
         //    cell.textLabel.text = item.itemDescription;
@@ -208,6 +224,8 @@
         //        cell.detailTextLabel.text = @"1234 Points";
         
         //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        cell.contentView.backgroundColor = [UIColor colorWithRed:208.0/255.0 green:210.0/255.0 blue:216.0/255.0 alpha:1.0];
         
         return cell;
     }
@@ -258,10 +276,13 @@
 
 - (void)dateChanged:(UIDatePicker *)sender
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"hh:mm a"];
-    NSString *currentTime = [dateFormatter stringFromDate:sender.date];
-    NSLog(@"%@", currentTime);
+    self.pickupDate = sender.date;
+    [self.tableView reloadData];
+}
+
+- (void)payButtonPressed:(id)sender
+{
+    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
