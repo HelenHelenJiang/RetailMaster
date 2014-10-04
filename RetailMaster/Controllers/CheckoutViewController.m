@@ -44,7 +44,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.pickupDate = [NSDate date];
+    self.pickupDate = [self nextHourDate:[NSDate date]];
     
     //    self.tableView.backgroundColor = [UIColor blackColor];
     
@@ -55,6 +55,14 @@
             [self.tableView reloadData];
         }
     }];
+}
+
+- (NSDate*)nextHourDate:(NSDate*)inDate
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components: NSEraCalendarUnit|NSYearCalendarUnit| NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit fromDate: inDate];
+    [comps setHour: [comps hour]+1]; // Here you may also need to check if it's the last hour of the day
+    return [calendar dateFromComponents:comps];
 }
 
 - (float)getTotalPrice
@@ -286,8 +294,18 @@
         {
             self.datePick = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 340, 0, 0)];
             
+            // One hour from now
+            NSDate *minDate = [[NSDate alloc] initWithTimeIntervalSinceNow:60*60];
+            // 7 Days from now
+            NSDate *maxDate = [[NSDate alloc] initWithTimeIntervalSinceNow:7*24*60*60];
+            
             self.datePick.backgroundColor = [UIColor whiteColor];
+            self.datePick.minuteInterval = 15;
             self.datePick.datePickerMode =UIDatePickerModeDateAndTime;
+            
+            [self.datePick setMinimumDate:minDate];
+            [self.datePick setMaximumDate:maxDate];
+            
             [self.datePick addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
         }
         
