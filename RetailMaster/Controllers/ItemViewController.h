@@ -9,14 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ItemViewController : UICollectionViewController<UICollectionViewDelegate, UICollectionViewDelegate>
-{
-    NSArray *ImageNames;
-    NSArray *NameLabels;
-    NSArray *PriceLabels;
-    
-}
 
-
+@property (weak, nonatomic)NSString* catName ;
+@property (strong,nonatomic) NSMutableArray *NameLabels;
+@property (strong,nonatomic) NSMutableArray *PriceLabels;
+@property (strong,nonatomic) NSMutableArray *ImageURLs;
 
 
 @end

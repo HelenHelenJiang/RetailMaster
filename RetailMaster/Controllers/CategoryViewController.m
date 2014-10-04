@@ -65,6 +65,7 @@
     if ([segue.identifier isEqualToString:@"CategoryToItem"]) {
         NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
         ItemViewController *itemController = [segue destinationViewController];
+//  itemController.catName ;
     }
 }
 
@@ -72,7 +73,6 @@
     UICollectionViewCell *datasetCell =[collectionView cellForItemAtIndexPath:indexPath];
     datasetCell.backgroundColor = [UIColor blueColor]; // highlight selection
     [self performSegueWithIdentifier:@"CategoryToItem" sender:nil];
-    
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {

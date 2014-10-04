@@ -27,7 +27,7 @@
     [Parse setApplicationId:@"wS8MIO5z0tCiJyIIU7XaBtNiwcyLPdjJkqIetfHP"
                   clientKey:@"LJp1vLvGyzXpz0fmbJYyPDD0rR1JfVb8zLY4kAQL"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    [self uploadData];
+ //   [self uploadData];
 //    [[ParseManager sharedManager] updateItem];
     
     return YES;
