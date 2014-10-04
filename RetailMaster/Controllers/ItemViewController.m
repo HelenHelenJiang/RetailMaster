@@ -37,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.view.backgroundColor = [UIColor whiteColor];
     self.NameLabels =[NSMutableArray array];
     self.PriceLabels = [NSMutableArray array];
     self.ImageURLs = [NSMutableArray array];
@@ -83,6 +83,7 @@
                 [PriceLabels addObject:myPrice];
                 [ImageURLs addObject:myImageUrl];
             }
+            
             for (PFObject *object in objects) {
                 NSLog(@"%@", object.objectId);
                 NSLog(@"%@", object.description);
@@ -99,6 +100,8 @@
     static NSString *CellID = @"CellID";
     CollectionViewCell *myCell = (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CellID" forIndexPath:indexPath];
   //  myCell.ImageInCell.image = [UIImage imageNamed:[ImageNames objectAtIndex:indexPath.item]];
+    NSLog([NameLabels objectAtIndex:0]);
+    NSLog([NameLabels objectAtIndex:1]);
     myCell.NameLabel.text = [NameLabels objectAtIndex:indexPath.item];
     myCell.PriceLabel.text = [PriceLabels objectAtIndex:indexPath.item];
     
