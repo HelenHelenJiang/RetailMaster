@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B166A2619E095FE00BA4072 /* LocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B166A2519E095FE00BA4072 /* LocationVC.m */; };
 		9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1E401E19E05A79008D8349 /* WelcomeViewController.m */; };
 		9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BA19E0777E008732AA /* RegisterViewController.m */; };
 		9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */; };
@@ -22,6 +23,7 @@
 		A4026A9419E05FFA00BF648F /* CategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A9319E05FFA00BF648F /* CategoryViewCell.m */; };
 		A408D49119E08259009766E0 /* vege.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A408D49019E08259009766E0 /* vege.jpg */; };
 		A408D49319E082DF009766E0 /* kitchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A408D49219E082DF009766E0 /* kitchen.jpg */; };
+		A408D49619E097D4009766E0 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D49519E097D4009766E0 /* DetailView.m */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -85,12 +87,14 @@
 		36F973BDB82A946BEEA8476A /* Pods-RetailMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailMaster/Pods-RetailMaster.release.xcconfig"; sourceTree = "<group>"; };
 		5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RetailMaster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B144EFB121791A0400F8BC5 /* Pods-RetailMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailMaster/Pods-RetailMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		9B166A2419E095FE00BA4072 /* LocationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationVC.h; path = ../Views/LocationVC.h; sourceTree = "<group>"; };
+		9B166A2519E095FE00BA4072 /* LocationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationVC.m; path = ../Views/LocationVC.m; sourceTree = "<group>"; };
 		9B1E401D19E05A79008D8349 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = ../WelcomeViewController.h; sourceTree = "<group>"; };
 		9B1E401E19E05A79008D8349 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = ../WelcomeViewController.m; sourceTree = "<group>"; };
 		9BADE8B919E0777E008732AA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		9BADE8BA19E0777E008732AA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewCell.h; sourceTree = "<group>"; };
-		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewCell.m; sourceTree = "<group>"; };
+		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterTableViewCell.h; path = ../Controllers/RegisterTableViewCell.h; sourceTree = "<group>"; };
+		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterTableViewCell.m; path = ../Controllers/RegisterTableViewCell.m; sourceTree = "<group>"; };
 		A4026A7419E04AD700BF648F /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
 		A4026A7519E04AD700BF648F /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
 		A4026A7719E04AF400BF648F /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 		A4026A9319E05FFA00BF648F /* CategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewCell.m; sourceTree = "<group>"; };
 		A408D49019E08259009766E0 /* vege.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vege.jpg; sourceTree = "<group>"; };
 		A408D49219E082DF009766E0 /* kitchen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitchen.jpg; sourceTree = "<group>"; };
+		A408D49419E097D4009766E0 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
+		A408D49519E097D4009766E0 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -275,6 +281,8 @@
 				C345A03D19E066D600041E63 /* PickupTimeTableViewCell.xib */,
 				C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */,
 				C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */,
+				A408D49419E097D4009766E0 /* DetailView.h */,
+				A408D49519E097D4009766E0 /* DetailView.m */,
 				C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */,
 				A4026A9219E05FFA00BF648F /* CategoryViewCell.h */,
 				A4026A9319E05FFA00BF648F /* CategoryViewCell.m */,
@@ -283,9 +291,14 @@
 				C345A05919E0852A00041E63 /* OrderHistoryTableViewCell.h */,
 				C345A05A19E0852A00041E63 /* OrderHistoryTableViewCell.m */,
 				C345A05B19E0852A00041E63 /* OrderHistoryTableViewCell.xib */,
+<<<<<<< HEAD
 				C345A06319E096E300041E63 /* ItemsViewTableViewCell.h */,
 				C345A06419E096E300041E63 /* ItemsViewTableViewCell.m */,
 				C345A06519E096E300041E63 /* ItemsViewTableViewCell.xib */,
+=======
+				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
+				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
+>>>>>>> FETCH_HEAD
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -379,13 +392,13 @@
 		C3C5328D19E0356500C8A340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9B166A2419E095FE00BA4072 /* LocationVC.h */,
+				9B166A2519E095FE00BA4072 /* LocationVC.m */,
 				C345A05419E0849E00041E63 /* HistoryViewController.h */,
 				C345A05519E0849E00041E63 /* HistoryViewController.m */,
 				C345A05619E0849E00041E63 /* HistoryViewController.xib */,
 				9BADE8B919E0777E008732AA /* RegisterViewController.h */,
 				9BADE8BA19E0777E008732AA /* RegisterViewController.m */,
-				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
-				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
 				9B1E401D19E05A79008D8349 /* WelcomeViewController.h */,
 				9B1E401E19E05A79008D8349 /* WelcomeViewController.m */,
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
@@ -563,6 +576,7 @@
 				C345A04319E06ACC00041E63 /* OrderConformationViewController.m in Sources */,
 				C3153C8D19E03AFF00C7498A /* Item.m in Sources */,
 				C345A03E19E066D600041E63 /* PickupTimeTableViewCell.m in Sources */,
+				A408D49619E097D4009766E0 /* DetailView.m in Sources */,
 				C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */,
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
 				C345A04819E0741C00041E63 /* Order.m in Sources */,
@@ -570,6 +584,7 @@
 				C345A06119E093A400041E63 /* ItemsViewController.m in Sources */,
 				9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */,
 				9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */,
+				9B166A2619E095FE00BA4072 /* LocationVC.m in Sources */,
 				9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */,
 				C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */,
 				C345A06619E096E300041E63 /* ItemsViewTableViewCell.m in Sources */,
