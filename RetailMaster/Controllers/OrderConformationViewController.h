@@ -13,5 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIView *tableViewBottomView;
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 @property (strong, nonatomic)  NSMutableArray *orderedItems;
+@property (strong, nonatomic) IBOutlet UIButton *confirmButton;
+@property (strong, nonatomic) IBOutlet UILabel *totalPriceLabel;
 
 @end

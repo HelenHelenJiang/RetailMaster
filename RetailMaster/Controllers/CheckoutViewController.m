@@ -54,6 +54,17 @@
     }];
 }
 
+- (float)getTotalPrice
+{
+    __block float totalPrice = 0;
+    
+    [self.shoppingLists enumerateObjectsUsingBlock:^(Item *item, NSUInteger index, BOOL *stop){
+        totalPrice += [item.price doubleValue];
+    }];
+    
+    return totalPrice;
+}
+
 #pragma mark - Table View
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
@@ -86,7 +97,7 @@
     switch (section)
     {
         case 0:
-            return self.shoppingLists.count;
+            return self.shoppingLists.count + 1;
         case 1:
             return 1;
         case 2:
@@ -105,6 +116,28 @@
 {
     if (indexPath.section == 0)
     {
+        if (indexPath.row == self.shoppingLists.count)
+        {
+            UITableViewCell *cell;
+            
+            static NSString *cellIdentifier = @"SubtotalCell";
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+            
+            if(cell == nil) {
+                
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+            }
+            
+            //        Building *item = self.buildings[indexPath.row];
+            cell.textLabel.text = @"Total: ";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.02f", [self getTotalPrice]];
+            
+            //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+            return cell;
+        }
+        
         static NSString *CheckOutCellIdentifier = @"CheckOutCellIdentifier";
         CheckoutItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CheckOutCellIdentifier];
         
@@ -113,7 +146,6 @@
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CheckoutItemTableViewCell" owner:self options:nil];
             cell = (CheckoutItemTableViewCell *)[nib objectAtIndex:0];
         }
-        
         
         
         Item *item = self.shoppingLists[indexPath.row];
@@ -125,8 +157,10 @@
         cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", item.price];
         
         //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
         
         return cell;
+        
     }
     else if (indexPath.section == 1)
     {
