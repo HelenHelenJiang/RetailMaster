@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Product View Controller-->
@@ -35,7 +35,7 @@
             </objects>
             <point key="canvasLocation" x="-202" y="329"/>
         </scene>
-        <!--Home-->
+        <!--View Controller - Home-->
         <scene sceneID="zTG-HJ-eDf">
             <objects>
                 <viewController id="9lW-h4-KQu" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="9lW-h4-KQu" kind="relationship" relationship="viewControllers" id="5o9-Uh-4FU"/>
-                        <segue destination="0ES-jm-OXX" kind="relationship" relationship="viewControllers" id="zGc-O9-wbo"/>
+                        <segue destination="5d3-sx-DFP" kind="relationship" relationship="viewControllers" id="S1j-dO-mto"/>
                         <segue destination="yHE-n8-CYt" kind="relationship" relationship="viewControllers" id="U0f-Ld-yzI"/>
                         <segue destination="A9z-GL-7MO" kind="relationship" relationship="viewControllers" id="dfY-o5-1um"/>
                     </connections>
@@ -71,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="-77" y="-386"/>
         </scene>
-        <!--Settings-->
+        <!--View Controller - Settings-->
         <scene sceneID="grV-by-mOh">
             <objects>
                 <viewController id="A9z-GL-7MO" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="725" y="286"/>
         </scene>
-        <!--Checkout-->
+        <!--Checkout View Controller - Checkout-->
         <scene sceneID="nMP-GN-ttd">
             <objects>
                 <viewController id="yHE-n8-CYt" customClass="CheckoutViewController" sceneMemberID="viewController">
@@ -111,7 +111,62 @@
             </objects>
             <point key="canvasLocation" x="290" y="544"/>
         </scene>
-        <!--Shop-->
+        <!--Navigation Controller - Shopping-->
+        <scene sceneID="F5F-xW-70y">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="5d3-sx-DFP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shopping" id="VZH-N1-8PX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DsN-Dw-WUa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AwE-d0-EfP" kind="relationship" relationship="rootViewController" id="fdk-Ck-f4M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7h-ZA-xJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="-374"/>
+        </scene>
+        <!--Collection View Controller - Item-->
+        <scene sceneID="joV-T4-kJU">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="AwE-d0-EfP" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="b6L-Hq-yeF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pM1-dh-beM">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e4c-js-JdV">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="AwE-d0-EfP" id="d3W-5z-LLE"/>
+                            <outlet property="delegate" destination="AwE-d0-EfP" id="FlJ-uY-Dg5"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="Tr8-qV-Et2"/>
+                    <navigationItem key="navigationItem" id="2xf-MC-mGF"/>
+                    <connections>
+                        <segue destination="0ES-jm-OXX" kind="push" id="ahg-JG-aUb"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukv-VB-qoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="-386"/>
+        </scene>
+        <!--Item View Controller - Shop-->
         <scene sceneID="ZWD-UE-QY2">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="0ES-jm-OXX" customClass="ItemViewController" sceneMemberID="viewController">
@@ -126,7 +181,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellID" id="HPA-bT-ZW1" customClass="CollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="148" height="205"/>
+                                <rect key="frame" x="0.0" y="64" width="148" height="205"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="148" height="205"/>
@@ -166,10 +221,90 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Shop" id="VhB-7V-Rov"/>
+                    <navigationItem key="navigationItem" id="Dec-Yu-YqZ"/>
+                    <connections>
+                        <segue destination="VyD-Yb-rLI" kind="push" id="IIZ-6j-xk5"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFy-KI-0Hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="-435"/>
+            <point key="canvasLocation" x="1449" y="-374"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="S51-ju-LdQ">
+            <objects>
+                <viewController id="VyD-Yb-rLI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nck-ER-jqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xYk-dK-At8">
+                                <rect key="frame" x="225" y="49" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IY5-jh-bTa">
+                                <rect key="frame" x="225" y="101" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition Fact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UZY-C6-650">
+                                <rect key="frame" x="21" y="245" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7GI-gB-Ua7">
+                                <rect key="frame" x="20" y="41" width="170" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zQ0-fJ-aZ7">
+                                <rect key="frame" x="22" y="274" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="csz-Uo-0Eb">
+                                <rect key="frame" x="26" y="303" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Ms-vj-B5k">
+                                <rect key="frame" x="26" y="332" width="25" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7db-J5-c15">
+                                <rect key="frame" x="227" y="146" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sodium" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="29v-HS-WTU">
+                                <rect key="frame" x="26" y="361" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D4W-ar-e3W">
+                                <rect key="frame" x="26" y="390" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HhO-Va-w5P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njc-kO-lRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915" y="-402"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
