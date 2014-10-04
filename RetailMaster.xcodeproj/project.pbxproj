@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B166A2919E09C7A00BA4072 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B166A2819E09C7A00BA4072 /* LocationCell.m */; };
 		9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1E401E19E05A79008D8349 /* WelcomeViewController.m */; };
 		9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BA19E0777E008732AA /* RegisterViewController.m */; };
 		9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */; };
@@ -84,6 +85,8 @@
 		36F973BDB82A946BEEA8476A /* Pods-RetailMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailMaster/Pods-RetailMaster.release.xcconfig"; sourceTree = "<group>"; };
 		5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RetailMaster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B144EFB121791A0400F8BC5 /* Pods-RetailMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailMaster/Pods-RetailMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		9B166A2719E09C7A00BA4072 /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationCell.h; path = ../LocationCell.h; sourceTree = "<group>"; };
+		9B166A2819E09C7A00BA4072 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationCell.m; path = ../LocationCell.m; sourceTree = "<group>"; };
 		9B1E401D19E05A79008D8349 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = ../WelcomeViewController.h; sourceTree = "<group>"; };
 		9B1E401E19E05A79008D8349 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = ../WelcomeViewController.m; sourceTree = "<group>"; };
 		9BADE8B919E0777E008732AA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 		C3C5328D19E0356500C8A340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9B166A2719E09C7A00BA4072 /* LocationCell.h */,
+				9B166A2819E09C7A00BA4072 /* LocationCell.m */,
 				C345A05419E0849E00041E63 /* HistoryViewController.h */,
 				C345A05519E0849E00041E63 /* HistoryViewController.m */,
 				C345A05619E0849E00041E63 /* HistoryViewController.xib */,
@@ -555,6 +560,7 @@
 			files = (
 				C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */,
 				C345A05C19E0852A00041E63 /* OrderHistoryTableViewCell.m in Sources */,
+				9B166A2919E09C7A00BA4072 /* LocationCell.m in Sources */,
 				C345A04319E06ACC00041E63 /* OrderConformationViewController.m in Sources */,
 				C3153C8D19E03AFF00C7498A /* Item.m in Sources */,
 				C345A03E19E066D600041E63 /* PickupTimeTableViewCell.m in Sources */,
