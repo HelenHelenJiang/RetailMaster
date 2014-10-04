@@ -23,6 +23,7 @@
 		A4026A9419E05FFA00BF648F /* CategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A9319E05FFA00BF648F /* CategoryViewCell.m */; };
 		A408D49119E08259009766E0 /* vege.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A408D49019E08259009766E0 /* vege.jpg */; };
 		A408D49319E082DF009766E0 /* kitchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A408D49219E082DF009766E0 /* kitchen.jpg */; };
+		A408D4A219E0B0E0009766E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A119E0B0E0009766E0 /* DetailViewController.m */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -114,6 +115,8 @@
 		A4026A9319E05FFA00BF648F /* CategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewCell.m; sourceTree = "<group>"; };
 		A408D49019E08259009766E0 /* vege.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vege.jpg; sourceTree = "<group>"; };
 		A408D49219E082DF009766E0 /* kitchen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitchen.jpg; sourceTree = "<group>"; };
+		A408D4A019E0B0E0009766E0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A408D4A119E0B0E0009766E0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -404,6 +407,8 @@
 				C345A05619E0849E00041E63 /* HistoryViewController.xib */,
 				9BADE8B919E0777E008732AA /* RegisterViewController.h */,
 				9BADE8BA19E0777E008732AA /* RegisterViewController.m */,
+				A408D4A019E0B0E0009766E0 /* DetailViewController.h */,
+				A408D4A119E0B0E0009766E0 /* DetailViewController.m */,
 				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
 				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
 				9B1E401D19E05A79008D8349 /* WelcomeViewController.h */,
@@ -603,6 +608,7 @@
 				C3C5329019E0356500C8A340 /* SIMProductViewController.m in Sources */,
 				C345A05719E0849E00041E63 /* HistoryViewController.m in Sources */,
 				A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */,
+				A408D4A219E0B0E0009766E0 /* DetailViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,
 				A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */,
 				C345A06B19E0B05C00041E63 /* CatagoriesViewController.m in Sources */,
