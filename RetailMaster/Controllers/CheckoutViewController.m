@@ -12,6 +12,7 @@
 #import "CheckoutItemTableViewCell.h"
 #import "PickupTimeTableViewCell.h"
 #import "CheckoutPayButtonTableViewCell.h"
+#import "OrderConformationViewController.h"
 
 @interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -282,6 +283,7 @@
 
 - (void)payButtonPressed:(id)sender
 {
+    OrderConformationViewController *orderVC = [[OrderConformationViewController alloc] init];
     
 }
 
