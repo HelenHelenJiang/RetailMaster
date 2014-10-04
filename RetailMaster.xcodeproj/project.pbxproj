@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A4026A7619E04AD700BF648F /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7519E04AD700BF648F /* ItemViewController.m */; };
 		A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7819E04AF400BF648F /* CollectionViewCell.m */; };
+		A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7B19E04CB700BF648F /* ItemDetailView.m */; };
+		A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A8419E0548B00BF648F /* CategoryViewController.m */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -60,6 +62,10 @@
 		A4026A7519E04AD700BF648F /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
 		A4026A7719E04AF400BF648F /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		A4026A7819E04AF400BF648F /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		A4026A7A19E04CB700BF648F /* ItemDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailView.h; sourceTree = "<group>"; };
+		A4026A7B19E04CB700BF648F /* ItemDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailView.m; sourceTree = "<group>"; };
+		A4026A8319E0548B00BF648F /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		A4026A8419E0548B00BF648F /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -195,6 +201,8 @@
 				C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */,
 				C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */,
 				C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */,
+				A4026A7A19E04CB700BF648F /* ItemDetailView.h */,
+				A4026A7B19E04CB700BF648F /* ItemDetailView.m */,
 				A4026A7719E04AF400BF648F /* CollectionViewCell.h */,
 				A4026A7819E04AF400BF648F /* CollectionViewCell.m */,
 			);
@@ -433,10 +441,12 @@
 				C3153C8D19E03AFF00C7498A /* Item.m in Sources */,
 				C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */,
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
+				A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */,
 				C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */,
 				C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */,
 				C3C5329019E0356500C8A340 /* SIMProductViewController.m in Sources */,
 				A4026A7619E04AD700BF648F /* ItemViewController.m in Sources */,
+				A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,
 				A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */,
 				C3153C9319E03BB800C7498A /* ParseManager.m in Sources */,
