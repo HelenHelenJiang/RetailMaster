@@ -41,6 +41,8 @@
 		C345A05819E0849E00041E63 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A05619E0849E00041E63 /* HistoryViewController.xib */; };
 		C345A05C19E0852A00041E63 /* OrderHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A05A19E0852A00041E63 /* OrderHistoryTableViewCell.m */; };
 		C345A05D19E0852A00041E63 /* OrderHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A05B19E0852A00041E63 /* OrderHistoryTableViewCell.xib */; };
+		C345A06119E093A400041E63 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A05F19E093A400041E63 /* ItemsViewController.m */; };
+		C345A06219E093A400041E63 /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A06019E093A400041E63 /* ItemsViewController.xib */; };
 		C3A5884C19E05C8800CDD6EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A5884B19E05C8800CDD6EB /* Foundation.framework */; };
 		C3C5326519E0322C00C8A340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326419E0322C00C8A340 /* main.m */; };
 		C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326719E0322C00C8A340 /* AppDelegate.m */; };
@@ -134,6 +136,9 @@
 		C345A05919E0852A00041E63 /* OrderHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryTableViewCell.h; sourceTree = "<group>"; };
 		C345A05A19E0852A00041E63 /* OrderHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryTableViewCell.m; sourceTree = "<group>"; };
 		C345A05B19E0852A00041E63 /* OrderHistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		C345A05E19E093A400041E63 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
+		C345A05F19E093A400041E63 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
+		C345A06019E093A400041E63 /* ItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsViewController.xib; sourceTree = "<group>"; };
 		C3A5884B19E05C8800CDD6EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3C5325F19E0322C00C8A340 /* RetailMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C5326319E0322C00C8A340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -391,6 +396,9 @@
 				C345A04019E06ACC00041E63 /* OrderConformationViewController.h */,
 				C345A04119E06ACC00041E63 /* OrderConformationViewController.m */,
 				C345A04219E06ACC00041E63 /* OrderConformationViewController.xib */,
+				C345A05E19E093A400041E63 /* ItemsViewController.h */,
+				C345A05F19E093A400041E63 /* ItemsViewController.m */,
+				C345A06019E093A400041E63 /* ItemsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -488,6 +496,7 @@
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
 				C345A03F19E066D600041E63 /* PickupTimeTableViewCell.xib in Resources */,
+				C345A06219E093A400041E63 /* ItemsViewController.xib in Resources */,
 				C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */,
 				A4026A9119E05F1B00BF648F /* rawMeat.jpg in Resources */,
 				C3C5327019E0322C00C8A340 /* Images.xcassets in Resources */,
@@ -554,6 +563,7 @@
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
 				C345A04819E0741C00041E63 /* Order.m in Sources */,
 				C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */,
+				C345A06119E093A400041E63 /* ItemsViewController.m in Sources */,
 				A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */,
 				9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */,
 				9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */,
