@@ -9,6 +9,8 @@
 #import "ItemsViewController.h"
 #import "ParseManager.h"
 #import "Item.h"
+#import "ItemsViewTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ItemsViewController ()
 
@@ -29,6 +31,10 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = self.catName;
+    
+    self.tableview.delaysContentTouches = NO;
+    
     // Do any additional setup after loading the view from its nib.
     self.items = [NSMutableArray array];
     
@@ -44,6 +50,11 @@
 
 #pragma mark - Table View
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100.0f;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -56,29 +67,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    static NSString *CommentCellIdentifier = @"RankingCellIdentifier";
-    //    RankingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CommentCellIdentifier];
-    //
-    //    if (cell == nil)
-    //    {
-    //        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RankingTableViewCell" owner:self options:nil];
-    //        cell = (RankingTableViewCell *)[nib objectAtIndex:0];
-    //    }
-    //
-    UITableViewCell *cell;
+    static NSString *CellIdentifier = @"CellIdentifier";
+    ItemsViewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    static NSString *cellIdentifier = @"Cell";
-    
-    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if(cell == nil) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ItemsViewTableViewCell" owner:self options:nil];
+        cell = (ItemsViewTableViewCell *)[nib objectAtIndex:0];
     }
     
     Item *item = self.items[indexPath.row];
-    cell.textLabel.text = item.name;
-    cell.detailTextLabel.text = item.price;
+    
+    [cell.itemImageView sd_setImageWithURL:[NSURL URLWithString:item.imageURL]];
+    cell.itemNameLabel.text = item.itemDescription;
+    cell.itemPriceLabel.text = [NSString stringWithFormat:@"$ %0.2f", [item.price doubleValue]];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
@@ -92,6 +94,16 @@
     //    SubjectsViewController *subjectsVC = [[SubjectsViewController alloc] init];
     //    subjectsVC.department = item;
     //    [self.navigationController pushViewController:subjectsVC animated:YES];
+}
+
+- (BOOL)touchesShouldCancelInContentView:(UIView *)view
+{
+    if ([view isKindOfClass:[UITextView class]])
+    {
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

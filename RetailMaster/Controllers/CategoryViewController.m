@@ -74,9 +74,14 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
-    UICollectionViewCell *datasetCell =[collectionView cellForItemAtIndexPath:indexPath];
-    
-    [self performSegueWithIdentifier:@"CategoryToItem" sender:nil];
+//    UICollectionViewCell *datasetCell =[collectionView cellForItemAtIndexPath:indexPath];
+//    
+//    [self performSegueWithIdentifier:@"CategoryToItem" sender:nil];
+    NSArray* NamesForQuery = [[NSArray alloc] initWithObjects:@"Bakery",@"Dairy",@"Frozen",@"Fruit",@"Kitchen",@"RawMeat",@"SeaFood",@"Vegetable", nil];
+    NSString *catagoryName = [NamesForQuery objectAtIndex:indexPath.row];
+    ItemsViewController *itemsVC = [[ItemsViewController alloc] init];
+    itemsVC.catName = catagoryName;
+    [self.navigationController pushViewController:itemsVC animated:YES];
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
