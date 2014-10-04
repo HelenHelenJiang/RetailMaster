@@ -17,5 +17,6 @@
 @property (retain) NSNumber *price;
 @property (retain) NSString *itemDescription;
 @property (retain) NSString *catagory;
+@property (retain) NSString *imageURL;
 
 @end

@@ -16,6 +16,7 @@
 @dynamic price;
 @dynamic nutritionFact;
 @dynamic catagory;
+@dynamic imageURL;
 
 + (NSString *)parseClassName
 {

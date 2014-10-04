@@ -33,6 +33,7 @@
     item.price = [NSNumber numberWithDouble:2.99];
     item.nutritionFact = @"Grain";
     item.isSold = [NSNumber numberWithBool:NO];
+    item.imageURL = @"";
     
     [item saveInBackgroundWithBlock:^(BOOL success, NSError *error){
         
