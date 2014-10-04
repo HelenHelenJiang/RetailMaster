@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Product View Controller-->
@@ -34,7 +35,7 @@
             </objects>
             <point key="canvasLocation" x="-202" y="329"/>
         </scene>
-        <!--View Controller - Item 1-->
+        <!--Home-->
         <scene sceneID="zTG-HJ-eDf">
             <objects>
                 <viewController id="9lW-h4-KQu" sceneMemberID="viewController">
@@ -43,11 +44,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="KgQ-JE-U8h"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="KgQ-JE-U8h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKt-zB-tae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="523" y="-282"/>
+            <point key="canvasLocation" x="399" y="-1015"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8CV-YO-eBe">
@@ -61,14 +62,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="9lW-h4-KQu" kind="relationship" relationship="viewControllers" id="5o9-Uh-4FU"/>
+                        <segue destination="0ES-jm-OXX" kind="relationship" relationship="viewControllers" id="zGc-O9-wbo"/>
                         <segue destination="yHE-n8-CYt" kind="relationship" relationship="viewControllers" id="U0f-Ld-yzI"/>
+                        <segue destination="A9z-GL-7MO" kind="relationship" relationship="viewControllers" id="dfY-o5-1um"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLo-Fc-UIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-77" y="-386"/>
         </scene>
-        <!--Checkout View Controller - Checkout-->
+        <!--Settings-->
+        <scene sceneID="grV-by-mOh">
+            <objects>
+                <viewController id="A9z-GL-7MO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RMP-kC-nLE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="lsd-4M-DZR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUk-UP-9EM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="286"/>
+        </scene>
+        <!--Checkout-->
         <scene sceneID="nMP-GN-ttd">
             <objects>
                 <viewController id="yHE-n8-CYt" customClass="CheckoutViewController" sceneMemberID="viewController">
@@ -91,9 +109,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxl-TS-qyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288" y="345"/>
+            <point key="canvasLocation" x="290" y="544"/>
         </scene>
-        <!--Item View Controller-->
+        <!--Shop-->
         <scene sceneID="ZWD-UE-QY2">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="0ES-jm-OXX" customClass="ItemViewController" sceneMemberID="viewController">
@@ -147,10 +165,11 @@
                             <outlet property="delegate" destination="0ES-jm-OXX" id="DbK-Qo-9Zu"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="Shop" id="VhB-7V-Rov"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFy-KI-0Hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="1091"/>
+            <point key="canvasLocation" x="845" y="-435"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
