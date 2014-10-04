@@ -8,6 +8,8 @@
 
 #import "HistoryViewController.h"
 #import "Order.h"
+#import "OrderHistoryTableViewCell.h"
+#import "ParseManager.h"
 
 @interface HistoryViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -27,11 +29,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"History";
+    
     self.orders = [NSMutableArray array];
     // Do any additional setup after loading the view from its nib.
+    
+    [[ParseManager sharedManager] fetchOrdersFromUserID:nil Limit:100 Skip:0 Completion:^(BOOL success, NSArray *objects){
+        self.orders = [objects mutableCopy];
+        [self.tableview reloadData];
+    }];
 }
 
 #pragma mark - Table View
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return 145.0f;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -45,29 +60,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    static NSString *CommentCellIdentifier = @"RankingCellIdentifier";
-    //    RankingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CommentCellIdentifier];
-    //
-    //    if (cell == nil)
-    //    {
-    //        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RankingTableViewCell" owner:self options:nil];
-    //        cell = (RankingTableViewCell *)[nib objectAtIndex:0];
-    //    }
-    //
-    UITableViewCell *cell;
+    static NSString *CellIdentifier = @"CellIdentifier";
+    OrderHistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    static NSString *cellIdentifier = @"Cell";
-    
-    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if(cell == nil) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"OrderHistoryTableViewCell" owner:self options:nil];
+        cell = (OrderHistoryTableViewCell *)[nib objectAtIndex:0];
     }
     
     Order *order = self.orders[indexPath.row];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.orderNumberLabel.text = order.orderNumber;
+    cell.orderPriceLabel.text = [NSString stringWithFormat:@"%0.2f", [order.orderPrice doubleValue]];
+    cell.orderPickupLocationLabel.text = order.orderPickupLocation;
+    
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }

@@ -9,6 +9,9 @@
 #import "OrderConformationViewController.h"
 #import "CheckoutItemTableViewCell.h"
 #import "Item.h"
+#import "ParseManager.h"
+#import "MBProgressHUD.h"
+#import "CheckoutViewController.h"
 
 @interface OrderConformationViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -48,6 +51,10 @@
     self.confirmButton.layer.cornerRadius = 5.0f;
     
     [self.tableview setTableFooterView:self.tableViewBottomView];
+    
+    
+    
+    [self.view addSubview:self.tableViewBottomView];
     
     self.totalPriceLabel.text = [NSString stringWithFormat:@"$%0.2f", [self getTotalPrice]];
     // Do any additional setup after loading the view from its nib.
@@ -108,8 +115,6 @@
             cell = (CheckoutItemTableViewCell *)[nib objectAtIndex:0];
         }
         
-        
-        
         Item *item = self.orderedItems[indexPath.row];
         //    cell.textLabel.text = item.itemDescription;
         //    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
@@ -156,7 +161,7 @@
         else
         {
             cell.textLabel.text = @"Order #: ";
-            cell.detailTextLabel.text = [self randomStringWithLength:7];
+            cell.detailTextLabel.text = self.order.orderNumber;
         }
         
         return cell;
@@ -176,7 +181,7 @@
         
         //        Building *item = self.buildings[indexPath.row];
         cell.textLabel.text = @"Order #: ";
-        cell.detailTextLabel.text = [self randomStringWithLength:7];
+        cell.detailTextLabel.text = self.order.orderNumber;
         
         //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
@@ -195,21 +200,25 @@
 
 - (IBAction)confirmBtnPressed:(id)sender
 {
+    self.order.isPaid = [NSNumber numberWithBool:true];
+    self.order[@"OrderNumber"] = self.order.orderNumber;
+    self.order[@"Price"] = [NSString stringWithFormat:@"%0.2f", [self.order.orderPrice doubleValue]];
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"hh:mm a"];
+    NSString *currentTime = [dateFormatter stringFromDate:self.self.order.orderPickupDate];
+    self.order[@"PickUpTime"] = currentTime;
+    self.order[@"OrderList"] = [[ParseManager sharedManager] parseOrderToString:self.order];
+    
+    self.tabBarController.selectedIndex = 3;
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self.order saveInBackgroundWithBlock:^(BOOL successed, NSError *error){
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }];
 }
 
-NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-- (NSString *)randomStringWithLength:(int)len
-{
-    
-    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
-    
-    for (int i=0; i<len; i++) {
-        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length]) % [letters length]]];
-    }
-    
-    return randomString;
-}
 
 @end
