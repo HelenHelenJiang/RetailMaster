@@ -489,10 +489,10 @@
             </objects>
             <point key="canvasLocation" x="1449" y="-374"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="v8l-Y5-tco">
             <objects>
-                <viewController id="zHR-So-wLk" sceneMemberID="viewController">
+                <viewController id="zHR-So-wLk" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gnn-VU-LSb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -520,6 +520,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ahP-3S-fPe"/>
+                    <connections>
+                        <outlet property="DetailTableView" destination="jWZ-w9-V46" id="wW1-oc-ddE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41p-Au-qgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
