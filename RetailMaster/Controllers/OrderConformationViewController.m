@@ -10,6 +10,8 @@
 #import "CheckoutItemTableViewCell.h"
 #import "Item.h"
 #import "ParseManager.h"
+#import "MBProgressHUD.h"
+#import "CheckoutViewController.h"
 
 @interface OrderConformationViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -49,6 +51,10 @@
     self.confirmButton.layer.cornerRadius = 5.0f;
     
     [self.tableview setTableFooterView:self.tableViewBottomView];
+    
+    
+    
+    [self.view addSubview:self.tableViewBottomView];
     
     self.totalPriceLabel.text = [NSString stringWithFormat:@"$%0.2f", [self getTotalPrice]];
     // Do any additional setup after loading the view from its nib.
@@ -204,8 +210,13 @@
     self.order[@"PickUpTime"] = currentTime;
     self.order[@"OrderList"] = [[ParseManager sharedManager] parseOrderToString:self.order];
     
+    self.tabBarController.selectedIndex = 3;
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.order saveInBackgroundWithBlock:^(BOOL successed, NSError *error){
-        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }];
 }
 

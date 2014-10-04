@@ -29,6 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"History";
+    
     self.orders = [NSMutableArray array];
     // Do any additional setup after loading the view from its nib.
     
