@@ -6,6 +6,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target "RetailMasterHack" do
 
 pod 'MMDrawerController', '~> 0.5.7'
+pod 'MBProgressHUD', '~> 0.8'
 
 end
 

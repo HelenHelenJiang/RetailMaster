@@ -1,4 +1,5 @@
 PODS:
+  - MBProgressHUD (0.9)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core
     - MMDrawerController/MMDrawerBarButtonItem
@@ -13,9 +14,11 @@ PODS:
     - MMDrawerController/Core
 
 DEPENDENCIES:
+  - MBProgressHUD (~> 0.8)
   - MMDrawerController (~> 0.5.7)
 
 SPEC CHECKSUMS:
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   MMDrawerController: c3ab7a318ddc7e2bcd133139c3161af08c6e1197
 
 COCOAPODS: 0.34.1
