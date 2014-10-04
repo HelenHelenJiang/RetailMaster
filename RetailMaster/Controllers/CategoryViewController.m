@@ -7,12 +7,18 @@
 //
 
 #import "CategoryViewController.h"
+#import "ItemViewController.h"
+#import "CategoryViewCell.h"
 
 @interface CategoryViewController ()
 
 @end
 
+
+
 @implementation CategoryViewController
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    CategoryNames = [[NSArray alloc] initWithObjects:@"Bakery",@"Diary",@"Frozen",@"Fruit",@"Kitchen",@"Raw Meat",@"Sea Food",nil];
+    CategoryImages = [[NSArray alloc] initWithObjects:@"bakery.jpg",@"frozen.jpg",@"kitchen.jpg",@"rawMeat.jpg",@"fruit.jpg",@"seafood.jpg",nil];
     // Do any additional setup after loading the view.
 }
 
@@ -34,6 +42,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return CategoryNames.count;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CategoryCell = @"CategoryID";
+    CategoryViewCell *categoryCell = (CategoryViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryID" forIndexPath:indexPath];
+    categoryCell.CategoryImage.image = [UIImage imageNamed:[CategoryImages objectAtIndex:indexPath.item]];
+    categoryCell.CategoryNameLabel.text = [CategoryNames objectAtIndex:indexPath.item];
+
+    return categoryCell;
+}
+
+
 
 /*
 #pragma mark - Navigation
