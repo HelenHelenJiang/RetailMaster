@@ -285,9 +285,9 @@
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
 				C3C5328F19E0356500C8A340 /* SIMProductViewController.m */,
 				C3153C9419E03E9800C7498A /* CheckoutViewController.h */,
+				C3153C9519E03E9800C7498A /* CheckoutViewController.m */,
 				A4026A7419E04AD700BF648F /* ItemViewController.h */,
 				A4026A7519E04AD700BF648F /* ItemViewController.m */,
-				C3153C9519E03E9800C7498A /* CheckoutViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
