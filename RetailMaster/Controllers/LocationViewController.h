@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LocationViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UITableView *locationTabelView;
 
 @end
