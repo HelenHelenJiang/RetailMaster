@@ -15,6 +15,9 @@
 
 @interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) UIToolbar *datePickToolbar;
+@property (strong, nonatomic) UIDatePicker *datePick;
+
 @end
 
 @implementation CheckoutViewController
@@ -201,8 +204,8 @@
         }
         
         //        Building *item = self.buildings[indexPath.row];
-//        cell.textLabel.text = @"123456789";
-//        cell.detailTextLabel.text = @"1234 Points";
+        //        cell.textLabel.text = @"123456789";
+        //        cell.detailTextLabel.text = @"1234 Points";
         
         //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
@@ -213,7 +216,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //    Department *item = self.departments[indexPath.row];
     //    SubjectsViewController *subjectsVC = [[SubjectsViewController alloc] init];
     //    subjectsVC.department = item;
@@ -223,16 +226,42 @@
         NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:0 inSection:4];
         [[self tableView] scrollToRowAtIndexPath:scrollIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
         
-        UIDatePicker *timePick;
-        timePick = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 340, 0, 0)];
+        if (!self.datePick)
+        {
+            self.datePick = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 340, 0, 0)];
+            
+            self.datePick.backgroundColor = [UIColor whiteColor];
+            self.datePick.datePickerMode =UIDatePickerModeDateAndTime;
+            [self.datePick addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+        }
         
-        timePick.backgroundColor = [UIColor whiteColor];
-        timePick.datePickerMode =UIDatePickerModeDateAndTime;
+        if (!self.datePickToolbar)
+        {
+            self.datePickToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 40)];
+            
+            UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *customItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain    target:self     action:@selector(datePickDonePressed:)];
+            NSArray *toolbarItems = [NSArray arrayWithObjects:spaceItem, customItem, nil];
+            [self.datePickToolbar setItems:toolbarItems];
+        }
         
-        [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
-        
-        [self.view addSubview:timePick];
+        [self.view addSubview:self.datePickToolbar];
+        [self.view addSubview:self.datePick];
     }
+}
+
+- (void)datePickDonePressed:(id)sender
+{
+    [self.datePick removeFromSuperview];
+    [self.datePickToolbar removeFromSuperview];
+}
+
+- (void)dateChanged:(UIDatePicker *)sender
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"hh:mm a"];
+    NSString *currentTime = [dateFormatter stringFromDate:sender.date];
+    NSLog(@"%@", currentTime);
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
