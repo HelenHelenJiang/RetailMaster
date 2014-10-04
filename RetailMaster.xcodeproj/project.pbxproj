@@ -34,6 +34,7 @@
 		C345A03F19E066D600041E63 /* PickupTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A03D19E066D600041E63 /* PickupTimeTableViewCell.xib */; };
 		C345A04319E06ACC00041E63 /* OrderConformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A04119E06ACC00041E63 /* OrderConformationViewController.m */; };
 		C345A04419E06ACC00041E63 /* OrderConformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A04219E06ACC00041E63 /* OrderConformationViewController.xib */; };
+		C345A04819E0741C00041E63 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A04719E0741C00041E63 /* Order.m */; };
 		C3A5884C19E05C8800CDD6EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A5884B19E05C8800CDD6EB /* Foundation.framework */; };
 		C3C5326519E0322C00C8A340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326419E0322C00C8A340 /* main.m */; };
 		C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326719E0322C00C8A340 /* AppDelegate.m */; };
@@ -117,6 +118,8 @@
 		C345A04019E06ACC00041E63 /* OrderConformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderConformationViewController.h; sourceTree = "<group>"; };
 		C345A04119E06ACC00041E63 /* OrderConformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderConformationViewController.m; sourceTree = "<group>"; };
 		C345A04219E06ACC00041E63 /* OrderConformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderConformationViewController.xib; sourceTree = "<group>"; };
+		C345A04619E0741C00041E63 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		C345A04719E0741C00041E63 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		C3A5884B19E05C8800CDD6EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3C5325F19E0322C00C8A340 /* RetailMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C5326319E0322C00C8A340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 			children = (
 				C3153C8B19E03AFF00C7498A /* Item.h */,
 				C3153C8C19E03AFF00C7498A /* Item.m */,
+				C345A04619E0741C00041E63 /* Order.h */,
+				C345A04719E0741C00041E63 /* Order.m */,
 			);
 			name = Model;
 			path = RetailMaster/Model;
@@ -520,6 +525,7 @@
 				C345A03E19E066D600041E63 /* PickupTimeTableViewCell.m in Sources */,
 				C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */,
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
+				C345A04819E0741C00041E63 /* Order.m in Sources */,
 				C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */,
 				A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */,
 				9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */,

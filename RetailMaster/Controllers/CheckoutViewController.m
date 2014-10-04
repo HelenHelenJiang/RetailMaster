@@ -13,6 +13,7 @@
 #import "PickupTimeTableViewCell.h"
 #import "CheckoutPayButtonTableViewCell.h"
 #import "OrderConformationViewController.h"
+#import "Order.h"
 
 @interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -36,12 +37,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Checkout";
+    
     // Do any additional setup after loading the view from its nib.
     self.shoppingLists = [NSMutableArray array];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.pickupDate = [NSDate date];
+    self.pickupDate = [self nextHourDate:[NSDate date]];
     
     //    self.tableView.backgroundColor = [UIColor blackColor];
     
@@ -52,6 +55,25 @@
             [self.tableView reloadData];
         }
     }];
+}
+
+- (NSDate*)nextHourDate:(NSDate*)inDate
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components: NSEraCalendarUnit|NSYearCalendarUnit| NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit fromDate: inDate];
+    [comps setHour: [comps hour]+1]; // Here you may also need to check if it's the last hour of the day
+    return [calendar dateFromComponents:comps];
+}
+
+- (float)getTotalPrice
+{
+    __block float totalPrice = 0;
+    
+    [self.shoppingLists enumerateObjectsUsingBlock:^(Item *item, NSUInteger index, BOOL *stop){
+        totalPrice += [item.price doubleValue];
+    }];
+    
+    return totalPrice;
 }
 
 #pragma mark - Table View
@@ -86,7 +108,7 @@
     switch (section)
     {
         case 0:
-            return self.shoppingLists.count;
+            return self.shoppingLists.count + 1;
         case 1:
             return 1;
         case 2:
@@ -105,6 +127,28 @@
 {
     if (indexPath.section == 0)
     {
+        if (indexPath.row == self.shoppingLists.count)
+        {
+            UITableViewCell *cell;
+            
+            static NSString *cellIdentifier = @"SubtotalCell";
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+            
+            if(cell == nil) {
+                
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+            }
+            
+            //        Building *item = self.buildings[indexPath.row];
+            cell.textLabel.text = @"Total: ";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.02f", [self getTotalPrice]];
+            
+            //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+            return cell;
+        }
+        
         static NSString *CheckOutCellIdentifier = @"CheckOutCellIdentifier";
         CheckoutItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CheckOutCellIdentifier];
         
@@ -113,7 +157,6 @@
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CheckoutItemTableViewCell" owner:self options:nil];
             cell = (CheckoutItemTableViewCell *)[nib objectAtIndex:0];
         }
-        
         
         
         Item *item = self.shoppingLists[indexPath.row];
@@ -125,8 +168,10 @@
         cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", item.price];
         
         //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
         
         return cell;
+        
     }
     else if (indexPath.section == 1)
     {
@@ -249,8 +294,18 @@
         {
             self.datePick = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 340, 0, 0)];
             
+            // One hour from now
+            NSDate *minDate = [[NSDate alloc] initWithTimeIntervalSinceNow:60*60];
+            // 7 Days from now
+            NSDate *maxDate = [[NSDate alloc] initWithTimeIntervalSinceNow:7*24*60*60];
+            
             self.datePick.backgroundColor = [UIColor whiteColor];
+            self.datePick.minuteInterval = 15;
             self.datePick.datePickerMode =UIDatePickerModeDateAndTime;
+            
+            [self.datePick setMinimumDate:minDate];
+            [self.datePick setMaximumDate:maxDate];
+            
             [self.datePick addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
         }
         
@@ -285,6 +340,18 @@
 {
     OrderConformationViewController *orderVC = [[OrderConformationViewController alloc] init];
     
+    orderVC.orderedItems = self.shoppingLists;
+    
+    Order *order = [Order object];
+    order.orderedObjects = self.shoppingLists;
+    order.orderPickupDate = self.pickupDate;
+    order.orderPickupLocation = @"Toronto?";
+    order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
+    [order saveInBackground];
+    
+    orderVC.order = order;
+    
+    [self.navigationController pushViewController:orderVC animated:YES];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

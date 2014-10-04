@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "Item.h"
+#import "Order.h"
 
 #import "ParseManager.h"
 
@@ -22,6 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Parse class
     [Item registerSubclass];
+    [Order registerSubclass];
     
     // Override point for customization after application launch.
     [Parse setApplicationId:@"wS8MIO5z0tCiJyIIU7XaBtNiwcyLPdjJkqIetfHP"

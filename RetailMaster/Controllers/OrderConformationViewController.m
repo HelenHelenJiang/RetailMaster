@@ -7,8 +7,10 @@
 //
 
 #import "OrderConformationViewController.h"
+#import "CheckoutItemTableViewCell.h"
+#import "Item.h"
 
-@interface OrderConformationViewController ()
+@interface OrderConformationViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -23,9 +25,31 @@
     return self;
 }
 
+- (float)getTotalPrice
+{
+    __block float totalPrice = 0;
+    
+    [self.orderedItems enumerateObjectsUsingBlock:^(Item *item, NSUInteger index, BOOL *stop){
+        totalPrice += [item.price doubleValue];
+    }];
+    
+    return totalPrice;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"Confirmation";
+    
+    self.tableview.dataSource = self;
+    self.tableview.delegate = self;
+    
+    self.confirmButton.layer.cornerRadius = 5.0f;
+    
+    [self.tableview setTableFooterView:self.tableViewBottomView];
+    
+    self.totalPriceLabel.text = [NSString stringWithFormat:@"$%0.2f", [self getTotalPrice]];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,6 +57,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)hidesBottomBarWhenPushed
+{
+    return YES;
 }
 
 /*
@@ -45,5 +74,142 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 3;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    switch (section)
+    {
+        case 0:
+            return self.orderedItems.count;
+        case 1:
+            return 3;
+        case 2:
+            return 0;
+        default:
+            return 0;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0)
+    {
+        static NSString *CheckOutCellIdentifier = @"CheckOutCellIdentifier";
+        CheckoutItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CheckOutCellIdentifier];
+        
+        if (cell == nil)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CheckoutItemTableViewCell" owner:self options:nil];
+            cell = (CheckoutItemTableViewCell *)[nib objectAtIndex:0];
+        }
+        
+        
+        
+        Item *item = self.orderedItems[indexPath.row];
+        //    cell.textLabel.text = item.itemDescription;
+        //    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
+        
+        cell.itemNameLabel.text = item.name;
+        cell.orderQuantityLabel.text = @"1";
+        cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", item.price];
+        
+        //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }
+    else if (indexPath.section == 1)
+    {
+        UITableViewCell *cell;
+        
+        static NSString *cellIdentifier = @"PickupDate";
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if(cell == nil) {
+            
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        }
+        
+        if (indexPath.row == 0)
+        {
+            //        Building *item = self.buildings[indexPath.row];
+            cell.textLabel.text = @"Pickup Date: ";
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"EEEE, MMM d, hh:mm a"];
+            NSString *currentTime = [dateFormatter stringFromDate:self.self.order.orderPickupDate];
+            
+            cell.detailTextLabel.text = currentTime;
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0f];
+        }
+        else if (indexPath.row == 1)
+        {
+            cell.textLabel.text = @"Pickup Location: ";
+            cell.detailTextLabel.text = self.order.orderPickupLocation;
+        }
+        else
+        {
+            cell.textLabel.text = @"Order #: ";
+            cell.detailTextLabel.text = [self randomStringWithLength:7];
+        }
+        
+        return cell;
+    }
+    else
+    {
+        UITableViewCell *cell;
+        
+        static NSString *cellIdentifier = @"OrderNumber";
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if(cell == nil) {
+            
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        }
+        
+        //        Building *item = self.buildings[indexPath.row];
+        cell.textLabel.text = @"Order #: ";
+        cell.detailTextLabel.text = [self randomStringWithLength:7];
+        
+        //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        return cell;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //    Department *item = self.departments[indexPath.row];
+    //    SubjectsViewController *subjectsVC = [[SubjectsViewController alloc] init];
+    //    subjectsVC.department = item;
+    //    [self.navigationController pushViewController:subjectsVC animated:YES];
+}
+
+- (IBAction)confirmBtnPressed:(id)sender
+{
+    
+}
+
+NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+- (NSString *)randomStringWithLength:(int)len
+{
+    
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+    
+    for (int i=0; i<len; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length]) % [letters length]]];
+    }
+    
+    return randomString;
+}
 
 @end
