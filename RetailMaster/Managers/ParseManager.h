@@ -16,4 +16,8 @@
 
 - (void)fetchItemsWithCatagory:(NSString *)catagory Limit:(NSInteger)limit Skip:(NSInteger)skip Completion:(void (^)(BOOL success, NSArray *items))completion;
 
+- (void)fetchOrdersFromUserID:(NSString *)userid Limit:(NSInteger)limit Skip:(NSInteger)skip Completion:(void (^)(BOOL success, NSArray *orders))completion;
+
+- (NSString *)randomStringWithLength:(int)len;
+
 @end

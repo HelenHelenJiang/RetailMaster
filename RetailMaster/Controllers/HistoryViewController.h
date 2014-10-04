@@ -11,5 +11,6 @@
 @interface HistoryViewController : UIViewController
 
 @property (nonatomic, strong) NSMutableArray *orders;
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
 
 @end
