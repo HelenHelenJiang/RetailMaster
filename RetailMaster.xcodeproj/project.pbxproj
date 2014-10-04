@@ -11,6 +11,10 @@
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
 		C3153C9319E03BB800C7498A /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9219E03BB800C7498A /* ParseManager.m */; };
+		C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9519E03E9800C7498A /* CheckoutViewController.m */; };
+		C3153C9819E03E9800C7498A /* CheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3153C9619E03E9800C7498A /* CheckoutViewController.xib */; };
+		C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */; };
+		C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */; };
 		C3C5326519E0322C00C8A340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326419E0322C00C8A340 /* main.m */; };
 		C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326719E0322C00C8A340 /* AppDelegate.m */; };
 		C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326A19E0322C00C8A340 /* ViewController.m */; };
@@ -57,6 +61,12 @@
 		C3153C8F19E03B9E00C7498A /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		C3153C9119E03BB800C7498A /* ParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseManager.h; sourceTree = "<group>"; };
 		C3153C9219E03BB800C7498A /* ParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseManager.m; sourceTree = "<group>"; };
+		C3153C9419E03E9800C7498A /* CheckoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutViewController.h; sourceTree = "<group>"; };
+		C3153C9519E03E9800C7498A /* CheckoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutViewController.m; sourceTree = "<group>"; };
+		C3153C9619E03E9800C7498A /* CheckoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutViewController.xib; sourceTree = "<group>"; };
+		C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutItemTableViewCell.h; sourceTree = "<group>"; };
+		C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutItemTableViewCell.m; sourceTree = "<group>"; };
+		C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutItemTableViewCell.xib; sourceTree = "<group>"; };
 		C3C5325F19E0322C00C8A340 /* RetailMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C5326319E0322C00C8A340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C5326419E0322C00C8A340 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -175,6 +185,16 @@
 			path = RetailMaster/Model;
 			sourceTree = "<group>";
 		};
+		C3153C9919E0403900C7498A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */,
+				C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */,
+				C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C3C5325619E0322C00C8A340 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +221,7 @@
 		C3C5326119E0322C00C8A340 /* RetailMaster */ = {
 			isa = PBXGroup;
 			children = (
+				C3153C9919E0403900C7498A /* Views */,
 				C3C5328D19E0356500C8A340 /* Controllers */,
 				C3C5326619E0322C00C8A340 /* AppDelegate.h */,
 				C3C5326719E0322C00C8A340 /* AppDelegate.m */,
@@ -257,6 +278,9 @@
 			children = (
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
 				C3C5328F19E0356500C8A340 /* SIMProductViewController.m */,
+				C3153C9419E03E9800C7498A /* CheckoutViewController.h */,
+				C3153C9519E03E9800C7498A /* CheckoutViewController.m */,
+				C3153C9619E03E9800C7498A /* CheckoutViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -346,6 +370,8 @@
 				C3C5328B19E0337600C8A340 /* Simplify.bundle in Resources */,
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
+				C3153C9819E03E9800C7498A /* CheckoutViewController.xib in Resources */,
+				C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */,
 				C3C5327019E0322C00C8A340 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */,
 				C3153C8D19E03AFF00C7498A /* Item.m in Sources */,
+				C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */,
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
 				C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */,
 				C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */,

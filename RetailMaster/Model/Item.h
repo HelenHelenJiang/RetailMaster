@@ -19,4 +19,6 @@
 @property (retain) NSString *catagory;
 @property (retain) NSString *imageURL;
 
+@property (nonatomic) NSUInteger orderCount;
+
 @end
