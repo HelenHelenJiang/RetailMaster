@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Order.h"
 
 @interface OrderConformationViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIView *tableViewBottomView;
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
+@property (strong, nonatomic)  NSMutableArray *orderedItems;
+@property (strong, nonatomic)  Order *order;
+@property (strong, nonatomic) IBOutlet UIButton *confirmButton;
+@property (strong, nonatomic) IBOutlet UILabel *totalPriceLabel;
 
 @end
