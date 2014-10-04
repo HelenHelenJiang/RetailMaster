@@ -10,4 +10,8 @@
 
 @interface CheckoutItemTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *itemNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *orderQuantityLabel;
+@property (strong, nonatomic) IBOutlet UILabel *orderPriceLabel;
+
 @end

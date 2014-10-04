@@ -9,6 +9,7 @@
 #import "CheckoutViewController.h"
 #import "Item.h"
 #import "ParseManager.h"
+#import "CheckoutItemTableViewCell.h"
 
 @interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -48,41 +49,59 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = @"Shopping List";
+            break;
+        case 1:
+            sectionName = @"Pickup Time";
+            break;
+        default:
+            sectionName = @"";
+            break;
+    }
+    return sectionName;
     return self.shoppingLists.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    static NSString *CommentCellIdentifier = @"RankingCellIdentifier";
-    //    RankingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CommentCellIdentifier];
-    //
-    //    if (cell == nil)
-    //    {
-    //        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RankingTableViewCell" owner:self options:nil];
-    //        cell = (RankingTableViewCell *)[nib objectAtIndex:0];
-    //    }
-    //
-    UITableViewCell *cell;
-    
-    static NSString *cellIdentifier = @"Cell";
-    
-    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if(cell == nil) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-    }
+      static NSString *CheckOutCellIdentifier = @"CheckOutCellIdentifier";
+      CheckoutItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CheckOutCellIdentifier];
+  
+      if (cell == nil)
+      {
+          NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CheckoutItemTableViewCell" owner:self options:nil];
+          cell = (CheckoutItemTableViewCell *)[nib objectAtIndex:0];
+      }
+  
+//    UITableViewCell *cell;
+//    
+//    static NSString *cellIdentifier = @"Cell";
+//    
+//    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+//    
+//    if(cell == nil) {
+//        
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+//    }
     
     Item *item = self.shoppingLists[indexPath.row];
-    cell.textLabel.text = item.itemDescription;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
+//    cell.textLabel.text = item.itemDescription;
+//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.itemNameLabel.text = item.name;
+    cell.orderQuantityLabel.text = @"1";
+    cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", item.price];
+    
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
