@@ -8,6 +8,7 @@
 
 #import "ParseManager.h"
 #import "Item.h"
+#import "Order.h"
 
 @implementation ParseManager
 
@@ -59,6 +60,41 @@
                 completion(NO, nil);
         }
     }];
+}
+
+- (void)fetchOrdersFromUserID:(NSString *)userid Limit:(NSInteger)limit Skip:(NSInteger)skip Completion:(void (^)(BOOL success, NSArray *orders))completion
+{
+    PFQuery *query = [PFQuery queryWithClassName:[Order parseClassName]];
+    //    [query orderByDescending:@"termId"];
+//    [query whereKey:@"catagory" equalTo:catagory];
+//    query.limit = limit;
+//    query.skip = skip;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"Successfully retrieved %lu orders", (unsigned long)objects.count);
+            if (completion)
+                completion(YES, objects);
+            
+        } else {
+            NSLog(@"Error In Fetch items: %@ %@", error, [error userInfo]);
+            if (completion)
+                completion(NO, nil);
+        }
+    }];
+}
+
+NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+- (NSString *)randomStringWithLength:(int)len
+{
+    
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+    
+    for (int i=0; i<len; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length]) % [letters length]]];
+    }
+    
+    return randomString;
 }
 
 @end

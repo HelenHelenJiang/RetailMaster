@@ -7,8 +7,11 @@
 //
 
 #import "HistoryViewController.h"
+#import "Order.h"
+#import "OrderHistoryTableViewCell.h"
+#import "ParseManager.h"
 
-@interface HistoryViewController ()
+@interface HistoryViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -26,24 +29,61 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.orders = [NSMutableArray array];
     // Do any additional setup after loading the view from its nib.
+    
+    [[ParseManager sharedManager] fetchOrdersFromUserID:nil Limit:100 Skip:0 Completion:^(BOOL success, NSArray *objects){
+        self.orders = [objects mutableCopy];
+        [self.tableview reloadData];
+    }];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - Table View
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return 145.0f;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.orders.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"CellIdentifier";
+    OrderHistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"OrderHistoryTableViewCell" owner:self options:nil];
+        cell = (OrderHistoryTableViewCell *)[nib objectAtIndex:0];
+    }
+    
+    Order *order = self.orders[indexPath.row];
+    
+    cell.orderNumberLabel.text = order.orderNumber;
+    cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", order.orderPrice];
+    cell.orderPickupLocationLabel.text = order.orderPickupLocation;
+    
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //    Department *item = self.departments[indexPath.row];
+    //    SubjectsViewController *subjectsVC = [[SubjectsViewController alloc] init];
+    //    subjectsVC.department = item;
+    //    [self.navigationController pushViewController:subjectsVC animated:YES];
+}
 
 @end

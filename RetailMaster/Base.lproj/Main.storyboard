@@ -123,8 +123,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="dwn-SR-N1m">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CVv-gD-D8h"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jJs-pe-fKG"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CVv-gD-D8h">
+                            <connections>
+                                <action selector="cancelEvent:" destination="ixP-GS-XoS" id="zvu-Co-8C5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jJs-pe-fKG">
+                            <connections>
+                                <action selector="saveEvent:" destination="ixP-GS-XoS" id="Rg2-rS-pgS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsZ-qx-BZp" userLabel="First Responder" sceneMemberID="firstResponder"/>

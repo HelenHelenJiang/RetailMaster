@@ -10,6 +10,8 @@
 #import "RegisterTableViewCell.h"
 @interface RegisterViewController ()
 
+@property (nonatomic, strong) NSMutableArray *nameTitleArray;
+
 @end
 
 @implementation RegisterViewController
@@ -27,6 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.nameTitleArray = [[NSMutableArray alloc] initWithObjects:@"First Name",@"Last Name",@"Address",@"City",@"Postal",@"Phone",nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +42,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;    //count number of row from counting array hear cataGorry is An Array
+    return [self.nameTitleArray count];    //count number of row from counting array hear cataGorry is An Array
 }
 
 
@@ -54,9 +58,20 @@
         cell = [[RegisterTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:MyIdentifier];
     }
-    
-    cell.catLabel.text = @"test";
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.catLabel.text = [self.nameTitleArray objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (IBAction)cancelEvent:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+- (IBAction)saveEvent:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 

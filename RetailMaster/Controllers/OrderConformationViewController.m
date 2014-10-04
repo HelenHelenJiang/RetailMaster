@@ -156,7 +156,7 @@
         else
         {
             cell.textLabel.text = @"Order #: ";
-            cell.detailTextLabel.text = [self randomStringWithLength:7];
+            cell.detailTextLabel.text = self.order.orderNumber;
         }
         
         return cell;
@@ -176,7 +176,7 @@
         
         //        Building *item = self.buildings[indexPath.row];
         cell.textLabel.text = @"Order #: ";
-        cell.detailTextLabel.text = [self randomStringWithLength:7];
+        cell.detailTextLabel.text = self.order.orderNumber;
         
         //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
@@ -198,18 +198,6 @@
     
 }
 
-NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-- (NSString *)randomStringWithLength:(int)len
-{
-    
-    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
-    
-    for (int i=0; i<len; i++) {
-        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length]) % [letters length]]];
-    }
-    
-    return randomString;
-}
 
 @end
