@@ -36,7 +36,9 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     [textField resignFirstResponder];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:textField.text forKey:self.catLabel.text];
+    NSMutableArray *array = [[defaults objectForKey:@"customerInfo"] mutableCopy];
+    [array replaceObjectAtIndex:self.indexPath.row withObject:textField.text];
+    [defaults setObject:array forKey:@"customerInfo"];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

@@ -59,7 +59,26 @@
                                        reuseIdentifier:MyIdentifier];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     cell.catLabel.text = [self.nameTitleArray objectAtIndex:indexPath.row];
+    cell.indexPath = indexPath;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL isRegistered = [defaults objectForKey:@"isRegistered"];
+    
+    if (isRegistered) {
+        
+        NSMutableArray *customerInfo = [defaults objectForKey:@"customerInfo"];
+        NSString *content = [customerInfo objectAtIndex:indexPath.row];
+        cell.inputTextField.text = content;
+        
+    } else {
+        
+        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:@[@"",@"",@"",@"",@"",@""]];
+        [defaults setObject:array forKey:@"customerInfo"];
+        
+    }
+    
     return cell;
 }
 
@@ -70,6 +89,8 @@
 }
 - (IBAction)saveEvent:(id)sender {
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"isRegistered"];
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
