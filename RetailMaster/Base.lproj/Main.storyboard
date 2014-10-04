@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Product View Controller-->
@@ -44,13 +44,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nOx-a7-QzL">
-                                <rect key="frame" x="100" y="140" width="120" height="30"/>
+                                <rect key="frame" x="100" y="151" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kE5-Ad-Dye" kind="modal" id="BHJ-Lk-ZsU"/>
+                                    <segue destination="7cr-fG-JFz" kind="modal" id="TCF-9f-mWA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,6 +65,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKt-zB-tae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="991" y="-1055"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Etv-sH-SBA">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="7cr-fG-JFz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nUC-me-e7A">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7YL-Ga-xB4" kind="relationship" relationship="rootViewController" id="HG1-e8-HE3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVa-s4-n2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="-1055"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="62f-bE-iN2">
+            <objects>
+                <viewController id="7YL-Ga-xB4" customClass="RegisterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zJj-0I-o9z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M5Z-sc-dK5">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Wwp-Ij-XiN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0YB-aV-OSL"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSu-7g-XKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="-1055"/>
         </scene>
         <!--Navigation Controller - Home-->
         <scene sceneID="RDT-xI-dpL">
@@ -81,20 +114,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BU-K4-lUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="579" y="-1055"/>
-        </scene>
-        <!--Register View Controller-->
-        <scene sceneID="yt0-kg-uUh">
-            <objects>
-                <viewController id="kE5-Ad-Dye" customClass="RegisterViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MT5-Rf-z2b">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v7b-hm-Kj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1436" y="-1049"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8CV-YO-eBe">
@@ -240,7 +259,7 @@
                     <tabBarItem key="tabBarItem" title="Shopping" id="Tr8-qV-Et2"/>
                     <navigationItem key="navigationItem" id="2xf-MC-mGF"/>
                     <connections>
-                        <segue destination="0ES-jm-OXX" kind="push" id="ahg-JG-aUb"/>
+                        <segue destination="0ES-jm-OXX" kind="push" identifier="CategoryToItem" id="ahg-JG-aUb"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukv-VB-qoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -304,7 +323,7 @@
                     <tabBarItem key="tabBarItem" title="Shop" id="VhB-7V-Rov"/>
                     <navigationItem key="navigationItem" id="Dec-Yu-YqZ"/>
                     <connections>
-                        <segue destination="VyD-Yb-rLI" kind="push" id="IIZ-6j-xk5"/>
+                        <segue destination="VyD-Yb-rLI" kind="push" identifier="ItemToDetail" id="IIZ-6j-xk5"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFy-KI-0Hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
