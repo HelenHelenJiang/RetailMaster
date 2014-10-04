@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B166A2619E095FE00BA4072 /* LocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B166A2519E095FE00BA4072 /* LocationVC.m */; };
 		9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1E401E19E05A79008D8349 /* WelcomeViewController.m */; };
 		9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BA19E0777E008732AA /* RegisterViewController.m */; };
 		9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */; };
@@ -84,12 +85,14 @@
 		36F973BDB82A946BEEA8476A /* Pods-RetailMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailMaster/Pods-RetailMaster.release.xcconfig"; sourceTree = "<group>"; };
 		5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RetailMaster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B144EFB121791A0400F8BC5 /* Pods-RetailMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailMaster/Pods-RetailMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		9B166A2419E095FE00BA4072 /* LocationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationVC.h; path = ../Views/LocationVC.h; sourceTree = "<group>"; };
+		9B166A2519E095FE00BA4072 /* LocationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationVC.m; path = ../Views/LocationVC.m; sourceTree = "<group>"; };
 		9B1E401D19E05A79008D8349 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = ../WelcomeViewController.h; sourceTree = "<group>"; };
 		9B1E401E19E05A79008D8349 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = ../WelcomeViewController.m; sourceTree = "<group>"; };
 		9BADE8B919E0777E008732AA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		9BADE8BA19E0777E008732AA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewCell.h; sourceTree = "<group>"; };
-		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewCell.m; sourceTree = "<group>"; };
+		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterTableViewCell.h; path = ../Controllers/RegisterTableViewCell.h; sourceTree = "<group>"; };
+		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterTableViewCell.m; path = ../Controllers/RegisterTableViewCell.m; sourceTree = "<group>"; };
 		A4026A7419E04AD700BF648F /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
 		A4026A7519E04AD700BF648F /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
 		A4026A7719E04AF400BF648F /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 				C345A05919E0852A00041E63 /* OrderHistoryTableViewCell.h */,
 				C345A05A19E0852A00041E63 /* OrderHistoryTableViewCell.m */,
 				C345A05B19E0852A00041E63 /* OrderHistoryTableViewCell.xib */,
+				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
+				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -376,13 +381,13 @@
 		C3C5328D19E0356500C8A340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9B166A2419E095FE00BA4072 /* LocationVC.h */,
+				9B166A2519E095FE00BA4072 /* LocationVC.m */,
 				C345A05419E0849E00041E63 /* HistoryViewController.h */,
 				C345A05519E0849E00041E63 /* HistoryViewController.m */,
 				C345A05619E0849E00041E63 /* HistoryViewController.xib */,
 				9BADE8B919E0777E008732AA /* RegisterViewController.h */,
 				9BADE8BA19E0777E008732AA /* RegisterViewController.m */,
-				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
-				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
 				9B1E401D19E05A79008D8349 /* WelcomeViewController.h */,
 				9B1E401E19E05A79008D8349 /* WelcomeViewController.m */,
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
@@ -567,6 +572,7 @@
 				A4026A7C19E04CB700BF648F /* ItemDetailView.m in Sources */,
 				9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */,
 				9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */,
+				9B166A2619E095FE00BA4072 /* LocationVC.m in Sources */,
 				9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */,
 				C3C5326B19E0322C00C8A340 /* ViewController.m in Sources */,
 				C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */,
