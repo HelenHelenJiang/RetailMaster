@@ -8,8 +8,9 @@
 
 #import "CheckoutViewController.h"
 #import "Item.h"
+#import "ParseManager.h"
 
-@interface CheckoutViewController ()
+@interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -29,6 +30,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.shoppingLists = [NSMutableArray array];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+//    self.tableView.backgroundColor = [UIColor blackColor];
+    
+    [[ParseManager sharedManager] fetchItemsWithCatagory:@"Bakery" Limit:10 Skip:0 Completion:^(BOOL success, NSArray *items){
+        if (success)
+        {
+            self.shoppingLists = [items mutableCopy];
+            [self.tableView reloadData];
+        }
+    }];
 }
 
 #pragma mark - Table View
@@ -81,6 +94,24 @@
 //    SubjectsViewController *subjectsVC = [[SubjectsViewController alloc] init];
 //    subjectsVC.department = item;
 //    [self.navigationController pushViewController:subjectsVC animated:YES];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = @"Shopping List";
+            break;
+        case 1:
+            sectionName = @"Pickup Time";
+            break;
+        default:
+            sectionName = @"";
+            break;
+    }
+    return sectionName;
 }
 
 @end

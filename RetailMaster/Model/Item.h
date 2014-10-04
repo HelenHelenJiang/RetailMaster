@@ -18,6 +18,8 @@
 @property (retain) NSString *itemDescription;
 @property (retain) NSString *catagory;
 @property (retain) NSString *imageURL;
+@property (retain) NSString *name;
+
 
 @property (nonatomic) NSUInteger orderCount;
 

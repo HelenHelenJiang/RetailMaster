@@ -17,6 +17,9 @@
 @dynamic nutritionFact;
 @dynamic catagory;
 @dynamic imageURL;
+@dynamic name;
+
+@synthesize orderCount;
 
 + (NSString *)parseClassName
 {
