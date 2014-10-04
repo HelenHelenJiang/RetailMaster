@@ -285,6 +285,9 @@
 {
     OrderConformationViewController *orderVC = [[OrderConformationViewController alloc] init];
     
+    orderVC.orderedItems = self.shoppingLists;
+    
+    [self.navigationController pushViewController:orderVC animated:YES];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

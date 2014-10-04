@@ -7,8 +7,10 @@
 //
 
 #import "OrderConformationViewController.h"
+#import "CheckoutItemTableViewCell.h"
+#import "Item.h"
 
-@interface OrderConformationViewController ()
+@interface OrderConformationViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -26,6 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tableview.dataSource = self;
+    self.tableview.delegate = self;
+    
+    [self.tableview setTableFooterView:self.tableViewBottomView];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,6 +40,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)hidesBottomBarWhenPushed
+{
+    return YES;
 }
 
 /*
@@ -45,5 +57,51 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.orderedItems.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CheckOutCellIdentifier = @"CheckOutCellIdentifier";
+    CheckoutItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CheckOutCellIdentifier];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CheckoutItemTableViewCell" owner:self options:nil];
+        cell = (CheckoutItemTableViewCell *)[nib objectAtIndex:0];
+    }
+    
+    
+    
+    Item *item = self.orderedItems[indexPath.row];
+    //    cell.textLabel.text = item.itemDescription;
+    //    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
+    
+    cell.itemNameLabel.text = item.name;
+    cell.orderQuantityLabel.text = @"1";
+    cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", item.price];
+    
+    //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //    Department *item = self.departments[indexPath.row];
+    //    SubjectsViewController *subjectsVC = [[SubjectsViewController alloc] init];
+    //    subjectsVC.department = item;
+    //    [self.navigationController pushViewController:subjectsVC animated:YES];
+}
+
 
 @end

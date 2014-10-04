@@ -10,4 +10,8 @@
 
 @interface OrderConformationViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *tableViewBottomView;
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
+@property (strong, nonatomic)  NSMutableArray *orderedItems;
+
 @end
