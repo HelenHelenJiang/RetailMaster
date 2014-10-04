@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CatagoriesViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

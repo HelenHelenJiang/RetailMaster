@@ -72,6 +72,8 @@
 		C3C532A819E036ED00C8A340 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C532A719E036ED00C8A340 /* SystemConfiguration.framework */; };
 		C3C532AA19E036F100C8A340 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C532A919E036F100C8A340 /* Social.framework */; };
 		C3C532AC19E036FF00C8A340 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C532AB19E036FF00C8A340 /* Accounts.framework */; };
+		C3E01B5619E0B39C009AE24E /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E01B5419E0B39C009AE24E /* CategoryCollectionViewCell.m */; };
+		C3E01B5719E0B39C009AE24E /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E01B5519E0B39C009AE24E /* CategoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +183,9 @@
 		C3C532A719E036ED00C8A340 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C3C532A919E036F100C8A340 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C3C532AB19E036FF00C8A340 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		C3E01B5319E0B39C009AE24E /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		C3E01B5419E0B39C009AE24E /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
+		C3E01B5519E0B39C009AE24E /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +299,9 @@
 				C345A06319E096E300041E63 /* ItemsViewTableViewCell.h */,
 				C345A06419E096E300041E63 /* ItemsViewTableViewCell.m */,
 				C345A06519E096E300041E63 /* ItemsViewTableViewCell.xib */,
+				C3E01B5319E0B39C009AE24E /* CategoryCollectionViewCell.h */,
+				C3E01B5419E0B39C009AE24E /* CategoryCollectionViewCell.m */,
+				C3E01B5519E0B39C009AE24E /* CategoryCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -521,6 +529,7 @@
 				A4026A8B19E05E3000BF648F /* fruit.jpg in Resources */,
 				C345A03A19E0667300041E63 /* CheckoutPayButtonTableViewCell.xib in Resources */,
 				A4026A8D19E05E9400BF648F /* frozen.jpg in Resources */,
+				C3E01B5719E0B39C009AE24E /* CategoryCollectionViewCell.xib in Resources */,
 				C345A05D19E0852A00041E63 /* OrderHistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +590,7 @@
 				C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */,
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
 				C345A04819E0741C00041E63 /* Order.m in Sources */,
+				C3E01B5619E0B39C009AE24E /* CategoryCollectionViewCell.m in Sources */,
 				9B63F4E619E0B12E001C2074 /* LocationViewController.m in Sources */,
 				C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */,
 				C345A06119E093A400041E63 /* ItemsViewController.m in Sources */,
