@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
@@ -142,7 +143,7 @@
         <scene sceneID="RDT-xI-dpL">
             <objects>
                 <navigationController definesPresentationContext="YES" id="L0y-sz-H4a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="5Qf-5M-mxW"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeIcon" id="5Qf-5M-mxW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tpe-u5-KG6">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -185,7 +186,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="lsd-4M-DZR"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon" id="lsd-4M-DZR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUk-UP-9EM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -195,7 +196,7 @@
         <scene sceneID="OYZ-Ag-6mw">
             <objects>
                 <navigationController id="NsW-Qm-qyr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="History" id="lFE-yU-bZV"/>
+                    <tabBarItem key="tabBarItem" title="History" image="HistoryIcon" id="lFE-yU-bZV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qij-e7-ifb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -248,7 +249,7 @@
         <scene sceneID="sdC-fp-pKq">
             <objects>
                 <navigationController id="43V-mg-7D0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Checkout" id="PhJ-ov-6gd"/>
+                    <tabBarItem key="tabBarItem" title="Checkout" image="CheckoutIcon" id="PhJ-ov-6gd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gle-14-1tG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -265,7 +266,7 @@
         <scene sceneID="F5F-xW-70y">
             <objects>
                 <navigationController definesPresentationContext="YES" id="5d3-sx-DFP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shopping" id="VZH-N1-8PX"/>
+                    <tabBarItem key="tabBarItem" title="Shopping" image="ShopIcon" id="VZH-N1-8PX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DsN-Dw-WUa">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -533,6 +534,13 @@
             <point key="canvasLocation" x="1915" y="-402"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CheckoutIcon" width="24" height="24"/>
+        <image name="HistoryIcon" width="24" height="22"/>
+        <image name="HomeIcon" width="24" height="24"/>
+        <image name="SettingsIcon" width="24" height="24"/>
+        <image name="ShopIcon" width="24" height="24"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
