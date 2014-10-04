@@ -60,19 +60,16 @@
     locationLabel.text = @"Location:";
     [self.view addSubview:locationLabel];
     
-    UIButton *locationButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 310, 140, 50)];
-    locationButton.titleLabel.font = [UIFont systemFontOfSize:10];
-    [locationButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    [locationButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
-    [self.view addSubview:locationButton];
+    self.setLocationButton.titleLabel.font = [UIFont systemFontOfSize:10];
+    [self.setLocationButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [self.setLocationButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
+    [self.view addSubview:self.setLocationButton];
     
     if (isRegistered) {
-        [locationButton setTitle:@"LOL" forState:UIControlStateNormal];
+        [self.setLocationButton setTitle:@"LOL" forState:UIControlStateNormal];
     } else {
-        [locationButton setTitle:@"pick a retail store location" forState:UIControlStateNormal];
+        [self.setLocationButton setTitle:@"pick a retail store location" forState:UIControlStateNormal];
     }
-    
-    [self.view addSubview:locationButton];
     
 }
 
