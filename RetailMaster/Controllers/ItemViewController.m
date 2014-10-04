@@ -24,6 +24,7 @@
 @synthesize PriceLabels;
 @synthesize ImageURLs;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,7 +50,6 @@
         }
     }];*/
     
-    catName = @"Bakery";
     [self queryByClassName:catName];
 }
 

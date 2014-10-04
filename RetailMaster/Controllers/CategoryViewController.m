@@ -65,7 +65,7 @@
     if ([segue.identifier isEqualToString:@"CategoryToItem"]) {
         NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
         ItemViewController *itemController = [segue destinationViewController];
-//  itemController.catName ;
+        itemController.catName = [CategoryNames objectAtIndex:selectedIndexPath.row];
     }
 }
 

@@ -15,5 +15,4 @@
 @property (strong,nonatomic) NSMutableArray *PriceLabels;
 @property (strong,nonatomic) NSMutableArray *ImageURLs;
 
-
 @end
