@@ -61,6 +61,8 @@
             return 44.0f;
         case 3:
             return 44.0f;
+        case 4:
+            return 60.0f;
         default:
             return 0;
     }
@@ -68,7 +70,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -83,6 +85,8 @@
         case 2:
             return 1;
         case 3:
+            return 1;
+        case 4:
             return 1;
         default:
             return 0;
@@ -183,6 +187,27 @@
         
         return cell;
     }
+    else if (indexPath.section == 4)
+    {
+        UITableViewCell *cell;
+        
+        static NSString *cellIdentifier = @"Cell";
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if(cell == nil) {
+            
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        }
+        
+        //        Building *item = self.buildings[indexPath.row];
+//        cell.textLabel.text = @"123456789";
+//        cell.detailTextLabel.text = @"1234 Points";
+        
+        //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        return cell;
+    }
     return nil;
 }
 
@@ -193,7 +218,21 @@
     //    SubjectsViewController *subjectsVC = [[SubjectsViewController alloc] init];
     //    subjectsVC.department = item;
     //    [self.navigationController pushViewController:subjectsVC animated:YES];
-    
+    if (indexPath.section == 1)
+    {
+        NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:0 inSection:4];
+        [[self tableView] scrollToRowAtIndexPath:scrollIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        
+        UIDatePicker *timePick;
+        timePick = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 340, 0, 0)];
+        
+        timePick.backgroundColor = [UIColor whiteColor];
+        timePick.datePickerMode =UIDatePickerModeDateAndTime;
+        
+        [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+        
+        [self.view addSubview:timePick];
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
