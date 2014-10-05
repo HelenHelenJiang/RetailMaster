@@ -79,6 +79,23 @@
 
 - (void)addToCart:(id)sender
 {
+    self.addToCartImageIcon.frame = CGRectMake(260, 39, 40, 40);
+    self.addToCartImageIcon.hidden = NO;
+    
+    [UIView animateWithDuration:0.5 animations:^(){
+        CGRect frame = self.addToCartImageIcon.frame;
+        frame.size.height = 22.0f;
+        frame.size.width = 22.0f;
+        frame.origin.x += 9.0f;
+        frame.origin.y += 8.0f;
+        self.addToCartImageIcon.frame = frame;
+    }completion:^(BOOL finished){
+        if (finished)
+        {
+            self.addToCartImageIcon.hidden = YES;
+        }
+    }];
+    
     [[DataManager sharedManager] addToShoppingList:self.myObject];
 }
 

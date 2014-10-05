@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *headerNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *headerPriceLabel;
 @property (weak, nonatomic) IBOutlet UIButton *addToCartButton;
+@property (strong, nonatomic) IBOutlet UIImageView *addToCartImageIcon;
 
 @end
