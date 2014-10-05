@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view.
     
     UILabel *welcomeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 320, 20)];
-    [self.view addSubview:welcomeLabel];
+    // [self.view addSubview:welcomeLabel];
     welcomeLabel.textColor  = [UIColor orangeColor];
     welcomeLabel.backgroundColor = [UIColor whiteColor];
     
@@ -45,20 +45,20 @@
         
     } else {
         
-        welcomeLabel.text = @"Welcome to Retail Master!";
+        // welcomeLabel.text = @"Welcome to Retail Master!";
         
     }
     
     [self.button setTitle:@"Register" forState:UIControlStateNormal];
     [self.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.button.backgroundColor= [UIColor orangeColor];
-    self.button.layer.cornerRadius = 10;
+    self.button.layer.cornerRadius = 5.0f;
     [self.view addSubview:self.button];
     
     UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 300, 80, 30)];
     locationLabel.textColor = [UIColor orangeColor];
     locationLabel.text = @"Location:";
-    [self.view addSubview:locationLabel];
+    //[self.view addSubview:locationLabel];
     
     self.setLocationButton.titleLabel.font = [UIFont systemFontOfSize:10];
     [self.setLocationButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
