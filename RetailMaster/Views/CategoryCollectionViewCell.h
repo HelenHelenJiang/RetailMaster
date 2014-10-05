@@ -11,5 +11,6 @@
 @interface CategoryCollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *catImageView;
+@property (strong, nonatomic) IBOutlet UILabel *catNameLabel;
 
 @end
