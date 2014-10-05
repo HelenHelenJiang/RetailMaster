@@ -56,6 +56,7 @@
 		C345A06719E096E300041E63 /* ItemsViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A06519E096E300041E63 /* ItemsViewTableViewCell.xib */; };
 		C345A06B19E0B05C00041E63 /* CatagoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A06919E0B05C00041E63 /* CatagoriesViewController.m */; };
 		C345A06C19E0B05C00041E63 /* CatagoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A06A19E0B05C00041E63 /* CatagoriesViewController.xib */; };
+		C35BA82419E0D0DC0084C661 /* welcomeHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = C35BA82319E0D0DC0084C661 /* welcomeHeader.png */; };
 		C3A5884C19E05C8800CDD6EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A5884B19E05C8800CDD6EB /* Foundation.framework */; };
 		C3C5326519E0322C00C8A340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326419E0322C00C8A340 /* main.m */; };
 		C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326719E0322C00C8A340 /* AppDelegate.m */; };
@@ -173,6 +174,7 @@
 		C345A06819E0B05C00041E63 /* CatagoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatagoriesViewController.h; sourceTree = "<group>"; };
 		C345A06919E0B05C00041E63 /* CatagoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatagoriesViewController.m; sourceTree = "<group>"; };
 		C345A06A19E0B05C00041E63 /* CatagoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatagoriesViewController.xib; sourceTree = "<group>"; };
+		C35BA82319E0D0DC0084C661 /* welcomeHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomeHeader.png; sourceTree = "<group>"; };
 		C3A5884B19E05C8800CDD6EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3C5325F19E0322C00C8A340 /* RetailMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C5326319E0322C00C8A340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 		C3C5326219E0322C00C8A340 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C35BA82319E0D0DC0084C661 /* welcomeHeader.png */,
 				A4026A8619E05DFE00BF648F /* bakery.jpg */,
 				A4026A8C19E05E9400BF648F /* frozen.jpg */,
 				A4026A8E19E05EDA00BF648F /* diary.jpg */,
@@ -562,6 +565,7 @@
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
 				C345A03F19E066D600041E63 /* PickupTimeTableViewCell.xib in Resources */,
 				C345A06219E093A400041E63 /* ItemsViewController.xib in Resources */,
+				C35BA82419E0D0DC0084C661 /* welcomeHeader.png in Resources */,
 				C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */,
 				A4026A9119E05F1B00BF648F /* rawMeat.jpg in Resources */,
 				C3C5327019E0322C00C8A340 /* Images.xcassets in Resources */,
