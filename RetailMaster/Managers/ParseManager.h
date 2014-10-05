@@ -19,6 +19,7 @@
 - (void)fetchItemsWithCatagory:(NSString *)catagory Limit:(NSInteger)limit Skip:(NSInteger)skip Completion:(void (^)(BOOL success, NSArray *items))completion;
 
 - (void)fetchOrdersFromUserID:(NSString *)userid Limit:(NSInteger)limit Skip:(NSInteger)skip Completion:(void (^)(BOOL success, NSArray *orders))completion;
+- (void)fetchItemsWithBarcode:(NSString *)barcode Completion:(void (^)(BOOL success, NSArray *items))completion;
 
 - (NSString *)randomStringWithLength:(int)len;
 - (NSString *)parseOrderToString:(Order *)order;
