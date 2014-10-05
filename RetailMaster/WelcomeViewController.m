@@ -8,8 +8,11 @@
 
 #import "WelcomeViewController.h"
 #import "RegisterViewController.h"
+#import "ParseManager.h"
+#import "Item.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
-@interface WelcomeViewController ()
+@interface WelcomeViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -33,6 +36,15 @@
     // [self.view addSubview:welcomeLabel];
     welcomeLabel.textColor  = [UIColor orangeColor];
     welcomeLabel.backgroundColor = [UIColor whiteColor];
+    
+    [self createCollectionView];
+    
+    self.dealsData = [NSMutableArray array];
+    
+    [[ParseManager sharedManager] fetchItemsWithCatagory:@"Bakery" Limit:5 Skip:0 Completion:^(BOOL success, NSArray *objects){
+        self.dealsData = [objects mutableCopy];
+        [self.collectionView reloadData];
+    }];
     
     NSUserDefaults *defualts = [NSUserDefaults standardUserDefaults];
     BOOL isRegistered = [defualts objectForKey:@"isRegistered"];
@@ -81,13 +93,68 @@
     
 }
 
-- (void)didReceiveMemoryWarning
+- (void)createCollectionView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if (self.collectionView == nil)
+    {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+        [flowLayout setItemSize:CGSizeMake(140, 180)];
+        flowLayout.minimumLineSpacing = 5.0f;
+        
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(10, 10, 300, 180) collectionViewLayout:flowLayout];
+        
+        self.collectionView.dataSource = self;
+        self.collectionView.delegate = self;
+        self.collectionView.backgroundColor = [UIColor clearColor];
+        [self.dealsContainer addSubview:self.collectionView];
+        
+        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
+        [self.collectionView reloadData];
+    }
 }
 
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
+{
+    return self.dealsData.count;
+}
 
+- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    for (id subview in cell.contentView.subviews) {
+        [subview removeFromSuperview];
+    }
+    
+    Item *item = self.dealsData[indexPath.row];
+    
+    UILabel *filterLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 140, 120, 20)];
+    filterLabel.text = item.name;
+    filterLabel.textColor = [UIColor blackColor];
+    filterLabel.font = [UIFont fontWithName:@"Avenir" size:10.0f];
+    filterLabel.textAlignment = NSTextAlignmentCenter;
+    [cell.contentView addSubview:filterLabel];
+    
+    UIImageView *filteredImageView = [[UIImageView alloc] init];
+    [filteredImageView sd_setImageWithURL:[NSURL URLWithString:item.imageURL]];
+    filteredImageView.frame = CGRectMake(5, 0, 120, 140);
+    filteredImageView.clipsToBounds = YES;
+    [cell.contentView addSubview:filteredImageView];
+    
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+//    UIImage *item = self.filteredImages[indexPath.row];
+//    self.uploadImageView.image = item;
+}
 
  #pragma mark - Navigation
  
