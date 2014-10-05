@@ -35,6 +35,7 @@
 		C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9519E03E9800C7498A /* CheckoutViewController.m */; };
 		C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */; };
 		C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */; };
+		C343328619E0C9790092252C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C343328519E0C9790092252C /* Default-568h@2x.png */; };
 		C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */; };
 		C345A03A19E0667300041E63 /* CheckoutPayButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */; };
 		C345A03E19E066D600041E63 /* PickupTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A03C19E066D600041E63 /* PickupTimeTableViewCell.m */; };
@@ -136,6 +137,7 @@
 		C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutItemTableViewCell.h; sourceTree = "<group>"; };
 		C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutItemTableViewCell.m; sourceTree = "<group>"; };
 		C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutItemTableViewCell.xib; sourceTree = "<group>"; };
+		C343328519E0C9790092252C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C345A03619E0667300041E63 /* CheckoutPayButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutPayButtonTableViewCell.h; sourceTree = "<group>"; };
 		C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutPayButtonTableViewCell.m; sourceTree = "<group>"; };
 		C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutPayButtonTableViewCell.xib; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 		C3C5325619E0322C00C8A340 = {
 			isa = PBXGroup;
 			children = (
+				C343328519E0C9790092252C /* Default-568h@2x.png */,
 				C3153C8A19E03AF600C7498A /* Model */,
 				C3153C8919E03A4500C7498A /* Managers */,
 				C3C5328819E0337600C8A340 /* ThirdParty */,
@@ -495,6 +498,7 @@
 				TargetAttributes = {
 					C3C5325E19E0322C00C8A340 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 78W2X9ZMWT;
 					};
 					C3C5327719E0322C00C8A340 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -537,6 +541,7 @@
 				C3C5328B19E0337600C8A340 /* Simplify.bundle in Resources */,
 				C345A06C19E0B05C00041E63 /* CatagoriesViewController.xib in Resources */,
 				A4026A8919E05E1300BF648F /* seafood.jpg in Resources */,
+				C343328619E0C9790092252C /* Default-568h@2x.png in Resources */,
 				9B63F4EC19E0BB5E001C2074 /* Longos.jpg in Resources */,
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
@@ -766,6 +771,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.0;
 			};
 			name = Debug;
 		};
@@ -788,6 +794,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.0;
 			};
 			name = Release;
 		};
