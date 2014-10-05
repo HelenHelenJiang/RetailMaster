@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fTt-Yt-GQd">
     <dependencies>
         <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
         <development version="5100" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Product View Controller-->
@@ -280,18 +280,28 @@
             </objects>
             <point key="canvasLocation" x="-77" y="-456.76666666666665"/>
         </scene>
-        <!--View Controller - Settings-->
+        <!--Setting View Controller - Settings-->
         <scene sceneID="grV-by-mOh">
             <objects>
-                <viewController id="A9z-GL-7MO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RMP-kC-nLE">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUk-UP-9EM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="A9z-GL-7MO" customClass="SettingViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lZp-tx-fsm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="alq-eV-geM">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="alq-eV-geM" id="9ad-fv-jFh">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
                     <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon" id="lsd-4M-DZR"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YUk-UP-9EM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="579" y="319.5"/>
         </scene>

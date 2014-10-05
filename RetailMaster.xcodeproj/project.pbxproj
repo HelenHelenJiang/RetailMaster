@@ -29,6 +29,7 @@
 		A408D49319E082DF009766E0 /* kitchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A408D49219E082DF009766E0 /* kitchen.jpg */; };
 		A408D4A219E0B0E0009766E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A119E0B0E0009766E0 /* DetailViewController.m */; };
 		A408D4A519E0C8F8009766E0 /* DetailCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */; };
+		A408D4A819E0D004009766E0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A719E0D004009766E0 /* SettingViewController.m */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -129,6 +130,8 @@
 		A408D4A119E0B0E0009766E0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		A408D4A319E0C8F8009766E0 /* DetailCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCellTableViewCell.h; sourceTree = "<group>"; };
 		A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCellTableViewCell.m; sourceTree = "<group>"; };
+		A408D4A619E0D004009766E0 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		A408D4A719E0D004009766E0 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -434,6 +437,8 @@
 				9B1E401D19E05A79008D8349 /* WelcomeViewController.h */,
 				9B1E401E19E05A79008D8349 /* WelcomeViewController.m */,
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
+				A408D4A619E0D004009766E0 /* SettingViewController.h */,
+				A408D4A719E0D004009766E0 /* SettingViewController.m */,
 				C3C5328F19E0356500C8A340 /* SIMProductViewController.m */,
 				C3153C9419E03E9800C7498A /* CheckoutViewController.h */,
 				C3153C9519E03E9800C7498A /* CheckoutViewController.m */,
@@ -641,6 +646,7 @@
 				C345A06B19E0B05C00041E63 /* CatagoriesViewController.m in Sources */,
 				A4026A9419E05FFA00BF648F /* CategoryViewCell.m in Sources */,
 				C3153C9319E03BB800C7498A /* ParseManager.m in Sources */,
+				A408D4A819E0D004009766E0 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
