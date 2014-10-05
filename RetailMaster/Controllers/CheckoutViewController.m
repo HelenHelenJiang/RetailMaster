@@ -384,9 +384,28 @@
     order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
     order.orderNumber = [[ParseManager sharedManager] randomStringWithLength:7];
     order.isPaid = [NSNumber numberWithBool:false];
-    [order saveInBackground];
+//    [order saveInBackground];
     
     orderVC.order = order;
+    
+//    if ([DataManager sharedManager].token)
+//    {
+//        [self creditCardTokenProcessed:[DataManager sharedManager].token];
+//    }
+//    else
+//    {
+        //Mastercard
+        //2. Create a SIMChargeViewController with your public api key
+        SIMChargeCardViewController *chargeController = [[SIMChargeCardViewController alloc] initWithPublicKey:@"sbpb_NzdlZTRkMTgtYjVkYS00ODljLWIzZjUtMzYzZWU0ZjQ4Zjg4" primaryColor:self.primaryColor];
+    
+        //3. Assign your class as the delegate to the SIMChargeViewController class which takes the user input and requests a token
+        chargeController.delegate = self;
+        self.chargeController = chargeController;
+        
+        //4. Add SIMChargeViewController to your view hierarchy
+        //    [self.navigationController pushViewController:self.chargeController animated:YES];
+        [self presentViewController:self.chargeController animated:YES completion:nil];
+//    }
     
 //    [self.navigationController pushViewController:orderVC animated:YES];
     
@@ -394,17 +413,6 @@
 ////    [self.navigationController pushViewController:simVC animated:YES];
 //    [self presentViewController:simVC animated:YES completion:nil];
     
-    //Mastercard
-    //2. Create a SIMChargeViewController with your public api key
-    SIMChargeCardViewController *chargeController = [[SIMChargeCardViewController alloc] initWithPublicKey:@"sbpb_NzdlZTRkMTgtYjVkYS00ODljLWIzZjUtMzYzZWU0ZjQ4Zjg4" primaryColor:self.primaryColor];
-    
-    //3. Assign your class as the delegate to the SIMChargeViewController class which takes the user input and requests a token
-    chargeController.delegate = self;
-    self.chargeController = chargeController;
-    
-    //4. Add SIMChargeViewController to your view hierarchy
-//    [self.navigationController pushViewController:self.chargeController animated:YES];
-    [self presentViewController:self.chargeController animated:YES completion:nil];
     
     
 }
@@ -454,21 +462,30 @@
 -(void)creditCardTokenProcessed:(SIMCreditCardToken *)token {
     //Token was generated successfully, now you must use it
     
+    [DataManager sharedManager].token = token;
+    
+    Order *order = [Order object];
+    order.orderedObjects = self.shoppingLists;
+    order.orderPickupDate = self.pickupDate;
+    order.orderPickupLocation = @"Toronto?";
+    order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
+    order.orderNumber = [[ParseManager sharedManager] randomStringWithLength:7];
+    order.isPaid = [NSNumber numberWithBool:false];
+//    [order saveInBackground];
+    
     NSURL *url= [NSURL URLWithString:@"http://retailmaster.herokuapp.com/charge.php"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
     NSString *postString = @"simplifyToken=";
     postString = [postString stringByAppendingString:token.token];
     
-    
-    
-    //[postString stringByAppendingString:[NSString stringWithFormat:@"&amount=%f", 10.0]];
-    //postString = [NSString stringWithFormat:@"%@&amount=%f",postString,10.0];
-    NSLog(@"URL : %@", postString);
+    postString = [postString stringByAppendingString:[NSString stringWithFormat:@"&amount=%i", (int)([order.orderPrice doubleValue]*100)]];
     
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
     NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    
+    [conn start];
     
     if(conn) {
         

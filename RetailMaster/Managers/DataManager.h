@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+// Mastercard
+#import "SIMProductViewController.h"
+#import <Simplify/SIMChargeCardViewController.h>
+#import <Simplify/SIMButton.h>
+#import <Simplify/UIImage+Simplify.h>
+#import <Simplify/UIColor+Simplify.h>
+#import <Simplify/SIMResponseViewController.h>
+
 @class Item;
 
 @interface DataManager : NSObject
@@ -18,6 +26,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) SIMCreditCardToken *token;
 
 - (void)addToShoppingList:(Item *)item;
 
