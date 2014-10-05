@@ -9,7 +9,9 @@
 #import "LocationViewController.h"
 #import "LocationCell.h"
 
-@interface LocationViewController ()
+@interface LocationViewController () {
+    NSMutableArray *locationArray;
+}
 
 @end
 
@@ -28,6 +30,32 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    locationArray = [[NSMutableArray alloc] init];
+    
+    NSMutableDictionary *longos = [[NSMutableDictionary alloc]init];
+    [longos setObject:@"Longos" forKey:@"name"];
+    [longos setObject:@"15 York Street" forKey:@"location"];
+    [longos setObject:@"Longos.jpg" forKey:@"image"];
+    [locationArray addObject:longos];
+    
+    NSMutableDictionary *sobeys = [[NSMutableDictionary alloc]init];
+    [sobeys setObject:@"Sobeys" forKey:@"name"];
+    [sobeys setObject:@"777 Bay St" forKey:@"location"];
+    [sobeys setObject:@"Sobeys.jpg" forKey:@"image"];
+    [locationArray addObject:sobeys];
+    
+    NSMutableDictionary *loblaws = [[NSMutableDictionary alloc]init];
+    [loblaws setObject:@"Loblaws" forKey:@"name"];
+    [loblaws setObject:@"585 Queen St W" forKey:@"location"];
+    [loblaws setObject:@"Loblaws.png" forKey:@"image"];
+    [locationArray addObject:loblaws];
+    
+    NSMutableDictionary *zehrs = [[NSMutableDictionary alloc]init];
+    [zehrs setObject:@"Zehrs" forKey:@"name"];
+    [zehrs setObject:@"487 Queen St S" forKey:@"location"];
+    [zehrs setObject:@"Zehrs.jpg" forKey:@"image"];
+    [locationArray addObject:zehrs];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +72,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 4;    //count number of row from counting array hear cataGorry is An Array
+    return [locationArray count];    //count number of row from counting array hear cataGorry is An Array
     
 }
 
@@ -60,8 +88,16 @@
         cell = [[LocationCell alloc] initWithStyle:UITableViewCellStyleDefault
                                             reuseIdentifier:MyIdentifier];
     }
+    
+    NSDictionary *locationDic = [locationArray objectAtIndex:indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    cell.nameLabel.text = [locationDic objectForKey:@"name"];
+    cell.detailLabel.text = [locationDic objectForKey:@"location"];
+    cell.imageName = [locationDic objectForKey:@"image"];
+    NSLog(@"Name: %@",cell.imageName);
+    
+    [cell assignImage];
     return cell;
 }
 
