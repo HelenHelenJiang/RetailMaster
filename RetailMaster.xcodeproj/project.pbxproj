@@ -28,6 +28,7 @@
 		A408D49119E08259009766E0 /* vege.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A408D49019E08259009766E0 /* vege.jpg */; };
 		A408D49319E082DF009766E0 /* kitchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A408D49219E082DF009766E0 /* kitchen.jpg */; };
 		A408D4A219E0B0E0009766E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A119E0B0E0009766E0 /* DetailViewController.m */; };
+		A408D4A519E0C8F8009766E0 /* DetailCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -35,6 +36,7 @@
 		C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9519E03E9800C7498A /* CheckoutViewController.m */; };
 		C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */; };
 		C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */; };
+		C343328619E0C9790092252C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C343328519E0C9790092252C /* Default-568h@2x.png */; };
 		C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */; };
 		C345A03A19E0667300041E63 /* CheckoutPayButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */; };
 		C345A03E19E066D600041E63 /* PickupTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A03C19E066D600041E63 /* PickupTimeTableViewCell.m */; };
@@ -125,6 +127,8 @@
 		A408D49219E082DF009766E0 /* kitchen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitchen.jpg; sourceTree = "<group>"; };
 		A408D4A019E0B0E0009766E0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A408D4A119E0B0E0009766E0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A408D4A319E0C8F8009766E0 /* DetailCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCellTableViewCell.h; sourceTree = "<group>"; };
+		A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCellTableViewCell.m; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutItemTableViewCell.h; sourceTree = "<group>"; };
 		C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutItemTableViewCell.m; sourceTree = "<group>"; };
 		C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutItemTableViewCell.xib; sourceTree = "<group>"; };
+		C343328519E0C9790092252C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C345A03619E0667300041E63 /* CheckoutPayButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutPayButtonTableViewCell.h; sourceTree = "<group>"; };
 		C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutPayButtonTableViewCell.m; sourceTree = "<group>"; };
 		C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutPayButtonTableViewCell.xib; sourceTree = "<group>"; };
@@ -302,6 +307,8 @@
 				A4026A9219E05FFA00BF648F /* CategoryViewCell.h */,
 				A4026A9319E05FFA00BF648F /* CategoryViewCell.m */,
 				A4026A7719E04AF400BF648F /* CollectionViewCell.h */,
+				A408D4A319E0C8F8009766E0 /* DetailCellTableViewCell.h */,
+				A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */,
 				A4026A7819E04AF400BF648F /* CollectionViewCell.m */,
 				C345A05919E0852A00041E63 /* OrderHistoryTableViewCell.h */,
 				C345A05A19E0852A00041E63 /* OrderHistoryTableViewCell.m */,
@@ -324,6 +331,7 @@
 		C3C5325619E0322C00C8A340 = {
 			isa = PBXGroup;
 			children = (
+				C343328519E0C9790092252C /* Default-568h@2x.png */,
 				C3153C8A19E03AF600C7498A /* Model */,
 				C3153C8919E03A4500C7498A /* Managers */,
 				C3C5328819E0337600C8A340 /* ThirdParty */,
@@ -495,6 +503,7 @@
 				TargetAttributes = {
 					C3C5325E19E0322C00C8A340 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 78W2X9ZMWT;
 					};
 					C3C5327719E0322C00C8A340 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -537,6 +546,7 @@
 				C3C5328B19E0337600C8A340 /* Simplify.bundle in Resources */,
 				C345A06C19E0B05C00041E63 /* CatagoriesViewController.xib in Resources */,
 				A4026A8919E05E1300BF648F /* seafood.jpg in Resources */,
+				C343328619E0C9790092252C /* Default-568h@2x.png in Resources */,
 				9B63F4EC19E0BB5E001C2074 /* Longos.jpg in Resources */,
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
@@ -613,6 +623,7 @@
 				C345A04819E0741C00041E63 /* Order.m in Sources */,
 				C3E01B5619E0B39C009AE24E /* CategoryCollectionViewCell.m in Sources */,
 				9B63F4E619E0B12E001C2074 /* LocationViewController.m in Sources */,
+				A408D4A519E0C8F8009766E0 /* DetailCellTableViewCell.m in Sources */,
 				C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */,
 				C345A06119E093A400041E63 /* ItemsViewController.m in Sources */,
 				9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */,
@@ -766,6 +777,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.0;
 			};
 			name = Debug;
 		};
@@ -788,6 +800,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.0;
 			};
 			name = Release;
 		};

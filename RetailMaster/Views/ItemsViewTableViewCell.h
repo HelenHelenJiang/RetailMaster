@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *itemNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *itemPriceLabel;
 @property (strong, nonatomic) IBOutlet UIButton *itemBuyButton;
+@property (strong, nonatomic) IBOutlet UIView *backgroundView;
 
 @end
