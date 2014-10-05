@@ -44,7 +44,11 @@
 }
 
 -(void)setName:(NSString *)name {
-    self.name = name;
+    if (name == nil) {
+        name = @"";
+    } else {
+        self.name = name;
+    }
 }
 -(void)setAddress:(NSString *)address {
     self.address = address;

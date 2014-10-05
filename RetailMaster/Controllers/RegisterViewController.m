@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.nameTitleArray = [[NSMutableArray alloc] initWithObjects:@"First Name",@"Last Name",@"Address",@"City",@"Postal",@"Phone",nil];
+    self.nameTitleArray = [[NSMutableArray alloc] initWithObjects:@"Name",@"Address",@"Phone",@"Email",nil];
     
 }
 
@@ -59,10 +59,11 @@
         cell = [[RegisterTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:MyIdentifier];
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.catLabel.text = [self.nameTitleArray objectAtIndex:indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.placeHolder = [self.nameTitleArray objectAtIndex:indexPath.row];
     cell.indexPath = indexPath;
+    [cell setIcon];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL isRegistered = [defaults objectForKey:@"isRegistered"];
@@ -75,7 +76,7 @@
         
     } else {
         
-        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:@[@"",@"",@"",@"",@"",@""]];
+        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:@[@"",@"",@"",@""]];
         [defaults setObject:array forKey:@"customerInfo"];
         
     }
@@ -93,7 +94,6 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:YES forKey:@"isRegistered"];
     [self dismissViewControllerAnimated:YES completion:nil];
-    [WelcomeViewController populateDataToManager];
 }
 
 

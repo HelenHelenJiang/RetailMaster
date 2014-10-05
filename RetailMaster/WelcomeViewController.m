@@ -55,7 +55,7 @@
         NSArray *array  = [defualts objectForKey:@"customerInfo"];
         NSString *nameString = [array objectAtIndex:0];
         welcomeLabel.text = [NSString stringWithFormat:@"Hi %@!",nameString];
-        [WelcomeViewController populateDataToManager];
+        //[WelcomeViewController populateDataToManager];
         
     } else {
         
@@ -181,10 +181,11 @@
     if (isRegistered) {
         
         NSArray *infoArray = [defaults objectForKey:@"customerInfo"];
-        
-        [[DataManager sharedManager] setName:[NSString stringWithFormat:@"%@ %@",infoArray[0],infoArray[1]]];
-        [[DataManager sharedManager] setPhoneNumber:infoArray[5]];
-        [[DataManager sharedManager] setAddress:infoArray[2]];
+        if (infoArray[0]) {
+            [[DataManager sharedManager] setName:infoArray[0]];
+        }
+        [[DataManager sharedManager] setPhoneNumber:infoArray[2]];
+        [[DataManager sharedManager] setAddress:infoArray[1]];
         
     }
     
