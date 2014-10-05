@@ -9,6 +9,7 @@
 #import "WelcomeViewController.h"
 #import "RegisterViewController.h"
 #import "ParseManager.h"
+#import "DataManager.h"
 #import "Item.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
@@ -54,18 +55,17 @@
         NSArray *array  = [defualts objectForKey:@"customerInfo"];
         NSString *nameString = [array objectAtIndex:0];
         welcomeLabel.text = [NSString stringWithFormat:@"Hi %@!",nameString];
+        [WelcomeViewController populateDataToManager];
         
     } else {
         
-        // welcomeLabel.text = @"Welcome to Retail Master!";
         
     }
     
     if (isRegistered){
         
         [self.button setTitle:@"Edit" forState:UIControlStateNormal];
-        
-        //Populate Data
+    
         
         
     } else {
@@ -171,6 +171,24 @@
     }
 }
 
+
+
++(void) populateDataToManager {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL isRegistered = [defaults objectForKey:@"isRegistered"];
+    
+    if (isRegistered) {
+        
+        NSArray *infoArray = [defaults objectForKey:@"customerInfo"];
+        
+        [[DataManager sharedManager] setName:[NSString stringWithFormat:@"%@ %@",infoArray[0],infoArray[1]]];
+        [[DataManager sharedManager] setPhoneNumber:infoArray[5]];
+        [[DataManager sharedManager] setAddress:infoArray[2]];
+        
+    }
+    
+}
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
 //    UIImage *item = self.filteredImages[indexPath.row];

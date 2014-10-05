@@ -27,11 +27,28 @@
 
 - (void)addToShoppingList:(Item *)item
 {
-    [self.shoppingLists addObject:item];
+    if ([self.shoppingLists containsObject:item])
+    {
+        item.orderCount++;
+    }
+    else
+    {
+        item.orderCount = 1;
+        [self.shoppingLists addObject:item];
+    }
+    
 }
 
 -(void)setPhoneNumber:(NSString *)phoneNumber {
-    
+    self.phoneNumber = phoneNumber;
 }
+
+-(void)setName:(NSString *)name {
+    self.name = name;
+}
+-(void)setAddress:(NSString *)address {
+    self.address = address;
+}
+
 
 @end

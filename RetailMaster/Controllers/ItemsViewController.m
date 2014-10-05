@@ -13,8 +13,9 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DetailViewController.h"
 #import "DetailsViewController.h"
+#import "DataManager.h"
 
-@interface ItemsViewController ()
+@interface ItemsViewController ()<ItemsViewTableViewCellDelegate>
 
 @end
 
@@ -84,11 +85,19 @@
     [cell.itemImageView sd_setImageWithURL:[NSURL URLWithString:item.imageURL]];
     cell.itemNameLabel.text = item.itemDescription;
     cell.itemPriceLabel.text = [NSString stringWithFormat:@"$ %0.2f", [item.price doubleValue]];
+    cell.indexPath = indexPath;
+    cell.delegate = self;
 //    cell.backgroundView.backgroundColor = [UIColor whiteColor];
     
 //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+}
+
+- (void)addToCartPressed:(NSIndexPath *)indexPath
+{
+    Item *item = self.items[indexPath.row];
+    [[DataManager sharedManager] addToShoppingList:item];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,16 +112,6 @@
     DetailsViewController *detailVC = [[DetailsViewController alloc] init];
     detailVC.myObject = item;
     [self.navigationController pushViewController:detailVC animated:YES];
-}
-
-- (BOOL)touchesShouldCancelInContentView:(UIView *)view
-{
-    if ([view isKindOfClass:[UITextView class]])
-    {
-        return NO;
-    }
-    
-    return YES;
 }
 
 @end
