@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		491422AD19D9D79A00B8E6D7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491422AB19D9D6FE00B8E6D7 /* CoreMotion.framework */; };
+		499D28E819D9E35900D7B2EA /* libNCLNetiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 499D28E619D9E35900D7B2EA /* libNCLNetiOS.a */; };
+		499D28EF19D9FB3300D7B2EA /* Simplify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 499D28EE19D9FB3300D7B2EA /* Simplify.bundle */; };
+		7D688E1419CC6662000C9F7C /* Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D688E1319CC6662000C9F7C /* Simplify.framework */; };
+		7D688E2219CC6D15000C9F7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D688E1719CC6D15000C9F7C /* AppDelegate.m */; };
+		7D688E2619CC6D15000C9F7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D688E1D19CC6D15000C9F7C /* main.m */; };
+		7D688E2819CC6D15000C9F7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D688E2119CC6D15000C9F7C /* ViewController.m */; };
+		7D688E4919CC6F49000C9F7C /* NymiSimplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D688E4819CC6F49000C9F7C /* NymiSimplify.framework */; };
+		7D688E5119CC6F6B000C9F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D688E4B19CC6F6B000C9F7C /* Main.storyboard */; };
+		7D688E5219CC6F6B000C9F7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D688E4E19CC6F6B000C9F7C /* InfoPlist.strings */; };
+		7D688E5319CC6F6B000C9F7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D688E5019CC6F6B000C9F7C /* Images.xcassets */; };
+		7DE265DB19CC318A00E068DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE265DA19CC318A00E068DC /* Foundation.framework */; };
+		7DE265DD19CC318A00E068DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE265DC19CC318A00E068DC /* CoreGraphics.framework */; };
+		7DE265DF19CC318A00E068DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE265DE19CC318A00E068DC /* UIKit.framework */; };
+		7DE2661219CC49E400E068DC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE2661119CC49E400E068DC /* AudioToolbox.framework */; };
+		E8CD735719E0B92C00BBB085 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CD735619E0B92C00BBB085 /* CoreBluetooth.framework */; };
+		E8CD735A19E0BA3300BBB085 /* libNCLiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CD735919E0BA3300BBB085 /* libNCLiOS.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		491422AB19D9D6FE00B8E6D7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		499D28E619D9E35900D7B2EA /* libNCLNetiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNCLNetiOS.a; path = NCL/iOS/libNCLNetiOS.a; sourceTree = "<group>"; };
+		499D28EE19D9FB3300D7B2EA /* Simplify.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Simplify.bundle; sourceTree = "<group>"; };
+		7D688E1319CC6662000C9F7C /* Simplify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Simplify.framework; sourceTree = "<group>"; };
+		7D688E1619CC6D15000C9F7C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7D688E1719CC6D15000C9F7C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7D688E1D19CC6D15000C9F7C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D688E2019CC6D15000C9F7C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7D688E2119CC6D15000C9F7C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7D688E4519CC6F0E000C9F7C /* NymiSimplyfyApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NymiSimplyfyApp-Info.plist"; sourceTree = "<group>"; };
+		7D688E4619CC6F0E000C9F7C /* NymiSimplyfyApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NymiSimplyfyApp-Prefix.pch"; sourceTree = "<group>"; };
+		7D688E4819CC6F49000C9F7C /* NymiSimplify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NymiSimplify.framework; sourceTree = "<group>"; };
+		7D688E4C19CC6F6B000C9F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		7D688E4F19CC6F6B000C9F7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		7D688E5019CC6F6B000C9F7C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Classes/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		7DE265D719CC318A00E068DC /* NymiSimplyfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NymiSimplyfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DE265DA19CC318A00E068DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7DE265DC19CC318A00E068DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7DE265DE19CC318A00E068DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7DE2661119CC49E400E068DC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E8CD735619E0B92C00BBB085 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		E8CD735819E0BA0D00BBB085 /* ncl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ncl.h; sourceTree = "<group>"; };
+		E8CD735919E0BA3300BBB085 /* libNCLiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNCLiOS.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DE265D419CC318A00E068DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8CD735719E0B92C00BBB085 /* CoreBluetooth.framework in Frameworks */,
+				491422AD19D9D79A00B8E6D7 /* CoreMotion.framework in Frameworks */,
+				7D688E4919CC6F49000C9F7C /* NymiSimplify.framework in Frameworks */,
+				499D28E819D9E35900D7B2EA /* libNCLNetiOS.a in Frameworks */,
+				7DE2661219CC49E400E068DC /* AudioToolbox.framework in Frameworks */,
+				7DE265DD19CC318A00E068DC /* CoreGraphics.framework in Frameworks */,
+				7D688E1419CC6662000C9F7C /* Simplify.framework in Frameworks */,
+				7DE265DF19CC318A00E068DC /* UIKit.framework in Frameworks */,
+				7DE265DB19CC318A00E068DC /* Foundation.framework in Frameworks */,
+				E8CD735A19E0BA3300BBB085 /* libNCLiOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D688E1519CC6D15000C9F7C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7D688E1619CC6D15000C9F7C /* AppDelegate.h */,
+				7D688E1719CC6D15000C9F7C /* AppDelegate.m */,
+				7D688E1D19CC6D15000C9F7C /* main.m */,
+				7D688E2019CC6D15000C9F7C /* ViewController.h */,
+				7D688E2119CC6D15000C9F7C /* ViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7D688E4419CC6F0E000C9F7C /* TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				E8CD735819E0BA0D00BBB085 /* ncl.h */,
+				E8CD735919E0BA3300BBB085 /* libNCLiOS.a */,
+				7D688E4519CC6F0E000C9F7C /* NymiSimplyfyApp-Info.plist */,
+				7D688E4619CC6F0E000C9F7C /* NymiSimplyfyApp-Prefix.pch */,
+				7D688E4A19CC6F6B000C9F7C /* Base.lproj */,
+				7D688E4D19CC6F6B000C9F7C /* en.lproj */,
+				7D688E5019CC6F6B000C9F7C /* Images.xcassets */,
+			);
+			path = TestApp;
+			sourceTree = "<group>";
+		};
+		7D688E4A19CC6F6B000C9F7C /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				7D688E4B19CC6F6B000C9F7C /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = Classes/Base.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		7D688E4D19CC6F6B000C9F7C /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				7D688E4E19CC6F6B000C9F7C /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = Classes/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		7DE265CE19CC318A00E068DC = {
+			isa = PBXGroup;
+			children = (
+				7D688E4419CC6F0E000C9F7C /* TestApp */,
+				7D688E1519CC6D15000C9F7C /* Classes */,
+				7DE265D919CC318A00E068DC /* Frameworks */,
+				7DE265D819CC318A00E068DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DE265D819CC318A00E068DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DE265D719CC318A00E068DC /* NymiSimplyfy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DE265D919CC318A00E068DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8CD735619E0B92C00BBB085 /* CoreBluetooth.framework */,
+				499D28E619D9E35900D7B2EA /* libNCLNetiOS.a */,
+				499D28EE19D9FB3300D7B2EA /* Simplify.bundle */,
+				491422AB19D9D6FE00B8E6D7 /* CoreMotion.framework */,
+				7D688E4819CC6F49000C9F7C /* NymiSimplify.framework */,
+				7D688E1319CC6662000C9F7C /* Simplify.framework */,
+				7DE2661119CC49E400E068DC /* AudioToolbox.framework */,
+				7DE265DA19CC318A00E068DC /* Foundation.framework */,
+				7DE265DC19CC318A00E068DC /* CoreGraphics.framework */,
+				7DE265DE19CC318A00E068DC /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DE265D619CC318A00E068DC /* NymiSimplyfyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DE2660919CC318B00E068DC /* Build configuration list for PBXNativeTarget "NymiSimplyfyApp" */;
+			buildPhases = (
+				7DE265D319CC318A00E068DC /* Sources */,
+				7DE265D419CC318A00E068DC /* Frameworks */,
+				7DE265D519CC318A00E068DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NymiSimplyfyApp;
+			productName = TestApp;
+			productReference = 7DE265D719CC318A00E068DC /* NymiSimplyfy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DE265CF19CC318A00E068DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+			};
+			buildConfigurationList = 7DE265D219CC318A00E068DC /* Build configuration list for PBXProject "NymiSimplyfyApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7DE265CE19CC318A00E068DC;
+			productRefGroup = 7DE265D819CC318A00E068DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DE265D619CC318A00E068DC /* NymiSimplyfyApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DE265D519CC318A00E068DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				499D28EF19D9FB3300D7B2EA /* Simplify.bundle in Resources */,
+				7D688E5319CC6F6B000C9F7C /* Images.xcassets in Resources */,
+				7D688E5119CC6F6B000C9F7C /* Main.storyboard in Resources */,
+				7D688E5219CC6F6B000C9F7C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DE265D319CC318A00E068DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D688E2819CC6D15000C9F7C /* ViewController.m in Sources */,
+				7D688E2619CC6D15000C9F7C /* main.m in Sources */,
+				7D688E2219CC6D15000C9F7C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D688E4B19CC6F6B000C9F7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D688E4C19CC6F6B000C9F7C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D688E4E19CC6F6B000C9F7C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D688E4F19CC6F6B000C9F7C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DE2660719CC318B00E068DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7DE2660819CC318B00E068DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DE2660A19CC318B00E068DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Happiest Minds Technologies Private Limited";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/**",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestApp/NymiSimplyfyApp-Prefix.pch";
+				INFOPLIST_FILE = "TestApp/NymiSimplyfyApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NCL/iOS",
+					"$(PROJECT_DIR)/TestApp",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/Simplify.framework/Versions/Current/Simplify",
+				);
+				PRODUCT_NAME = NymiSimplyfy;
+				PROVISIONING_PROFILE = "9927CA4B-8F5B-463A-9F0F-93F30553BEE3";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/** ${PROJECT_DIR}/include .";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7DE2660B19CC318B00E068DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Happiest Minds Technologies Private Limited";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/**",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestApp/NymiSimplyfyApp-Prefix.pch";
+				INFOPLIST_FILE = "TestApp/NymiSimplyfyApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NCL/iOS",
+					"$(PROJECT_DIR)/TestApp",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/Simplify.framework/Versions/Current/Simplify",
+				);
+				PRODUCT_NAME = NymiSimplyfy;
+				PROVISIONING_PROFILE = "9927CA4B-8F5B-463A-9F0F-93F30553BEE3";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/** ${PROJECT_DIR}/include .";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DE265D219CC318A00E068DC /* Build configuration list for PBXProject "NymiSimplyfyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DE2660719CC318B00E068DC /* Debug */,
+				7DE2660819CC318B00E068DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DE2660919CC318B00E068DC /* Build configuration list for PBXNativeTarget "NymiSimplyfyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DE2660A19CC318B00E068DC /* Debug */,
+				7DE2660B19CC318B00E068DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DE265CF19CC318A00E068DC /* Project object */;
+}

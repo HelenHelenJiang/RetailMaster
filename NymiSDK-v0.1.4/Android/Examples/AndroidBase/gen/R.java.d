@@ -1,0 +1,19 @@
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\gen\com\bionym\androidbase\R.java \
+ : C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\color\selectable_text_color.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\drawable\selectable_text_background.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\drawable-hdpi\ic_launcher.png \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\drawable-mdpi\ic_launcher.png \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\drawable-xhdpi\ic_launcher.png \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\drawable-xxhdpi\ic_launcher.png \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\layout\activity_start_page.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\layout\nymi_discovery_item.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\layout\nymi_find_item.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\menu\start_page.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\values\colors.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\values\dimens.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\values\strings.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\values\styles.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\values-v11\styles.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\values-v14\styles.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\res\values-w820dp\dimens.xml \
+C:\Users\Administrator\Desktop\buildBot\slave\build-android-win\nymi\sdk\Examples\AndroidBase\bin\AndroidManifest.xml \
