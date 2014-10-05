@@ -46,6 +46,8 @@
 		C345A06219E093A400041E63 /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A06019E093A400041E63 /* ItemsViewController.xib */; };
 		C345A06619E096E300041E63 /* ItemsViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A06419E096E300041E63 /* ItemsViewTableViewCell.m */; };
 		C345A06719E096E300041E63 /* ItemsViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A06519E096E300041E63 /* ItemsViewTableViewCell.xib */; };
+		C345A06B19E0B05C00041E63 /* CatagoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A06919E0B05C00041E63 /* CatagoriesViewController.m */; };
+		C345A06C19E0B05C00041E63 /* CatagoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A06A19E0B05C00041E63 /* CatagoriesViewController.xib */; };
 		C3A5884C19E05C8800CDD6EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A5884B19E05C8800CDD6EB /* Foundation.framework */; };
 		C3C5326519E0322C00C8A340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326419E0322C00C8A340 /* main.m */; };
 		C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C5326719E0322C00C8A340 /* AppDelegate.m */; };
@@ -71,6 +73,8 @@
 		C3C532A819E036ED00C8A340 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C532A719E036ED00C8A340 /* SystemConfiguration.framework */; };
 		C3C532AA19E036F100C8A340 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C532A919E036F100C8A340 /* Social.framework */; };
 		C3C532AC19E036FF00C8A340 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C532AB19E036FF00C8A340 /* Accounts.framework */; };
+		C3E01B5619E0B39C009AE24E /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E01B5419E0B39C009AE24E /* CategoryCollectionViewCell.m */; };
+		C3E01B5719E0B39C009AE24E /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E01B5519E0B39C009AE24E /* CategoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +151,9 @@
 		C345A06319E096E300041E63 /* ItemsViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewTableViewCell.h; sourceTree = "<group>"; };
 		C345A06419E096E300041E63 /* ItemsViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewTableViewCell.m; sourceTree = "<group>"; };
 		C345A06519E096E300041E63 /* ItemsViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsViewTableViewCell.xib; sourceTree = "<group>"; };
+		C345A06819E0B05C00041E63 /* CatagoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatagoriesViewController.h; sourceTree = "<group>"; };
+		C345A06919E0B05C00041E63 /* CatagoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatagoriesViewController.m; sourceTree = "<group>"; };
+		C345A06A19E0B05C00041E63 /* CatagoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatagoriesViewController.xib; sourceTree = "<group>"; };
 		C3A5884B19E05C8800CDD6EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3C5325F19E0322C00C8A340 /* RetailMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C5326319E0322C00C8A340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -179,6 +186,9 @@
 		C3C532A719E036ED00C8A340 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C3C532A919E036F100C8A340 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C3C532AB19E036FF00C8A340 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		C3E01B5319E0B39C009AE24E /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		C3E01B5419E0B39C009AE24E /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
+		C3E01B5519E0B39C009AE24E /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +302,9 @@
 				C345A06319E096E300041E63 /* ItemsViewTableViewCell.h */,
 				C345A06419E096E300041E63 /* ItemsViewTableViewCell.m */,
 				C345A06519E096E300041E63 /* ItemsViewTableViewCell.xib */,
+				C3E01B5319E0B39C009AE24E /* CategoryCollectionViewCell.h */,
+				C3E01B5419E0B39C009AE24E /* CategoryCollectionViewCell.m */,
+				C3E01B5519E0B39C009AE24E /* CategoryCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -412,6 +425,9 @@
 				C345A05E19E093A400041E63 /* ItemsViewController.h */,
 				C345A05F19E093A400041E63 /* ItemsViewController.m */,
 				C345A06019E093A400041E63 /* ItemsViewController.xib */,
+				C345A06819E0B05C00041E63 /* CatagoriesViewController.h */,
+				C345A06919E0B05C00041E63 /* CatagoriesViewController.m */,
+				C345A06A19E0B05C00041E63 /* CatagoriesViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -506,6 +522,7 @@
 				A408D49319E082DF009766E0 /* kitchen.jpg in Resources */,
 				A4026A8F19E05EDB00BF648F /* diary.jpg in Resources */,
 				C3C5328B19E0337600C8A340 /* Simplify.bundle in Resources */,
+				C345A06C19E0B05C00041E63 /* CatagoriesViewController.xib in Resources */,
 				A4026A8919E05E1300BF648F /* seafood.jpg in Resources */,
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
@@ -517,6 +534,7 @@
 				A4026A8B19E05E3000BF648F /* fruit.jpg in Resources */,
 				C345A03A19E0667300041E63 /* CheckoutPayButtonTableViewCell.xib in Resources */,
 				A4026A8D19E05E9400BF648F /* frozen.jpg in Resources */,
+				C3E01B5719E0B39C009AE24E /* CategoryCollectionViewCell.xib in Resources */,
 				C345A05D19E0852A00041E63 /* OrderHistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +595,7 @@
 				C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */,
 				C3153C9019E03B9E00C7498A /* DataManager.m in Sources */,
 				C345A04819E0741C00041E63 /* Order.m in Sources */,
+				C3E01B5619E0B39C009AE24E /* CategoryCollectionViewCell.m in Sources */,
 				9B63F4E619E0B12E001C2074 /* LocationViewController.m in Sources */,
 				C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */,
 				C345A06119E093A400041E63 /* ItemsViewController.m in Sources */,
@@ -592,6 +611,7 @@
 				A408D4A219E0B0E0009766E0 /* DetailViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,
 				A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */,
+				C345A06B19E0B05C00041E63 /* CatagoriesViewController.m in Sources */,
 				A4026A9419E05FFA00BF648F /* CategoryViewCell.m in Sources */,
 				C3153C9319E03BB800C7498A /* ParseManager.m in Sources */,
 			);
