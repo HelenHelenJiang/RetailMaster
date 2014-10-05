@@ -515,7 +515,7 @@
         Order *order = [Order object];
         order.orderedObjects = self.shoppingLists;
         order.orderPickupDate = self.pickupDate;
-        order.orderPickupLocation = @"Toronto?";
+        order.orderPickupLocation = @"Loblaws\n585 Queen St W";
         order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
         order.orderNumber = [[ParseManager sharedManager] randomStringWithLength:7];
         order.isPaid = [NSNumber numberWithBool:false];
