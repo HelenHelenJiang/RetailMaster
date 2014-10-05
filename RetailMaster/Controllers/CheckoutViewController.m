@@ -388,16 +388,16 @@
     
     orderVC.order = order;
     
-    if ([DataManager sharedManager].token)
-    {
-        [self creditCardTokenProcessed:[DataManager sharedManager].token];
-    }
-    else
-    {
+//    if ([DataManager sharedManager].token)
+//    {
+//        [self creditCardTokenProcessed:[DataManager sharedManager].token];
+//    }
+//    else
+//    {
         //Mastercard
         //2. Create a SIMChargeViewController with your public api key
         SIMChargeCardViewController *chargeController = [[SIMChargeCardViewController alloc] initWithPublicKey:@"sbpb_NzdlZTRkMTgtYjVkYS00ODljLWIzZjUtMzYzZWU0ZjQ4Zjg4" primaryColor:self.primaryColor];
-        
+    
         //3. Assign your class as the delegate to the SIMChargeViewController class which takes the user input and requests a token
         chargeController.delegate = self;
         self.chargeController = chargeController;
@@ -405,7 +405,7 @@
         //4. Add SIMChargeViewController to your view hierarchy
         //    [self.navigationController pushViewController:self.chargeController animated:YES];
         [self presentViewController:self.chargeController animated:YES completion:nil];
-    }
+//    }
     
 //    [self.navigationController pushViewController:orderVC animated:YES];
     
