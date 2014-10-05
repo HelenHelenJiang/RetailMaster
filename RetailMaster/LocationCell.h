@@ -8,14 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LocationCell : UITableViewCell
+@protocol LocationCellDelegate <NSObject>
+
+- (void)setLocationPressed:(NSIndexPath *)indexPath;
+
+@end
+
+@interface LocationCell : UITableViewCell<LocationCellDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *thumnil;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (weak, nonatomic) IBOutlet UIButton *setButton;
 @property (nonatomic, strong) NSString *imageName;
+@property (nonatomic, strong) NSIndexPath *indexPath;
 
+@property (weak, nonatomic) id <LocationCellDelegate> delegate;
 
 -(void) assignImage;
 @end

@@ -19,6 +19,8 @@
     return self;
 }
 - (IBAction)setLocation:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSString stringWithFormat:@"%@\n%@", self.nameLabel,self.detailLabel] forKey:@"isLocationRegistered"];
 }
 
 - (void)awakeFromNib
@@ -34,7 +36,8 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+    
+    
     // Configure the view for the selected state
 }
 
@@ -44,6 +47,14 @@
     NSLog(@"LOL :%@",self.imageName);
     self.thumnil.image = image;
     
+}
+
+- (void)setLocationPressed:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(setLocationPressed:)])
+    {
+        [self.delegate setLocationPressed:self.indexPath];
+    }
 }
 
 @end
