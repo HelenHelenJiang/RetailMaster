@@ -31,7 +31,15 @@
 }
 
 -(void)setPhoneNumber:(NSString *)phoneNumber {
-    
+    self.phoneNumber = phoneNumber;
 }
+
+-(void)setName:(NSString *)name {
+    self.name = name;
+}
+-(void)setAddress:(NSString *)address {
+    self.address = address;
+}
+
 
 @end

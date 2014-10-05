@@ -8,6 +8,7 @@
 
 #import "RegisterViewController.h"
 #import "RegisterTableViewCell.h"
+#import "WelcomeViewController.h"
 @interface RegisterViewController ()
 
 @property (nonatomic, strong) NSMutableArray *nameTitleArray;
@@ -92,7 +93,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:YES forKey:@"isRegistered"];
     [self dismissViewControllerAnimated:YES completion:nil];
-    
+    [WelcomeViewController populateDataToManager];
 }
 
 
