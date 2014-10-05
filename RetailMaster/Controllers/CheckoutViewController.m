@@ -451,14 +451,22 @@
 -(void)creditCardTokenProcessed:(SIMCreditCardToken *)token {
     //Token was generated successfully, now you must use it
     
-    NSURL *url= [NSURL URLWithString:@"https://Your_server/charge.rb"];
+    NSURL *url= [NSURL URLWithString:@"http://retailmaster.herokuapp.com/charge.php"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
-    NSString *postString = @"simplifyToken=";
+    NSString *postString = [NSString stringWithFormat:@"amount=%f", 10.0];
     
     postString = [postString stringByAppendingString:token.token];
     
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    
+    if(conn) {
+        NSLog(@"Connection Successful");
+    } else {
+        NSLog(@"Connection could not be made");
+    }
     
     NSError *error;
     
@@ -471,10 +479,25 @@
         [self presentViewController:viewController animated:YES completion:nil];
         
     } else {
+        OrderConformationViewController *orderVC = [[OrderConformationViewController alloc] init];
         
-        UIImageView *blurredView = [UIImage blurImage:self.view.layer];
-        SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:blurredView primaryColor:self.primaryColor title:@"Success!" description:@"You purchased a cupcake!"];
-        [self presentViewController:viewController animated:YES completion:nil];
+        orderVC.orderedItems = self.shoppingLists;
+        
+        Order *order = [Order object];
+        order.orderedObjects = self.shoppingLists;
+        order.orderPickupDate = self.pickupDate;
+        order.orderPickupLocation = @"Toronto?";
+        order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
+        order.orderNumber = [[ParseManager sharedManager] randomStringWithLength:7];
+        order.isPaid = [NSNumber numberWithBool:false];
+        [order saveInBackground];
+        
+        orderVC.order = order;
+        
+        [self.navigationController pushViewController:orderVC animated:YES];
+//        UIImageView *blurredView = [UIImage blurImage:self.view.layer];
+//        SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:blurredView primaryColor:self.primaryColor title:@"Success!" description:@"You purchased a cupcake!"];
+//        [self presentViewController:viewController animated:YES completion:nil];
     }
     
 }
