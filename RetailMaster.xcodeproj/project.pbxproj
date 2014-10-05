@@ -10,6 +10,10 @@
 		9B166A2919E09C7A00BA4072 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B166A2819E09C7A00BA4072 /* LocationCell.m */; };
 		9B1E401F19E05A79008D8349 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1E401E19E05A79008D8349 /* WelcomeViewController.m */; };
 		9B63F4E619E0B12E001C2074 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B63F4E519E0B12E001C2074 /* LocationViewController.m */; };
+		9B63F4EA19E0BB5E001C2074 /* Sobeys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4E719E0BB5E001C2074 /* Sobeys.jpg */; };
+		9B63F4EB19E0BB5E001C2074 /* Loblaws.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4E819E0BB5E001C2074 /* Loblaws.png */; };
+		9B63F4EC19E0BB5E001C2074 /* Longos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4E919E0BB5E001C2074 /* Longos.jpg */; };
+		9B63F4F019E0C448001C2074 /* Zehrs.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4EF19E0C448001C2074 /* Zehrs.png */; };
 		9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BA19E0777E008732AA /* RegisterViewController.m */; };
 		9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */; };
 		A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7819E04AF400BF648F /* CollectionViewCell.m */; };
@@ -97,6 +101,10 @@
 		9B1E401E19E05A79008D8349 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = ../WelcomeViewController.m; sourceTree = "<group>"; };
 		9B63F4E419E0B12E001C2074 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		9B63F4E519E0B12E001C2074 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		9B63F4E719E0BB5E001C2074 /* Sobeys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sobeys.jpg; sourceTree = "<group>"; };
+		9B63F4E819E0BB5E001C2074 /* Loblaws.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loblaws.png; sourceTree = "<group>"; };
+		9B63F4E919E0BB5E001C2074 /* Longos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Longos.jpg; sourceTree = "<group>"; };
+		9B63F4EF19E0C448001C2074 /* Zehrs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zehrs.png; sourceTree = "<group>"; };
 		9BADE8B919E0777E008732AA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		9BADE8BA19E0777E008732AA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewCell.h; sourceTree = "<group>"; };
@@ -357,8 +365,12 @@
 				A4026A8E19E05EDA00BF648F /* diary.jpg */,
 				A408D49219E082DF009766E0 /* kitchen.jpg */,
 				A408D49019E08259009766E0 /* vege.jpg */,
+				9B63F4EF19E0C448001C2074 /* Zehrs.png */,
 				A4026A9019E05F1B00BF648F /* rawMeat.jpg */,
 				A4026A8A19E05E3000BF648F /* fruit.jpg */,
+				9B63F4E719E0BB5E001C2074 /* Sobeys.jpg */,
+				9B63F4E819E0BB5E001C2074 /* Loblaws.png */,
+				9B63F4E919E0BB5E001C2074 /* Longos.jpg */,
 				C3C5326319E0322C00C8A340 /* Info.plist */,
 				A4026A8819E05E1300BF648F /* seafood.jpg */,
 				C3C5326419E0322C00C8A340 /* main.m */,
@@ -517,6 +529,7 @@
 				C345A05819E0849E00041E63 /* HistoryViewController.xib in Resources */,
 				A408D49119E08259009766E0 /* vege.jpg in Resources */,
 				C345A04419E06ACC00041E63 /* OrderConformationViewController.xib in Resources */,
+				9B63F4EA19E0BB5E001C2074 /* Sobeys.jpg in Resources */,
 				C345A06719E096E300041E63 /* ItemsViewTableViewCell.xib in Resources */,
 				A4026A8719E05DFE00BF648F /* bakery.jpg in Resources */,
 				A408D49319E082DF009766E0 /* kitchen.jpg in Resources */,
@@ -524,6 +537,7 @@
 				C3C5328B19E0337600C8A340 /* Simplify.bundle in Resources */,
 				C345A06C19E0B05C00041E63 /* CatagoriesViewController.xib in Resources */,
 				A4026A8919E05E1300BF648F /* seafood.jpg in Resources */,
+				9B63F4EC19E0BB5E001C2074 /* Longos.jpg in Resources */,
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
 				C345A03F19E066D600041E63 /* PickupTimeTableViewCell.xib in Resources */,
@@ -532,9 +546,11 @@
 				A4026A9119E05F1B00BF648F /* rawMeat.jpg in Resources */,
 				C3C5327019E0322C00C8A340 /* Images.xcassets in Resources */,
 				A4026A8B19E05E3000BF648F /* fruit.jpg in Resources */,
+				9B63F4F019E0C448001C2074 /* Zehrs.png in Resources */,
 				C345A03A19E0667300041E63 /* CheckoutPayButtonTableViewCell.xib in Resources */,
 				A4026A8D19E05E9400BF648F /* frozen.jpg in Resources */,
 				C3E01B5719E0B39C009AE24E /* CategoryCollectionViewCell.xib in Resources */,
+				9B63F4EB19E0BB5E001C2074 /* Loblaws.png in Resources */,
 				C345A05D19E0852A00041E63 /* OrderHistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

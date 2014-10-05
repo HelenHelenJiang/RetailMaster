@@ -127,6 +127,10 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jwE-4h-GfN" id="qeQ-ca-qpu"/>
+                            <outlet property="delegate" destination="jwE-4h-GfN" id="yRw-95-fmw"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="location" id="IZ2-WP-8ll">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="LkE-YO-J18"/>
