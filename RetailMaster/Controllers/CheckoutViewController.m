@@ -380,7 +380,7 @@
     Order *order = [Order object];
     order.orderedObjects = self.shoppingLists;
     order.orderPickupDate = self.pickupDate;
-    order.orderPickupLocation = @"Toronto?";
+    order.orderPickupLocation = @"Toronto";
     order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
     order.orderNumber = [[ParseManager sharedManager] randomStringWithLength:7];
     order.isPaid = [NSNumber numberWithBool:false];
@@ -405,6 +405,8 @@
     //4. Add SIMChargeViewController to your view hierarchy
 //    [self.navigationController pushViewController:self.chargeController animated:YES];
     [self presentViewController:self.chargeController animated:YES completion:nil];
+    
+    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -457,6 +459,8 @@
     [request setHTTPMethod:@"POST"];
     NSString *postString = @"simplifyToken=";
     postString = [postString stringByAppendingString:token.token];
+    
+    
     
     //[postString stringByAppendingString:[NSString stringWithFormat:@"&amount=%f", 10.0]];
     //postString = [NSString stringWithFormat:@"%@&amount=%f",postString,10.0];
