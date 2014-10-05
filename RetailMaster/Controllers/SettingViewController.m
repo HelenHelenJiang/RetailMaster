@@ -27,7 +27,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *registeredInfo = [defaults objectForKey:@"customerInfo"];
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
