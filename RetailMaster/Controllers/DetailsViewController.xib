@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController">
             <connections>
                 <outlet property="addToCartButton" destination="aIA-FG-Iu0" id="66g-VD-VTg"/>
+                <outlet property="addToCartImageIcon" destination="pJM-xE-rEl" id="uL2-r2-5uD"/>
                 <outlet property="header" destination="fkT-HT-y8z" id="XtI-a7-SX8"/>
                 <outlet property="headerImageView" destination="foP-Ha-bO7" id="ESt-ka-xEY"/>
                 <outlet property="headerNameLabel" destination="AQN-96-iSY" id="6ZF-nT-JGq"/>
@@ -58,6 +59,9 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ShopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pJM-xE-rEl">
+                    <rect key="frame" x="260" y="39" width="40" height="40"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
