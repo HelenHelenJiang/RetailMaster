@@ -454,17 +454,22 @@
 -(void)creditCardTokenProcessed:(SIMCreditCardToken *)token {
     //Token was generated successfully, now you must use it
     
+    Order *order = [Order object];
+    order.orderedObjects = self.shoppingLists;
+    order.orderPickupDate = self.pickupDate;
+    order.orderPickupLocation = @"Toronto?";
+    order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
+    order.orderNumber = [[ParseManager sharedManager] randomStringWithLength:7];
+    order.isPaid = [NSNumber numberWithBool:false];
+    [order saveInBackground];
+    
     NSURL *url= [NSURL URLWithString:@"http://retailmaster.herokuapp.com/charge.php"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
     NSString *postString = @"simplifyToken=";
     postString = [postString stringByAppendingString:token.token];
     
-    
-    
-    //[postString stringByAppendingString:[NSString stringWithFormat:@"&amount=%f", 10.0]];
-    //postString = [NSString stringWithFormat:@"%@&amount=%f",postString,10.0];
-    NSLog(@"URL : %@", postString);
+    postString = [postString stringByAppendingString:[NSString stringWithFormat:@"&amount=%i", (int)([order.orderPrice doubleValue]*100)]];
     
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
