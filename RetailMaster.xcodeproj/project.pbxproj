@@ -35,6 +35,8 @@
 		A408D4B019E0DAD2009766E0 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408D4AE19E0DAD2009766E0 /* DetailsViewController.xib */; };
 		A408D4B419E0EBBB009766E0 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4B219E0EBBB009766E0 /* DetailsTableViewCell.m */; };
 		A408D4B519E0EBBB009766E0 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408D4B319E0EBBB009766E0 /* DetailsTableViewCell.xib */; };
+		A408D4BC19E16621009766E0 /* libNCLiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A408D4BB19E16621009766E0 /* libNCLiOS.a */; };
+		A408D4BE19E16668009766E0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A408D4BD19E16668009766E0 /* CoreBluetooth.framework */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -149,6 +151,9 @@
 		A408D4B119E0EBBB009766E0 /* DetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewCell.h; sourceTree = "<group>"; };
 		A408D4B219E0EBBB009766E0 /* DetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewCell.m; sourceTree = "<group>"; };
 		A408D4B319E0EBBB009766E0 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
+		A408D4BA19E16616009766E0 /* ncl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ncl.h; sourceTree = "<group>"; };
+		A408D4BB19E16621009766E0 /* libNCLiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNCLiOS.a; sourceTree = "<group>"; };
+		A408D4BD19E16668009766E0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -234,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A408D4BE19E16668009766E0 /* CoreBluetooth.framework in Frameworks */,
 				C3A5884C19E05C8800CDD6EB /* Foundation.framework in Frameworks */,
 				C3C532AC19E036FF00C8A340 /* Accounts.framework in Frameworks */,
 				C3C532AA19E036F100C8A340 /* Social.framework in Frameworks */,
@@ -241,6 +247,7 @@
 				C3C532A619E036E600C8A340 /* StoreKit.framework in Frameworks */,
 				C3C532A419E036E100C8A340 /* Security.framework in Frameworks */,
 				C3C532A219E036DD00C8A340 /* QuartzCore.framework in Frameworks */,
+				A408D4BC19E16621009766E0 /* libNCLiOS.a in Frameworks */,
 				C3C532A019E036D600C8A340 /* MobileCoreServices.framework in Frameworks */,
 				C3C5329E19E036D000C8A340 /* libz.dylib in Frameworks */,
 				C3C5329C19E036CC00C8A340 /* CoreLocation.framework in Frameworks */,
@@ -267,6 +274,7 @@
 		66BBA7A9F999DA0069CF24D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A408D4BD19E16668009766E0 /* CoreBluetooth.framework */,
 				C3A5884B19E05C8800CDD6EB /* Foundation.framework */,
 				C3C532AB19E036FF00C8A340 /* Accounts.framework */,
 				C3C532A919E036F100C8A340 /* Social.framework */,
@@ -372,7 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				C343328519E0C9790092252C /* Default-568h@2x.png */,
-				C365613619E101C600759352 /* Scan */,
+				A408D4BB19E16621009766E0 /* libNCLiOS.a */,
+				A408D4BA19E16616009766E0 /* ncl.h */,
 				C3153C8A19E03AF600C7498A /* Model */,
 				C3153C8919E03A4500C7498A /* Managers */,
 				C3C5328819E0337600C8A340 /* ThirdParty */,
@@ -830,10 +839,15 @@
 					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
 					"\"${PODS_ROOT}/Headers/Public/MMDrawerController\"",
 					"$(SRCROOT)/Simplify.framework/Headers",
+					.,
 				);
 				INFOPLIST_FILE = RetailMaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos8.0;
 			};
@@ -853,10 +867,15 @@
 					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
 					"\"${PODS_ROOT}/Headers/Public/MMDrawerController\"",
 					"$(SRCROOT)/Simplify.framework/Headers",
+					.,
 				);
 				INFOPLIST_FILE = RetailMaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos8.0;
 			};
