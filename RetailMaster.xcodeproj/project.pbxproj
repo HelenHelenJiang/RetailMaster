@@ -471,11 +471,11 @@
 				9BADE8BA19E0777E008732AA /* RegisterViewController.m */,
 				A408D4A019E0B0E0009766E0 /* DetailViewController.h */,
 				A408D4A119E0B0E0009766E0 /* DetailViewController.m */,
+				C3153C9419E03E9800C7498A /* CheckoutViewController.h */,
 				9B1E401D19E05A79008D8349 /* WelcomeViewController.h */,
 				9B1E401E19E05A79008D8349 /* WelcomeViewController.m */,
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
 				C3C5328F19E0356500C8A340 /* SIMProductViewController.m */,
-				C3153C9419E03E9800C7498A /* CheckoutViewController.h */,
 				C3153C9519E03E9800C7498A /* CheckoutViewController.m */,
 				A4026A8319E0548B00BF648F /* CategoryViewController.h */,
 				A4026A8419E0548B00BF648F /* CategoryViewController.m */,
@@ -548,7 +548,7 @@
 				TargetAttributes = {
 					C3C5325E19E0322C00C8A340 = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 78W2X9ZMWT;
+						DevelopmentTeam = CYUYD5N9ES;
 					};
 					C3C5327719E0322C00C8A340 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -817,6 +817,8 @@
 			baseConfigurationReference = 7B144EFB121791A0400F8BC5 /* Pods-RetailMaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RetailMaster/ThirdParty",
@@ -836,6 +838,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos8.0;
 			};
 			name = Debug;
@@ -845,6 +848,8 @@
 			baseConfigurationReference = 36F973BDB82A946BEEA8476A /* Pods-RetailMaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RetailMaster/ThirdParty",
@@ -864,6 +869,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos8.0;
 			};
 			name = Release;
