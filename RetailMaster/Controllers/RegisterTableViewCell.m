@@ -15,6 +15,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        self.inputTextField.placeholder = self.placeHolder;
+        
     }
     return self;
 }
@@ -41,8 +43,7 @@
     [defaults setObject:array forKey:@"customerInfo"];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *array = [[defaults objectForKey:@"customerInfo"] mutableCopy];
@@ -51,5 +52,26 @@
     [textField resignFirstResponder];
     return NO;
 }
+
+-(void) setIcon {
+    
+    int index = self.indexPath.row;
+    
+    NSString *imageName = nil;
+    
+    if (index == 0) {
+        imageName = @"pencil";
+    } else if (index == 1) {
+        imageName = @"address";
+    } else if (index == 2) {
+        imageName = @"phone";
+    } else if (index == 3) {
+        imageName = @"email";
+    }
+    
+    UIImage *image = [UIImage imageNamed:imageName];
+    self.iconImageView.image = image;
+}
+
 
 @end
