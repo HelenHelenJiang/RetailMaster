@@ -34,18 +34,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.nutritionArray = [[NSMutableArray alloc] init];
+    NSString *Calcium = [[NSString alloc] initWithFormat:@"Calcium                %@",[myObject.nutritionFact objectForKey:@"Calcium"]];
+    NSString *Calories = [[NSString alloc] initWithFormat:@"Calories                 %@",[myObject.nutritionFact objectForKey:@"Calories"]];
+    NSString *Carb = [[NSString alloc] initWithFormat:@"Carb                  %@",[myObject.nutritionFact objectForKey:@"Carb"]];
+    NSString *Fat = [[NSString alloc] initWithFormat:@"Fat                      %@",[myObject.nutritionFact objectForKey:@"Fat"]];
+    NSString *Iron = [[NSString alloc] initWithFormat:@"Iron                    %@",[myObject.nutritionFact objectForKey:@"Iron"]];
+    NSString *Protein = [[NSString alloc] initWithFormat:@"Protein                  %@",[myObject.nutritionFact objectForKey:@"Protein"]];
+    NSString *VitaminA = [[NSString alloc] initWithFormat:@"VitaminA                  %@",[myObject.nutritionFact objectForKey:@"VitaminA"]];
+    NSString *VitaminB = [[NSString alloc] initWithFormat:@"VitaminB                  %@",[myObject.nutritionFact objectForKey:@"VitaminB"]];
+    NSString *VitaminC = [[NSString alloc] initWithFormat:@"VitaminC                  %@",[myObject.nutritionFact objectForKey:@"VitaminC"]];
+    NSString *VitaminD = [[NSString alloc] initWithFormat:@"VitaminD                     %@",[myObject.nutritionFact objectForKey:@"VitaminD"]];
+    NSString *VitaminE = [[NSString alloc] initWithFormat:@"VitaminE                     %@",[myObject.nutritionFact objectForKey:@"VitaminE"]];
     
-    NSString *Calcium = [[NSString alloc] initWithFormat:@"Calcium %@",[myObject.nutritionFact objectForKey:@"Calcium"]];
-    NSString *Calories = [[NSString alloc] initWithFormat:@"Calories %@",[myObject.nutritionFact objectForKey:@"Calories"]];
-    NSString *Carb = [[NSString alloc] initWithFormat:@"Carb %@",[myObject.nutritionFact objectForKey:@"Carb"]];
-    NSString *Fat = [[NSString alloc] initWithFormat:@"Fat %@",[myObject.nutritionFact objectForKey:@"Fat"]];
-    NSString *Iron = [[NSString alloc] initWithFormat:@"Iron %@",[myObject.nutritionFact objectForKey:@"Iron"]];
-    NSString *Protein = [[NSString alloc] initWithFormat:@"Protein %@",[myObject.nutritionFact objectForKey:@"Protein"]];
-    NSString *VitaminA = [[NSString alloc] initWithFormat:@"VitaminA %@",[myObject.nutritionFact objectForKey:@"VitaminA"]];
-    NSString *VitaminB = [[NSString alloc] initWithFormat:@"VitaminB %@",[myObject.nutritionFact objectForKey:@"VitaminB"]];
-    NSString *VitaminC = [[NSString alloc] initWithFormat:@"VitaminC %@",[myObject.nutritionFact objectForKey:@"VitaminC"]];
-    NSString *VitaminD = [[NSString alloc] initWithFormat:@"VitaminD %@",[myObject.nutritionFact objectForKey:@"VitaminD"]];
-    NSString *VitaminE = [[NSString alloc] initWithFormat:@"VitaminE %@",[myObject.nutritionFact objectForKey:@"VitaminE"]];
+    
+    
+    
+    
     
     [self.nutritionArray addObject:@"Nutrition Info"];
     [self.nutritionArray addObject:Calcium];
@@ -54,6 +58,7 @@
     [self.nutritionArray addObject:Fat];
     [self.nutritionArray addObject:Iron];
     [self.nutritionArray addObject:Protein];
+    [self.nutritionArray addObject:@"Amount per Serving"];
     [self.nutritionArray addObject:VitaminA];
     [self.nutritionArray addObject:VitaminB];
     [self.nutritionArray addObject:VitaminC];
@@ -65,6 +70,7 @@
     self.headerNameLabel.text = myObject.itemDescription;
     self.headerPriceLabel.text = [NSString stringWithFormat:@"$ %0.2f", [myObject.price doubleValue]];
     [self.addToCartButton addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     self.tableview.backgroundColor = [UIColor colorWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1.0f];
     
@@ -114,8 +120,12 @@
     if (indexPath.row == 0){
         cell.font = [UIFont boldSystemFontOfSize:20.0];
     }
+    if (indexPath.row == 7){
+        cell.font = [UIFont boldSystemFontOfSize:20.0];
+    }
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@",[nutritionArray objectAtIndex:indexPath.row]];
+    //cell.textLabel.textColor = [UIColor grayColor];
     return cell;
 }
 

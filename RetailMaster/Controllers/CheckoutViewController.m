@@ -269,6 +269,9 @@
         
         [cell.payButton addTarget:self action:@selector(payButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
+        [cell.payButton setEnabled:self.shoppingLists.count == 0 ? NO : YES];
+        [cell.payButton setBackgroundColor:self.shoppingLists.count == 0 ? [UIColor lightGrayColor] : [UIColor colorWithRed:214/255.0 green:93/255.0 blue:79/255.0 alpha:1]];
+        
         //        Item *item = self.shoppingLists[indexPath.row];
         //    cell.textLabel.text = item.itemDescription;
         //    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
