@@ -55,6 +55,7 @@
     self.shoppingLists = [NSMutableArray array];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+//    self.tableView.backgroundColor = [UIColor clearColor];
     
     self.pickupDate = [self nextHourDate:[NSDate date]];
     self.primaryColor = [UIColor orangeColor];
@@ -300,7 +301,8 @@
         
         //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
-        cell.contentView.backgroundColor = [UIColor colorWithRed:208.0/255.0 green:210.0/255.0 blue:216.0/255.0 alpha:1.0];
+//        cell.contentView.backgroundColor = [UIColor colorWithRed:239.0/255.0 green:239.0/255.0 blue:244.0/255.0 alpha:1.0];
+        cell.contentView.backgroundColor = [UIColor clearColor];
         
         return cell;
     }
@@ -367,6 +369,11 @@
 
 - (void)payButtonPressed:(id)sender
 {
+    
+    
+    
+    return;
+    
     OrderConformationViewController *orderVC = [[OrderConformationViewController alloc] init];
     
     orderVC.orderedItems = self.shoppingLists;
