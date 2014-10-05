@@ -12,4 +12,6 @@
 
 + (instancetype)sharedManager;
 
+@property (nonatomic, strong) NSMutableArray *shoppingLists;
+
 @end
