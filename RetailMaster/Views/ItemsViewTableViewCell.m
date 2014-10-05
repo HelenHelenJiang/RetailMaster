@@ -20,6 +20,7 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+//    self.backgroundView.layer.cornerRadius = 5.0f;
 }
 
 @end

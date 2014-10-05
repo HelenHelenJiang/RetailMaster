@@ -36,6 +36,7 @@
 		C3153C9719E03E9800C7498A /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9519E03E9800C7498A /* CheckoutViewController.m */; };
 		C3153C9D19E0404C00C7498A /* CheckoutItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */; };
 		C3153C9E19E0404C00C7498A /* CheckoutItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */; };
+		C343328619E0C9790092252C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C343328519E0C9790092252C /* Default-568h@2x.png */; };
 		C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */; };
 		C345A03A19E0667300041E63 /* CheckoutPayButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */; };
 		C345A03E19E066D600041E63 /* PickupTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C345A03C19E066D600041E63 /* PickupTimeTableViewCell.m */; };
@@ -108,8 +109,8 @@
 		9B63F4EF19E0C448001C2074 /* Zehrs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zehrs.png; sourceTree = "<group>"; };
 		9BADE8B919E0777E008732AA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		9BADE8BA19E0777E008732AA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewCell.h; sourceTree = "<group>"; };
-		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewCell.m; sourceTree = "<group>"; };
+		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterTableViewCell.h; path = ../Controllers/RegisterTableViewCell.h; sourceTree = "<group>"; };
+		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterTableViewCell.m; path = ../Controllers/RegisterTableViewCell.m; sourceTree = "<group>"; };
 		A4026A7719E04AF400BF648F /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		A4026A7819E04AF400BF648F /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		A4026A8319E0548B00BF648F /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutItemTableViewCell.h; sourceTree = "<group>"; };
 		C3153C9B19E0404C00C7498A /* CheckoutItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutItemTableViewCell.m; sourceTree = "<group>"; };
 		C3153C9C19E0404C00C7498A /* CheckoutItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutItemTableViewCell.xib; sourceTree = "<group>"; };
+		C343328519E0C9790092252C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C345A03619E0667300041E63 /* CheckoutPayButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutPayButtonTableViewCell.h; sourceTree = "<group>"; };
 		C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutPayButtonTableViewCell.m; sourceTree = "<group>"; };
 		C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutPayButtonTableViewCell.xib; sourceTree = "<group>"; };
@@ -297,7 +299,6 @@
 				C345A03619E0667300041E63 /* CheckoutPayButtonTableViewCell.h */,
 				C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */,
 				C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */,
-				C345A03B19E066D600041E63 /* PickupTimeTableViewCell.h */,
 				C345A03C19E066D600041E63 /* PickupTimeTableViewCell.m */,
 				C345A03D19E066D600041E63 /* PickupTimeTableViewCell.xib */,
 				C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */,
@@ -318,6 +319,11 @@
 				C3E01B5319E0B39C009AE24E /* CategoryCollectionViewCell.h */,
 				C3E01B5419E0B39C009AE24E /* CategoryCollectionViewCell.m */,
 				C3E01B5519E0B39C009AE24E /* CategoryCollectionViewCell.xib */,
+				9B166A2719E09C7A00BA4072 /* LocationCell.h */,
+				9B166A2819E09C7A00BA4072 /* LocationCell.m */,
+				C345A03B19E066D600041E63 /* PickupTimeTableViewCell.h */,
+				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
+				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 		C3C5325619E0322C00C8A340 = {
 			isa = PBXGroup;
 			children = (
+				C343328519E0C9790092252C /* Default-568h@2x.png */,
 				C3153C8A19E03AF600C7498A /* Model */,
 				C3153C8919E03A4500C7498A /* Managers */,
 				C3C5328819E0337600C8A340 /* ThirdParty */,
@@ -415,8 +422,6 @@
 		C3C5328D19E0356500C8A340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9B166A2719E09C7A00BA4072 /* LocationCell.h */,
-				9B166A2819E09C7A00BA4072 /* LocationCell.m */,
 				9B63F4E419E0B12E001C2074 /* LocationViewController.h */,
 				9B63F4E519E0B12E001C2074 /* LocationViewController.m */,
 				C345A05419E0849E00041E63 /* HistoryViewController.h */,
@@ -426,8 +431,6 @@
 				9BADE8BA19E0777E008732AA /* RegisterViewController.m */,
 				A408D4A019E0B0E0009766E0 /* DetailViewController.h */,
 				A408D4A119E0B0E0009766E0 /* DetailViewController.m */,
-				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
-				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
 				9B1E401D19E05A79008D8349 /* WelcomeViewController.h */,
 				9B1E401E19E05A79008D8349 /* WelcomeViewController.m */,
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,
@@ -500,6 +503,7 @@
 				TargetAttributes = {
 					C3C5325E19E0322C00C8A340 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 78W2X9ZMWT;
 					};
 					C3C5327719E0322C00C8A340 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -542,6 +546,7 @@
 				C3C5328B19E0337600C8A340 /* Simplify.bundle in Resources */,
 				C345A06C19E0B05C00041E63 /* CatagoriesViewController.xib in Resources */,
 				A4026A8919E05E1300BF648F /* seafood.jpg in Resources */,
+				C343328619E0C9790092252C /* Default-568h@2x.png in Resources */,
 				9B63F4EC19E0BB5E001C2074 /* Longos.jpg in Resources */,
 				C3C5326E19E0322C00C8A340 /* Main.storyboard in Resources */,
 				C3C5327319E0322C00C8A340 /* LaunchScreen.xib in Resources */,
@@ -772,6 +777,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.0;
 			};
 			name = Debug;
 		};
@@ -794,6 +800,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.0;
 			};
 			name = Release;
 		};

@@ -34,6 +34,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Catagory";
+    
     CategoryNames = [[[NSArray alloc] initWithObjects:@"Bakery",@"Dairy",@"Frozen",@"Fruit",@"Kitchen",@"Raw Meat",@"Sea Food",@"Vegetable", nil] mutableCopy];
     CategoryImages = [[[NSArray alloc] initWithObjects:@"bakery.jpg",@"diary.jpg",@"frozen.jpg",@"fruit.jpg",@"kitchen.jpg",@"rawMeat.jpg",@"seafood.jpg",@"vege.jpg", nil] mutableCopy];
     // Do any additional setup after loading the view from its nib.
@@ -154,7 +156,7 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(0, 15, 0, 15);
+    return UIEdgeInsetsMake(10, 15, 0, 15);
 }
 
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section

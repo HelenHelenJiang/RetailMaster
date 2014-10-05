@@ -50,7 +50,7 @@
     
     self.confirmButton.layer.cornerRadius = 5.0f;
     
-    [self.tableview setTableFooterView:self.tableViewBottomView];
+//    [self.tableview setTableFooterView:self.tableViewBottomView];
     
     [self.view addSubview:self.tableViewBottomView];
     

@@ -53,7 +53,7 @@
     NSMutableDictionary *zehrs = [[NSMutableDictionary alloc]init];
     [zehrs setObject:@"Zehrs" forKey:@"name"];
     [zehrs setObject:@"487 Queen St S" forKey:@"location"];
-    [zehrs setObject:@"Zehrs.jpg" forKey:@"image"];
+    [zehrs setObject:@"Zehrs.png" forKey:@"image"];
     [locationArray addObject:zehrs];
     
 }
@@ -67,6 +67,10 @@
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return 1;
+    
+}
+- (IBAction)cancelHit:(id)sender {
+    
     
 }
 
