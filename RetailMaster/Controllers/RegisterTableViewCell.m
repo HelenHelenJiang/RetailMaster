@@ -18,6 +18,7 @@
         self.inputTextField.placeholder = self.placeHolder;
         
     }
+    
     return self;
 }
 
@@ -34,6 +35,15 @@
     // Configure the view for the selected state
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if ([self.delegate respondsToSelector:@selector(didSelectedCell:)])
+    {
+        [self.delegate didSelectedCell:self];
+    }
+    
+    return true;
+}
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -67,10 +77,14 @@
         imageName = @"phone";
     } else if (index == 3) {
         imageName = @"email";
+    } else if (index == 4) {
+        imageName = @"mastercard";
     }
     
     UIImage *image = [UIImage imageNamed:imageName];
     self.iconImageView.image = image;
+    
+    self.inputTextField.placeholder = self.placeHolder;
 }
 
 

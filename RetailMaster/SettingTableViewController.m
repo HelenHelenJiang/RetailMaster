@@ -1,26 +1,26 @@
 //
 //  RegisterViewController.m
-//  
+//
 //
 //  Created by Jack on 2014-10-04.
 //
 //
 
-#import "RegisterViewController.h"
+#import "SettingTableViewController.h"
 #import "RegisterTableViewCell.h"
 #import "WelcomeViewController.h"
 
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-@interface RegisterViewController ()<RegisterTableViewCellDelegate>
+@interface SettingTableViewController ()<RegisterTableViewCellDelegate>
 
 @property (nonatomic, strong) NSMutableArray *nameTitleArray;
 @property (nonatomic, strong) RegisterTableViewCell *selectedCell;
 
 @end
 
-@implementation RegisterViewController
+@implementation SettingTableViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,9 +41,7 @@
     [self.tableView addGestureRecognizer:gestureRecognizer];
     
     self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
-//    [self.navigationController.navigationItem.leftBarButtonItems[0] setTintColor:RGB(194, 121, 63)];
-    [self.cancelButton setTintColor:RGB(194, 121, 63)];
-    [self.saveButton setTintColor:RGB(194, 121, 63)];
+    //    [self.navigationController.navigationItem.leftBarButtonItems[0] setTintColor:RGB(194, 121, 63)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,7 +70,7 @@
     if (cell == nil)
     {
         cell = [[RegisterTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                       reuseIdentifier:MyIdentifier];
+                                            reuseIdentifier:MyIdentifier];
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -126,16 +124,33 @@
     }
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    
+    UIView *footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 60)];
+    UIButton *saveButton = [[UIButton alloc] initWithFrame:CGRectMake(105, 20, 100, 30)];
+    
+    [saveButton setTitle:@"Save" forState:UIControlStateNormal];
+    [saveButton setBackgroundColor:RGB(214, 93, 79)];
+    [saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    saveButton.layer.cornerRadius = 3.0f;
+    [saveButton addTarget:self action:@selector(saveClicked) forControlEvents:UIControlEventTouchUpInside];
+    
+    [footerView addSubview:saveButton];
+    return footerView;
 }
-*/
+
+-(void) saveClicked {
+    [self hideKeyboard];
+}
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

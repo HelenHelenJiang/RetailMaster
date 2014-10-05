@@ -25,6 +25,12 @@
 #import <Simplify/UIColor+Simplify.h>
 #import <Simplify/SIMResponseViewController.h>
 
+// Scan
+#import "ReaderSampleViewController.h"
+
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate,SIMChargeCardViewControllerDelegate>
 
 @property (strong, nonatomic) UIToolbar *datePickToolbar;
@@ -69,7 +75,7 @@
 //            [self.tableView reloadData];
 //        }
 //    }];
-    
+    self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
     [self loadData];
 }
 
@@ -368,12 +374,7 @@
 }
 
 - (void)payButtonPressed:(id)sender
-{
-    
-    
-    
-    return;
-    
+{    
     OrderConformationViewController *orderVC = [[OrderConformationViewController alloc] init];
     
     orderVC.orderedItems = self.shoppingLists;
@@ -453,14 +454,29 @@
 -(void)creditCardTokenProcessed:(SIMCreditCardToken *)token {
     //Token was generated successfully, now you must use it
     
-    NSURL *url= [NSURL URLWithString:@"https://Your_server/charge.rb"];
+    NSURL *url= [NSURL URLWithString:@"http://retailmaster.herokuapp.com/charge.php"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
     NSString *postString = @"simplifyToken=";
-    
     postString = [postString stringByAppendingString:token.token];
     
+    //[postString stringByAppendingString:[NSString stringWithFormat:@"&amount=%f", 10.0]];
+    //postString = [NSString stringWithFormat:@"%@&amount=%f",postString,10.0];
+    NSLog(@"URL : %@", postString);
+    
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    
+    if(conn) {
+        
+        NSLog(@"Connection Successful");
+        
+    } else {
+        
+        NSLog(@"Connection could not be made");
+        
+    }
     
     NSError *error;
     
@@ -473,10 +489,25 @@
         [self presentViewController:viewController animated:YES completion:nil];
         
     } else {
+        OrderConformationViewController *orderVC = [[OrderConformationViewController alloc] init];
         
-        UIImageView *blurredView = [UIImage blurImage:self.view.layer];
-        SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:blurredView primaryColor:self.primaryColor title:@"Success!" description:@"You purchased a cupcake!"];
-        [self presentViewController:viewController animated:YES completion:nil];
+        orderVC.orderedItems = self.shoppingLists;
+        
+        Order *order = [Order object];
+        order.orderedObjects = self.shoppingLists;
+        order.orderPickupDate = self.pickupDate;
+        order.orderPickupLocation = @"Toronto?";
+        order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
+        order.orderNumber = [[ParseManager sharedManager] randomStringWithLength:7];
+        order.isPaid = [NSNumber numberWithBool:false];
+        [order saveInBackground];
+        
+        orderVC.order = order;
+        
+        [self.navigationController pushViewController:orderVC animated:YES];
+//        UIImageView *blurredView = [UIImage blurImage:self.view.layer];
+//        SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:blurredView primaryColor:self.primaryColor title:@"Success!" description:@"You purchased a cupcake!"];
+//        [self presentViewController:viewController animated:YES completion:nil];
     }
     
 }

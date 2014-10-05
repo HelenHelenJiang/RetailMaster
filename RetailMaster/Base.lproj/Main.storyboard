@@ -131,14 +131,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HmG-ou-8uD">
-                                            <rect key="frame" x="116" y="6" width="99" height="29"/>
+                                            <rect key="frame" x="121" y="20" width="99" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="djs-XD-0h5">
-                                            <rect key="frame" x="116" y="58" width="184" height="21"/>
+                                            <rect key="frame" x="121" y="58" width="184" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
@@ -176,6 +176,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelButton" destination="LkE-YO-J18" id="pBe-9i-5h4"/>
                         <outlet property="locationTabelView" destination="SWm-0R-rG7" id="P8P-tm-A0r"/>
                     </connections>
                 </viewController>
@@ -230,13 +231,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="4pF-M1-laA">
-                                            <rect key="frame" x="47" y="10" width="253" height="30"/>
+                                            <rect key="frame" x="53" y="8" width="247" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zjd-kL-as9">
-                                            <rect key="frame" x="9" y="10" width="30" height="30"/>
+                                            <rect key="frame" x="9" y="10" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -264,6 +265,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="CVv-gD-D8h" id="4uI-Z6-hwE"/>
+                        <outlet property="saveButton" destination="jJs-pe-fKG" id="vCr-Lo-2cD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsZ-qx-BZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,7 +488,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukv-VB-qoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="-456.76666666666665"/>
+            <point key="canvasLocation" x="1012" y="-457"/>
         </scene>
         <!--Catagories View Controller-->
         <scene sceneID="m8q-zi-HcC">
@@ -493,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tH-X6-gHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="376.30000000000001"/>
+            <point key="canvasLocation" x="1012" y="372.5"/>
         </scene>
         <!--Item View Controller - Shop-->
         <scene sceneID="ZWD-UE-QY2">
@@ -557,7 +562,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFy-KI-0Hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="-442.56666666666666"/>
+            <point key="canvasLocation" x="1471" y="-492.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="v8l-Y5-tco">
@@ -619,10 +624,10 @@
             </objects>
             <point key="canvasLocation" x="1449" y="389.31666666666666"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Setting Table View Controller - Setting-->
         <scene sceneID="les-sI-Tu1">
             <objects>
-                <tableViewController id="tJb-Ob-qer" customClass="RegisterViewController" sceneMemberID="viewController">
+                <tableViewController id="tJb-Ob-qer" customClass="SettingTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="CCa-Dl-Gza">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -658,7 +663,7 @@
                             <outlet property="delegate" destination="tJb-Ob-qer" id="Ans-hB-fpD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8oh-iU-59Z"/>
+                    <navigationItem key="navigationItem" title="Setting" id="8oh-iU-59Z"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xo4-ZB-VP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

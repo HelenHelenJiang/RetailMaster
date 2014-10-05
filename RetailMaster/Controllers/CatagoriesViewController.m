@@ -9,6 +9,14 @@
 #import "CatagoriesViewController.h"
 #import "CategoryCollectionViewCell.h"
 #import "ItemsViewController.h"
+#import "ReaderSampleViewController.h"
+#import "MBProgressHUD.h"
+#import "ParseManager.h"
+#import "Item.h"
+#import "DetailsViewController.h"
+
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 @interface CatagoriesViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 {
@@ -36,9 +44,25 @@
     
     self.navigationItem.title = @"Catagory";
     
-    CategoryNames = [[[NSArray alloc] initWithObjects:@"Bakery",@"Dairy",@"Frozen",@"Fruit",@"Kitchen",@"Raw Meat",@"Sea Food",@"Vegetable", nil] mutableCopy];
+    //    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"yourimage.png"]];
+    //    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"scan.png"]]];
+    //    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Scan" style:UIButtonTypeSystem target:self action:@selector(scanPressed:)];
+    //    self.navigationItem.rightBarButtonItem = item;
+    
+    UIButton *optionsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [optionsBtn setFrame:CGRectMake(0, 0, 30, 30)];
+    [optionsBtn addTarget:self action:@selector(scanBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [optionsBtn setBackgroundImage:[UIImage imageNamed:@"scan.png"] forState:UIControlStateNormal];
+    
+    UIBarButtonItem *optionsBtnItem = [[UIBarButtonItem alloc] initWithCustomView:optionsBtn];
+    
+    [self.navigationItem setRightBarButtonItem:optionsBtnItem];
+    
+    CategoryNames = [[[NSArray alloc] initWithObjects:@"Bakery",@"Dairy",@"FastFood",@"Fruit",@"Kitchen",@"RawMeat",@"Sea Food",@"Vegetable", nil] mutableCopy];
     CategoryImages = [[[NSArray alloc] initWithObjects:@"bakery.jpg",@"diary.jpg",@"frozen.jpg",@"fruit.jpg",@"kitchen.jpg",@"rawMeat.jpg",@"seafood.jpg",@"vege.jpg", nil] mutableCopy];
     // Do any additional setup after loading the view from its nib.
+    self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
+    [self.navigationController.navigationBar setTintColor:RGB(194, 121, 63)];
     [self initCollectionView];
 }
 
@@ -59,6 +83,14 @@
 //    [self.collectionView registerNib:headerNib forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"UploadingSnapHeader"];
 //    [self.view addSubview:self.collectionView];
     [self.collectionView reloadData];
+}
+
+- (void)scanPressed:(id)sender
+{
+    ReaderSampleViewController *scanVC = [[ReaderSampleViewController alloc] init];
+    [self.navigationController pushViewController:scanVC animated:YES];
+    
+    return;
 }
 
 #pragma mark collectionView delegates
@@ -185,5 +217,71 @@
     itemController.catName = [CategoryNames objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:itemController animated:YES];
 }
+
+#pragma mark - Scan
+- (void)scanBtnPressed:(id)sender
+{
+    // ADD: present a barcode reader that scans from the camera feed
+    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+    reader.readerDelegate = self;
+    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+    reader.readerView.torchMode = 0;
+    
+    ZBarImageScanner *scanner = reader.scanner;
+    // TODO: (optional) additional reader configuration here
+    
+    // EXAMPLE: disable rarely used I2/5 to improve performance
+    [scanner setSymbology: ZBAR_I25
+                   config: ZBAR_CFG_ENABLE
+                       to: 0];
+    
+    // present and release the controller
+    [self presentViewController:reader animated:YES completion:nil];
+}
+
+- (void) imagePickerController: (UIImagePickerController*) reader
+ didFinishPickingMediaWithInfo: (NSDictionary*) info
+{
+    // ADD: get the decode results
+    id<NSFastEnumeration> results =
+    [info objectForKey: ZBarReaderControllerResults];
+    ZBarSymbol *symbol = nil;
+    for(symbol in results)
+        // EXAMPLE: just grab the first barcode
+        break;
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[ParseManager sharedManager] fetchItemsWithBarcode:symbol.data Completion:^(BOOL success, NSArray *objects){
+        if (success)
+        {
+            Item *item = objects[0];
+            DetailsViewController *detailVC = [[DetailsViewController alloc] init];
+            detailVC.myObject = item;
+            [self.navigationController pushViewController:detailVC animated:YES];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cannot find that item"
+                                                            message:@"Please try again"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    }];
+    
+    NSLog(@"%@", symbol.data);
+//    // EXAMPLE: do something useful with the barcode data
+//    resultText.text = symbol.data;
+//    
+//    // EXAMPLE: do something useful with the barcode image
+//    resultImage.image =
+//    [info objectForKey: UIImagePickerControllerOriginalImage];
+    
+    // ADD: dismiss the controller (NB dismiss from the *reader*!)
+    [reader dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

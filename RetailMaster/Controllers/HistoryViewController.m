@@ -11,6 +11,10 @@
 #import "OrderHistoryTableViewCell.h"
 #import "ParseManager.h"
 
+
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @interface HistoryViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
@@ -35,6 +39,18 @@
     self.orders = [NSMutableArray array];
     // Do any additional setup after loading the view from its nib.
     
+    self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
+    
+    [self reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self reloadData];
+}
+
+- (void)reloadData
+{
     [[ParseManager sharedManager] fetchOrdersFromUserID:nil Limit:100 Skip:0 Completion:^(BOOL success, NSArray *objects){
         self.orders = [objects mutableCopy];
         [self.tableview reloadData];

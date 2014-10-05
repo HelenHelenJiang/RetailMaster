@@ -11,5 +11,6 @@
 @interface LocationViewController : UIViewController <UITableViewDataSource,UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *locationTabelView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 
 @end

@@ -12,6 +12,10 @@
 #import "ParseManager.h"
 #import "MBProgressHUD.h"
 #import "CheckoutViewController.h"
+#import "DataManager.h"
+
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 @interface OrderConformationViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -55,6 +59,7 @@
     [self.view addSubview:self.tableViewBottomView];
     
     self.totalPriceLabel.text = [NSString stringWithFormat:@"$%0.2f", [self getTotalPrice]];
+    self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -212,8 +217,8 @@
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.order saveInBackgroundWithBlock:^(BOOL successed, NSError *error){
+        [[DataManager sharedManager].shoppingLists removeAllObjects];
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-
         [self.navigationController popToRootViewControllerAnimated:YES];
     }];
 }

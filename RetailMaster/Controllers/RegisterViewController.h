@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RegisterViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 @end
