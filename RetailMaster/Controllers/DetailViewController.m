@@ -38,6 +38,8 @@
     UILabel *nameView = [[UILabel alloc] initWithFrame:CGRectMake(135, 10, 50, 10)];
     UILabel *priceView = [[UILabel alloc] initWithFrame:CGRectMake(135, 25, 50, 10)];
     UIButton *buttonView = [[UIButton alloc] initWithFrame:CGRectMake(135, 35, 50, 10)];
+    buttonView.imageView.image = [UIImage imageNamed:@"ShopIcon.jpg"];
+    
     [headerView addSubview:itemImage];
     [headerView addSubview:nameView];
     [headerView addSubview:priceView];
@@ -46,6 +48,11 @@
     nameView.text = myObject.name;
     priceView.text = myObject.price;
     [itemImage sd_setImageWithURL:myObject.imageURL];
+    CALayer *imgLayer=itemImage.layer;
+    [imgLayer setCornerRadius:10];
+    [imgLayer setBorderWidth:1];
+    [imgLayer setMasksToBounds:YES];
+    
     self.nutritionArray = [[NSMutableArray alloc] init];
 
     [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Calcium"]];
