@@ -133,7 +133,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="locationTabelView" destination="SWm-0R-rG7" id="P8P-tm-A0r"/>
-                        <outlet property="locationTableView" destination="SWm-0R-rG7" id="LkI-Ob-cT9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3T-Dp-4gF" userLabel="First Responder" sceneMemberID="firstResponder"/>
