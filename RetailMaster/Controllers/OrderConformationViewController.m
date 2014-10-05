@@ -60,6 +60,7 @@
     
     self.totalPriceLabel.text = [NSString stringWithFormat:@"$%0.2f", [self getTotalPrice]];
     self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
+    [self.navigationController.navigationBar setTintColor:RGB(194, 121, 63)];
     // Do any additional setup after loading the view from its nib.
 }
 
