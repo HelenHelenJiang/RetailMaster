@@ -17,4 +17,5 @@
 
 @property (strong, nonatomic) NSMutableArray *dealsData;
 
++(void) populateDataToManager;
 @end

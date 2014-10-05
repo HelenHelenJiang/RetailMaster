@@ -11,6 +11,7 @@
 @interface RegisterTableViewCell : UITableViewCell <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *catLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 @property (nonatomic,strong) NSIndexPath *indexPath;
 @end
