@@ -60,6 +60,7 @@
     [locationArray addObject:zehrs];
     
     self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
+    [self.cancelButton setTintColor:RGB(194, 121, 63)];
 }
 
 - (void)didReceiveMemoryWarning

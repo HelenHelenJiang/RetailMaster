@@ -40,7 +40,9 @@
     [self.tableView addGestureRecognizer:gestureRecognizer];
     
     self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
-    
+//    [self.navigationController.navigationItem.leftBarButtonItems[0] setTintColor:RGB(194, 121, 63)];
+    [self.cancelButton setTintColor:RGB(194, 121, 63)];
+    [self.saveButton setTintColor:RGB(194, 121, 63)];
 }
 
 - (void)didReceiveMemoryWarning
