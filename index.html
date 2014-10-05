@@ -49,8 +49,9 @@
                         
                         <div class="col-sm-12" id="featured">   
                           <div class="page-header text-muted">
-                          Dashboard
+                          <img class="img-responsive img-half" src="Loblaws.png">
                           </div> 
+                          
                         </div>
                         
                         <!--/top story-->
@@ -59,8 +60,10 @@
                             <table id="order" style="width:100%">
                                 <tr>
                                     <th>Name</th>
-                                    <th>Quantity</th>		
+                                    <th>Order Number</th>
+                                    <th>Order List</th>		
                                     <th>Price</th>
+                                    <th>Card Number</th>
                                     <th>Pickup time</th>
                                     <th>Paid</th>
                                 </tr>
@@ -88,8 +91,9 @@
     	// Do something with the returned Parse.Object values
     	for (var i = 0; i < results.length; i++) { 
       		var object = results[i];
-			document.getElementById('order').innerHTML += "<tr id=\""+i+"\"><td>"+object.get("Name")+"</td><td>"+object.get("Quantity")+"</td><td>"+object.get("Price")+"</td><td>"+object.get("PickUpTime")+"</td><td><button id=\"button"+i+"\" type=\"button\" onclick=pay("+i+",\""+object.id+"\")>Paid</button></tr>";
-            decideColor(i,object.id);
+            var orderList = object.get("OrderList");
+                 document.getElementById('order').innerHTML += "<tr id=\""+i+"\"><td>"+object.get("Name")+"</td><td>"+object.get("OrderNumber")+"</td><td>"+object.get("OrderList")+"</td><td>"+object.get("Price")+"</td><td>"+object.get("CardNumber")+"</td><td>"+object.get("PickUpTime")+"</td><td><button id=\"button"+i+"\" type=\"button\" onclick=pay("+i+",\""+object.id+"\")>Paid</button></tr>";
+                decideColor(i,object.id);
     	}
   	},
   	error: function(error) {
