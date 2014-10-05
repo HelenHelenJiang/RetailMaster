@@ -12,6 +12,7 @@
 #import "Order.h"
 
 #import "ParseManager.h"
+#import "DataManager.h"
 
 @interface AppDelegate ()
 
@@ -31,6 +32,20 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
  //   [self uploadData];
 //    [[ParseManager sharedManager] updateItem];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL isRegistered = [defaults objectForKey:@"isRegistered"];
+    
+    if (isRegistered) {
+        
+        NSMutableArray *customerInfo = [defaults objectForKey:@"customerInfo"];
+        if (customerInfo.count == 5)
+        {
+            NSString *content = [customerInfo objectAtIndex:4];
+            [DataManager sharedManager].cardNumber = content;
+        }
+//        cell.inputTextField.text = content;
+    }
     
     return YES;
 }

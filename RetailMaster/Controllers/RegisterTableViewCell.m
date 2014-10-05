@@ -7,6 +7,7 @@
 //
 
 #import "RegisterTableViewCell.h"
+#import "DataManager.h"
 
 @implementation RegisterTableViewCell
 
@@ -45,6 +46,16 @@
     return true;
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField.tag == 4)
+    {
+        [DataManager sharedManager].cardNumber = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    }
+    
+    return YES;
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     [textField resignFirstResponder];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -59,6 +70,12 @@
     NSMutableArray *array = [[defaults objectForKey:@"customerInfo"] mutableCopy];
     [array replaceObjectAtIndex:self.indexPath.row withObject:textField.text];
     [defaults setObject:array forKey:@"customerInfo"];
+    
+    if (textField.tag == 4)
+    {
+        [DataManager sharedManager].cardNumber = textField.text;
+    }
+    
     [textField resignFirstResponder];
     return NO;
 }

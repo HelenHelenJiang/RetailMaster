@@ -24,12 +24,15 @@
 #import <Simplify/UIImage+Simplify.h>
 #import <Simplify/UIColor+Simplify.h>
 #import <Simplify/SIMResponseViewController.h>
+#import <Simplify/SIMChargeCardModel.h>
+
+#import "MBProgressHUD.h"
 
 
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-@interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate,SIMChargeCardViewControllerDelegate>
+@interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate,SIMChargeCardViewControllerDelegate, SIMChargeCardModelDelegate>
 
 @property (strong, nonatomic) UIToolbar *datePickToolbar;
 @property (strong, nonatomic) UIDatePicker *datePick;
@@ -388,12 +391,15 @@
     
     orderVC.order = order;
     
-//    if ([DataManager sharedManager].token)
+//    if ([DataManager sharedManager].cardNumber)
 //    {
-//        [self creditCardTokenProcessed:[DataManager sharedManager].token];
+//        [self payWithSavedCard];
+////        [self creditCardTokenProcessed:[DataManager sharedManager].token];
 //    }
 //    else
 //    {
+    
+//    if ([DataManager sharedManager])
         //Mastercard
         //2. Create a SIMChargeViewController with your public api key
         SIMChargeCardViewController *chargeController = [[SIMChargeCardViewController alloc] initWithPublicKey:@"sbpb_NzdlZTRkMTgtYjVkYS00ODljLWIzZjUtMzYzZWU0ZjQ4Zjg4" primaryColor:self.primaryColor];
@@ -458,11 +464,26 @@
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
+- (void)payWithSavedCard
+{
+    NSError *error = [[NSError alloc] init];
+    SIMChargeCardModel *cardModel = [[SIMChargeCardModel alloc] initWithPublicKey:@"sbpb_NzdlZTRkMTgtYjVkYS00ODljLWIzZjUtMzYzZWU0ZjQ4Zjg4" error:&error];
+    [cardModel updateCardNumberWithString:[DataManager sharedManager].cardNumber];
+    [cardModel updateExpirationDateWithString:@"1214"];
+    cardModel.delegate = self;
+    [cardModel retrieveToken];
+}
+
+- (void)tokenProcessed:(SIMCreditCardToken *)token
+{
+    [self creditCardTokenProcessed:token];
+}
+
 //5. This method will be called on your class whenever the user presses the Charge Card button and tokenization succeeds
 -(void)creditCardTokenProcessed:(SIMCreditCardToken *)token {
     //Token was generated successfully, now you must use it
     
-    [DataManager sharedManager].token = token;
+//    [DataManager sharedManager].cardNumber = token;
     
     Order *order = [Order object];
     order.orderedObjects = self.shoppingLists;
@@ -483,9 +504,10 @@
     
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
     
-    [conn start];
+//    [conn start];
     
     if(conn) {
         
@@ -519,14 +541,14 @@
         order.orderPrice = [NSNumber numberWithDouble:[self getTotalPrice]];
         order.orderNumber = [[ParseManager sharedManager] randomStringWithLength:7];
         order.isPaid = [NSNumber numberWithBool:false];
-        [order saveInBackground];
+//        [order saveInBackground];
         
         orderVC.order = order;
         
         [self.navigationController pushViewController:orderVC animated:YES];
-//        UIImageView *blurredView = [UIImage blurImage:self.view.layer];
-//        SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:blurredView primaryColor:self.primaryColor title:@"Success!" description:@"You purchased a cupcake!"];
-//        [self presentViewController:viewController animated:YES completion:nil];
+        //        UIImageView *blurredView = [UIImage blurImage:self.view.layer];
+        //        SIMResponseViewController *viewController = [[SIMResponseViewController alloc] initWithBackground:blurredView primaryColor:self.primaryColor title:@"Success!" description:@"You purchased a cupcake!"];
+        //        [self presentViewController:viewController animated:YES completion:nil];
     }
     
 }

@@ -57,7 +57,7 @@
     
     [self.navigationItem setRightBarButtonItem:optionsBtnItem];
     
-    CategoryNames = [[[NSArray alloc] initWithObjects:@"Bakery",@"Dairy",@"FastFood",@"Fruit",@"Kitchen",@"RawMeat",@"Sea Food",@"Vegetable", nil] mutableCopy];
+    CategoryNames = [[[NSArray alloc] initWithObjects:@"Bakery",@"Dairy",@"FastFood",@"Fruit",@"Kitchen",@"RawMeat",@"SeaFood",@"Vegetable", nil] mutableCopy];
     CategoryImages = [[[NSArray alloc] initWithObjects:@"bakery.jpg",@"diary.jpg",@"frozen.jpg",@"fruit.jpg",@"kitchen.jpg",@"rawMeat.jpg",@"seafood.jpg",@"vege.jpg", nil] mutableCopy];
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);

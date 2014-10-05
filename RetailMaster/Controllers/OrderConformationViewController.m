@@ -43,6 +43,11 @@
     return totalPrice;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -209,7 +214,7 @@
     self.order.isPaid = [NSNumber numberWithBool:true];
     self.order[@"OrderNumber"] = self.order.orderNumber;
     self.order[@"Price"] = [NSString stringWithFormat:@"%0.2f", [self.order.orderPrice doubleValue]];
-    self.order[@"Name"] = [defaults objectForKey:@"customerInfo"][0];
+    self.order[@"Name"] = [defaults objectForKey:@"customerInfo"][0] == nil ? @"Test" : [defaults objectForKey:@"customerInfo"][0];
     self.order[@"CardNumber"] = @"5555********4444";
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

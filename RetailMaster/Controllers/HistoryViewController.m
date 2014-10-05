@@ -91,6 +91,10 @@
     cell.orderPriceLabel.text = [NSString stringWithFormat:@"%0.2f", [order.orderPrice doubleValue]];
     cell.orderPickupLocationLabel.text = order.orderPickupLocation;
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"hh:mm a"];
+    NSString *currentTime = [dateFormatter stringFromDate:order.orderPickupDate];
+    cell.orderPickupDateLabel.text = currentTime;
 //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;

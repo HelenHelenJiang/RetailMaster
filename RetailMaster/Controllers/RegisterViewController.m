@@ -79,6 +79,7 @@
     cell.placeHolder = [self.nameTitleArray objectAtIndex:indexPath.row];
     cell.indexPath = indexPath;
     cell.delegate = self;
+    cell.inputTextField.tag = indexPath.row;
     [cell setIcon];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

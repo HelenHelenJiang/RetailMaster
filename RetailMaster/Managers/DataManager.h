@@ -27,6 +27,7 @@
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, strong) SIMCreditCardToken *token;
+@property (nonatomic, strong) NSString *cardNumber;
 
 - (void)addToShoppingList:(Item *)item;
 
