@@ -1,5 +1,7 @@
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MMDrawerController" "${PODS_ROOT}/Headers/Public/SDWebImage"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/MMDrawerController" -isystem "${PODS_ROOT}/Headers/Public/SDWebImage"
-OTHER_LDFLAGS = -ObjC -l"Pods-RetailMaster-MBProgressHUD" -l"Pods-RetailMaster-MMDrawerController" -l"Pods-RetailMaster-SDWebImage" -framework "CoreGraphics" -framework "ImageIO" -framework "QuartzCore"
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphoneos*][arch=*] = ZBarReaderViewImpl_Simulator.m
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*][arch=*] = ZBarReaderViewImpl_Capture.m ZBarCaptureReader.m
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 NDEBUG=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MMDrawerController" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/ZBarSDK" "${PODS_ROOT}/Headers/Public/ZXingObjC" "${PODS_ROOT}/Headers/Public/libqrencode"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/MMDrawerController" -isystem "${PODS_ROOT}/Headers/Public/SDWebImage" -isystem "${PODS_ROOT}/Headers/Public/ZBarSDK" -isystem "${PODS_ROOT}/Headers/Public/ZXingObjC" -isystem "${PODS_ROOT}/Headers/Public/libqrencode"
+OTHER_LDFLAGS = -ObjC -l"Pods-RetailMaster-MBProgressHUD" -l"Pods-RetailMaster-MMDrawerController" -l"Pods-RetailMaster-SDWebImage" -l"Pods-RetailMaster-ZBarSDK" -l"Pods-RetailMaster-ZXingObjC" -l"Pods-RetailMaster-libqrencode" -l"iconv" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreGraphics" -framework "CoreMedia" -framework "CoreVideo" -framework "ImageIO" -framework "QuartzCore"
 PODS_ROOT = ${SRCROOT}/Pods
