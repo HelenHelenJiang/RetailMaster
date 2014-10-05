@@ -15,7 +15,6 @@
 		9B63F4EC19E0BB5E001C2074 /* Longos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4E919E0BB5E001C2074 /* Longos.jpg */; };
 		9B63F4F019E0C448001C2074 /* Zehrs.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4EF19E0C448001C2074 /* Zehrs.png */; };
 		9B63F4F319E15E8E001C2074 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B63F4F219E15E8E001C2074 /* SettingTableViewController.m */; };
-		9B63F4F519E16CFF001C2074 /* launch_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4F419E16CFF001C2074 /* launch_image.png */; };
 		9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BA19E0777E008732AA /* RegisterViewController.m */; };
 		9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */; };
 		A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7819E04AF400BF648F /* CollectionViewCell.m */; };
@@ -580,7 +579,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B63F4F519E16CFF001C2074 /* launch_image.png in Resources */,
 				C365613D19E1049F00759352 /* scan.png in Resources */,
 				C345A05819E0849E00041E63 /* HistoryViewController.xib in Resources */,
 				A408D49119E08259009766E0 /* vege.jpg in Resources */,
@@ -817,6 +815,7 @@
 			baseConfigurationReference = 7B144EFB121791A0400F8BC5 /* Pods-RetailMaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -848,6 +847,7 @@
 			baseConfigurationReference = 36F973BDB82A946BEEA8476A /* Pods-RetailMaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
