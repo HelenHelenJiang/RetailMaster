@@ -20,7 +20,8 @@
 }
 - (IBAction)setLocation:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[NSString stringWithFormat:@"%@\n%@", self.nameLabel,self.detailLabel] forKey:@"isLocationRegistered"];
+    [defaults setObject:[NSString stringWithFormat:@"%@\n%@", self.nameLabel.text,self.detailLabel.text] forKey:@"isLocationRegistered"];
+    [self setLocationPressed:self.indexPath];
 }
 
 - (void)awakeFromNib

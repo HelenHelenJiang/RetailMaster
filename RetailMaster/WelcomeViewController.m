@@ -74,23 +74,27 @@
     self.button.backgroundColor= [UIColor orangeColor];
     self.button.layer.cornerRadius = 5.0f;
     [self.view addSubview:self.button];
-    
-    UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 300, 80, 30)];
-    locationLabel.textColor = [UIColor orangeColor];
-    locationLabel.text = @"Location:";
     //[self.view addSubview:locationLabel];
     
     self.setLocationButton.titleLabel.font = [UIFont systemFontOfSize:10];
-    [self.setLocationButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [self.setLocationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.setLocationButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
+    [self.setLocationButton setBackgroundColor:[UIColor orangeColor]];
+    self.setLocationButton.layer.cornerRadius = 5.0f;
     [self.view addSubview:self.setLocationButton];
     
-    if (isRegistered) {
-        [self.setLocationButton setTitle:@"LOL" forState:UIControlStateNormal];
+    NSString *location = [defualts objectForKey:@"isLocationRegistered"];
+    
+    if (location) {
+        [self.setLocationButton setTitle:location forState:UIControlStateNormal];
     } else {
-        [self.setLocationButton setTitle:@"pick a retail store location" forState:UIControlStateNormal];
+        [self.setLocationButton setTitle:@"Pick a Location" forState:UIControlStateNormal];
     }
     
+    if (isRegistered) {
+        self.button.hidden = YES;
+    }
+
 }
 
 - (void)createCollectionView
@@ -148,6 +152,21 @@
     [cell.contentView addSubview:filteredImageView];
     
     return cell;
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *location = [defaults objectForKey:@"isLocationRegistered"];
+    NSString *isRegistered = [defaults objectForKey:@"isRegistered"];
+    
+    if (location) {
+        [self.setLocationButton setTitle:location forState:UIControlStateNormal];
+    }
+    
+    if (isRegistered) {
+        self.button.hidden = YES;
+    }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
