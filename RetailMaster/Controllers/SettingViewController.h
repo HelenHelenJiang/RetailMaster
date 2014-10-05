@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingViewController : UIViewController
+@interface SettingViewController : UIViewController<UITabBarControllerDelegate,UITableViewDataSource>{
+    IBOutlet UITableView *SettingTableView;
+}
+
+
+@property (nonatomic,retain) UITableView *SettingTableView;
+
 
 @end

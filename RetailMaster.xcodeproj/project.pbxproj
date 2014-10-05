@@ -30,6 +30,7 @@
 		A408D4A219E0B0E0009766E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A119E0B0E0009766E0 /* DetailViewController.m */; };
 		A408D4A519E0C8F8009766E0 /* DetailCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */; };
 		A408D4A819E0D004009766E0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A719E0D004009766E0 /* SettingViewController.m */; };
+		A408D4AB19E0D0EF009766E0 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4AA19E0D0EF009766E0 /* SettingTableViewCell.m */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -132,6 +133,8 @@
 		A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCellTableViewCell.m; sourceTree = "<group>"; };
 		A408D4A619E0D004009766E0 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		A408D4A719E0D004009766E0 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		A408D4A919E0D0EF009766E0 /* SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
+		A408D4AA19E0D0EF009766E0 /* SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -314,6 +317,8 @@
 				A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */,
 				A4026A7819E04AF400BF648F /* CollectionViewCell.m */,
 				C345A05919E0852A00041E63 /* OrderHistoryTableViewCell.h */,
+				A408D4A919E0D0EF009766E0 /* SettingTableViewCell.h */,
+				A408D4AA19E0D0EF009766E0 /* SettingTableViewCell.m */,
 				C345A05A19E0852A00041E63 /* OrderHistoryTableViewCell.m */,
 				C345A05B19E0852A00041E63 /* OrderHistoryTableViewCell.xib */,
 				C345A06319E096E300041E63 /* ItemsViewTableViewCell.h */,
@@ -629,6 +634,7 @@
 				C3E01B5619E0B39C009AE24E /* CategoryCollectionViewCell.m in Sources */,
 				9B63F4E619E0B12E001C2074 /* LocationViewController.m in Sources */,
 				A408D4A519E0C8F8009766E0 /* DetailCellTableViewCell.m in Sources */,
+				A408D4AB19E0D0EF009766E0 /* SettingTableViewCell.m in Sources */,
 				C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */,
 				C345A06119E093A400041E63 /* ItemsViewController.m in Sources */,
 				9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */,
