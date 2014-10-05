@@ -32,6 +32,9 @@
     // Do any additional setup after loading the view.
     self.nameTitleArray = [[NSMutableArray alloc] initWithObjects:@"Name",@"Address",@"Phone",@"Email",nil];
     
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.tableView addGestureRecognizer:gestureRecognizer];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,6 +49,9 @@
     return [self.nameTitleArray count];    //count number of row from counting array hear cataGorry is An Array
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Account";
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -94,6 +100,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:YES forKey:@"isRegistered"];
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.view resignFirstResponder];
 }
 
 

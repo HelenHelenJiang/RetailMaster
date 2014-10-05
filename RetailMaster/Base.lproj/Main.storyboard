@@ -217,13 +217,13 @@
         <scene sceneID="Qx8-RQ-vE9">
             <objects>
                 <tableViewController id="ixP-GS-XoS" customClass="RegisterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" id="DXh-ZO-njz">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="DXh-ZO-njz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="45" id="XKy-qo-xBi" customClass="RegisterTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="119" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XKy-qo-xBi" id="XCv-n3-hZE">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -644,13 +644,7 @@
                             <outlet property="delegate" destination="tJb-Ob-qer" id="Ans-hB-fpD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8oh-iU-59Z">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PIQ-wR-3Ql">
-                            <connections>
-                                <action selector="saveEvent:" destination="tJb-Ob-qer" id="tw3-sL-zjo"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="8oh-iU-59Z"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xo4-ZB-VP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

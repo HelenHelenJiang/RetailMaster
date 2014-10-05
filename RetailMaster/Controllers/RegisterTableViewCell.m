@@ -18,6 +18,7 @@
         self.inputTextField.placeholder = self.placeHolder;
         
     }
+    
     return self;
 }
 
@@ -71,6 +72,8 @@
     
     UIImage *image = [UIImage imageNamed:imageName];
     self.iconImageView.image = image;
+    
+    self.inputTextField.placeholder = self.placeHolder;
 }
 
 
