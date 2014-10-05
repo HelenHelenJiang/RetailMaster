@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "item.h"
 
 @interface DetailViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
     IBOutlet UITableView * DetailTableView;
@@ -14,5 +16,8 @@
 
 @property (nonatomic,retain) UITableView *DetailTableView;
 
-@end
+@property (nonatomic,retain) Item *myObject;
 
+
+
+@end
