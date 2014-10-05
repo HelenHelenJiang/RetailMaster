@@ -33,18 +33,31 @@
     // Do any additional setup after loading the view from its nib.
     self.nutritionArray = [[NSMutableArray alloc] init];
     
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Calcium"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Calories"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Carb"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Fat"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Iron"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Protein"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminA"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminB"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminC"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminD"]];
-    [self.nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminE"]];
+    NSString *Calcium = [[NSString alloc] initWithFormat:@"Calcium %@",[myObject.nutritionFact objectForKey:@"Calcium"]];
+    NSString *Calories = [[NSString alloc] initWithFormat:@"Calories %@",[myObject.nutritionFact objectForKey:@"Calories"]];
+    NSString *Carb = [[NSString alloc] initWithFormat:@"Carb %@",[myObject.nutritionFact objectForKey:@"Carb"]];
+    NSString *Fat = [[NSString alloc] initWithFormat:@"Fat %@",[myObject.nutritionFact objectForKey:@"Fat"]];
+    NSString *Iron = [[NSString alloc] initWithFormat:@"Iron %@",[myObject.nutritionFact objectForKey:@"Iron"]];
+    NSString *Protein = [[NSString alloc] initWithFormat:@"Protein %@",[myObject.nutritionFact objectForKey:@"Protein"]];
+    NSString *VitaminA = [[NSString alloc] initWithFormat:@"VitaminA %@",[myObject.nutritionFact objectForKey:@"VitaminA"]];
+    NSString *VitaminB = [[NSString alloc] initWithFormat:@"VitaminB %@",[myObject.nutritionFact objectForKey:@"VitaminB"]];
+    NSString *VitaminC = [[NSString alloc] initWithFormat:@"VitaminC %@",[myObject.nutritionFact objectForKey:@"VitaminC"]];
+    NSString *VitaminD = [[NSString alloc] initWithFormat:@"VitaminD %@",[myObject.nutritionFact objectForKey:@"VitaminD"]];
+    NSString *VitaminE = [[NSString alloc] initWithFormat:@"VitaminE %@",[myObject.nutritionFact objectForKey:@"VitaminE"]];
     
+    [self.nutritionArray addObject:Calcium];
+    [self.nutritionArray addObject:Calories];
+    [self.nutritionArray addObject:Carb];
+    [self.nutritionArray addObject:Fat];
+    [self.nutritionArray addObject:Iron];
+    [self.nutritionArray addObject:Protein];
+    [self.nutritionArray addObject:VitaminA];
+    [self.nutritionArray addObject:VitaminB];
+    [self.nutritionArray addObject:VitaminC];
+    [self.nutritionArray addObject:VitaminD];
+    [self.nutritionArray addObject:VitaminE];
+
+
     [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:myObject.imageURL]];
     self.headerNameLabel.text = myObject.itemDescription;
     self.headerPriceLabel.text = [NSString stringWithFormat:@"$ %0.2f", [myObject.price doubleValue]];
