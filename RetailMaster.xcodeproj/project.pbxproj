@@ -107,8 +107,8 @@
 		9B63F4EF19E0C448001C2074 /* Zehrs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zehrs.png; sourceTree = "<group>"; };
 		9BADE8B919E0777E008732AA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		9BADE8BA19E0777E008732AA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewCell.h; sourceTree = "<group>"; };
-		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewCell.m; sourceTree = "<group>"; };
+		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterTableViewCell.h; path = ../Controllers/RegisterTableViewCell.h; sourceTree = "<group>"; };
+		9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterTableViewCell.m; path = ../Controllers/RegisterTableViewCell.m; sourceTree = "<group>"; };
 		A4026A7719E04AF400BF648F /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		A4026A7819E04AF400BF648F /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		A4026A8319E0548B00BF648F /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
@@ -294,7 +294,6 @@
 				C345A03619E0667300041E63 /* CheckoutPayButtonTableViewCell.h */,
 				C345A03719E0667300041E63 /* CheckoutPayButtonTableViewCell.m */,
 				C345A03819E0667300041E63 /* CheckoutPayButtonTableViewCell.xib */,
-				C345A03B19E066D600041E63 /* PickupTimeTableViewCell.h */,
 				C345A03C19E066D600041E63 /* PickupTimeTableViewCell.m */,
 				C345A03D19E066D600041E63 /* PickupTimeTableViewCell.xib */,
 				C3153C9A19E0404C00C7498A /* CheckoutItemTableViewCell.h */,
@@ -313,6 +312,11 @@
 				C3E01B5319E0B39C009AE24E /* CategoryCollectionViewCell.h */,
 				C3E01B5419E0B39C009AE24E /* CategoryCollectionViewCell.m */,
 				C3E01B5519E0B39C009AE24E /* CategoryCollectionViewCell.xib */,
+				9B166A2719E09C7A00BA4072 /* LocationCell.h */,
+				9B166A2819E09C7A00BA4072 /* LocationCell.m */,
+				C345A03B19E066D600041E63 /* PickupTimeTableViewCell.h */,
+				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
+				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -410,8 +414,6 @@
 		C3C5328D19E0356500C8A340 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9B166A2719E09C7A00BA4072 /* LocationCell.h */,
-				9B166A2819E09C7A00BA4072 /* LocationCell.m */,
 				9B63F4E419E0B12E001C2074 /* LocationViewController.h */,
 				9B63F4E519E0B12E001C2074 /* LocationViewController.m */,
 				C345A05419E0849E00041E63 /* HistoryViewController.h */,
@@ -421,8 +423,6 @@
 				9BADE8BA19E0777E008732AA /* RegisterViewController.m */,
 				A408D4A019E0B0E0009766E0 /* DetailViewController.h */,
 				A408D4A119E0B0E0009766E0 /* DetailViewController.m */,
-				9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */,
-				9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */,
 				9B1E401D19E05A79008D8349 /* WelcomeViewController.h */,
 				9B1E401E19E05A79008D8349 /* WelcomeViewController.m */,
 				C3C5328E19E0356500C8A340 /* SIMProductViewController.h */,

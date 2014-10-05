@@ -116,6 +116,9 @@
                                             <state key="normal" title="Button">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="setLocation:" destination="sc4-AR-sgh" eventType="touchUpInside" id="I9z-bL-FRI"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -133,7 +136,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="location" id="IZ2-WP-8ll">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="LkE-YO-J18"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="LkE-YO-J18">
+                            <connections>
+                                <action selector="cancelHit:" destination="jwE-4h-GfN" id="pPn-xb-V6t"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="locationTabelView" destination="SWm-0R-rG7" id="P8P-tm-A0r"/>
