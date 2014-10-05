@@ -610,10 +610,10 @@
             </objects>
             <point key="canvasLocation" x="1449" y="389.31666666666666"/>
         </scene>
-        <!--Register View Controller - Setting-->
+        <!--Setting Table View Controller - Setting-->
         <scene sceneID="les-sI-Tu1">
             <objects>
-                <tableViewController id="tJb-Ob-qer" customClass="RegisterViewController" sceneMemberID="viewController">
+                <tableViewController id="tJb-Ob-qer" customClass="SettingTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="CCa-Dl-Gza">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -14,6 +14,7 @@
 		9B63F4EB19E0BB5E001C2074 /* Loblaws.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4E819E0BB5E001C2074 /* Loblaws.png */; };
 		9B63F4EC19E0BB5E001C2074 /* Longos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4E919E0BB5E001C2074 /* Longos.jpg */; };
 		9B63F4F019E0C448001C2074 /* Zehrs.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B63F4EF19E0C448001C2074 /* Zehrs.png */; };
+		9B63F4F319E15E8E001C2074 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B63F4F219E15E8E001C2074 /* SettingTableViewController.m */; };
 		9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BA19E0777E008732AA /* RegisterViewController.m */; };
 		9BADE8BE19E07833008732AA /* RegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADE8BD19E07833008732AA /* RegisterTableViewCell.m */; };
 		A4026A7919E04AF400BF648F /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4026A7819E04AF400BF648F /* CollectionViewCell.m */; };
@@ -116,6 +117,8 @@
 		9B63F4E819E0BB5E001C2074 /* Loblaws.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loblaws.png; sourceTree = "<group>"; };
 		9B63F4E919E0BB5E001C2074 /* Longos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Longos.jpg; sourceTree = "<group>"; };
 		9B63F4EF19E0C448001C2074 /* Zehrs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zehrs.png; sourceTree = "<group>"; };
+		9B63F4F119E15E8E001C2074 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingTableViewController.h; path = ../SettingTableViewController.h; sourceTree = "<group>"; };
+		9B63F4F219E15E8E001C2074 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingTableViewController.m; path = ../SettingTableViewController.m; sourceTree = "<group>"; };
 		9BADE8B919E0777E008732AA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		9BADE8BA19E0777E008732AA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		9BADE8BC19E07833008732AA /* RegisterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterTableViewCell.h; path = ../Controllers/RegisterTableViewCell.h; sourceTree = "<group>"; };
@@ -491,6 +494,8 @@
 				A408D4AC19E0DAD2009766E0 /* DetailsViewController.h */,
 				A408D4AD19E0DAD2009766E0 /* DetailsViewController.m */,
 				A408D4AE19E0DAD2009766E0 /* DetailsViewController.xib */,
+				9B63F4F119E15E8E001C2074 /* SettingTableViewController.h */,
+				9B63F4F219E15E8E001C2074 /* SettingTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -664,6 +669,7 @@
 				C345A05C19E0852A00041E63 /* OrderHistoryTableViewCell.m in Sources */,
 				9B166A2919E09C7A00BA4072 /* LocationCell.m in Sources */,
 				C365613A19E101C600759352 /* ReaderSampleViewController.m in Sources */,
+				9B63F4F319E15E8E001C2074 /* SettingTableViewController.m in Sources */,
 				C345A04319E06ACC00041E63 /* OrderConformationViewController.m in Sources */,
 				C3153C8D19E03AFF00C7498A /* Item.m in Sources */,
 				C345A03E19E066D600041E63 /* PickupTimeTableViewCell.m in Sources */,
