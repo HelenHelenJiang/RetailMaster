@@ -76,7 +76,6 @@
     [self.view addSubview:self.button];
     //[self.view addSubview:locationLabel];
     
-    self.setLocationButton.titleLabel.font = [UIFont systemFontOfSize:10];
     [self.setLocationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.setLocationButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
     [self.setLocationButton setBackgroundColor:[UIColor orangeColor]];
