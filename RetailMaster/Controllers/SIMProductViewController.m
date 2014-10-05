@@ -68,12 +68,16 @@
 -(void)creditCardTokenProcessed:(SIMCreditCardToken *)token {
     //Token was generated successfully, now you must use it
     
-    NSURL *url= [NSURL URLWithString:@"https://Your_server/charge.rb"];
+    NSURL *url= [NSURL URLWithString:@"http://retailmaster.herokuapp.com/charge.php"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
     NSString *postString = @"simplifyToken=";
     
     postString = [postString stringByAppendingString:token.token];
+    
+    postString = [postString stringByAppendingString:[NSString stringWithFormat:@"&amount=%f",15.5]];
+    
+    NSLog(postString);
     
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     

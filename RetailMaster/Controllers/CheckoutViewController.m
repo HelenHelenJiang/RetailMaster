@@ -457,18 +457,25 @@
     NSURL *url= [NSURL URLWithString:@"http://retailmaster.herokuapp.com/charge.php"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
     [request setHTTPMethod:@"POST"];
-    NSString *postString = [NSString stringWithFormat:@"amount=%f", 10.0];
-    
+    NSString *postString = @"simplifyToken=";
     postString = [postString stringByAppendingString:token.token];
+    
+    //[postString stringByAppendingString:[NSString stringWithFormat:@"&amount=%f", 10.0]];
+    //postString = [NSString stringWithFormat:@"%@&amount=%f",postString,10.0];
+    NSLog(@"URL : %@", postString);
     
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
     NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
     
     if(conn) {
+        
         NSLog(@"Connection Successful");
+        
     } else {
+        
         NSLog(@"Connection could not be made");
+        
     }
     
     NSError *error;
