@@ -49,8 +49,9 @@
                         
                         <div class="col-sm-12" id="featured">   
                           <div class="page-header text-muted">
-                          Dashboard
+                          <img class="img-responsive img-half" src="Loblaws.png">
                           </div> 
+                          
                         </div>
                         
                         <!--/top story-->
@@ -59,10 +60,12 @@
                             <table id="order" style="width:100%">
                                 <tr>
                                     <th>Name</th>
-                                    <th>Quantity</th>		
+                                    <th>Order Number</th>
+                                    <th>Order List</th>		
                                     <th>Price</th>
+                                    <th>Card Number</th>
                                     <th>Pickup time</th>
-                                    <th>Paid</th>
+                                    <th>Picked Up</th>
                                 </tr>
                             </table>
 
@@ -88,12 +91,12 @@
     	// Do something with the returned Parse.Object values
     	for (var i = 0; i < results.length; i++) { 
       		var object = results[i];
-			document.getElementById('order').innerHTML += "<tr id=\""+i+"\"><td>"+object.get("Name")+"</td><td>"+object.get("Quantity")+"</td><td>"+object.get("Price")+"</td><td>"+object.get("PickUpTime")+"</td><td><button id=\"button"+i+"\" type=\"button\" onclick=pay("+i+",\""+object.id+"\")>Paid</button></tr>";
-            decideColor(i,object.id);
+            var orderList = object.get("OrderList");
+                 document.getElementById('order').innerHTML += "<tr id=\""+i+"\"><td>"+object.get("Name")+"</td><td>"+object.get("OrderNumber")+"</td><td>"+object.get("OrderList")+"</td><td>"+object.get("Price")+"</td><td>"+object.get("CardNumber")+"</td><td>"+object.get("PickUpTime")+"</td><td><button id=\"button"+i+"\" type=\"button\" onclick=pay("+i+",\""+object.id+"\")>No</button></tr>";
+                decideColor(i,object.id);
     	}
   	},
   	error: function(error) {
-    	alert("Error: " + error.code + " " + error.message);
   	}
 	});
 	
@@ -105,8 +108,8 @@
     			// The object was retrieved successfully.
     			if (myObject.get("isPaid") == false){
                     //alert("should be black");
-                    document.getElementById(buttonId).innerHTML = "Paid";
-                document.getElementById(id).style.color="black";
+                    document.getElementById(buttonId).innerHTML = "Yes";
+                document.getElementById(id).style.color="green";
 				myObject.save(null, {
   				success: function(myObject) {
                 }
@@ -115,8 +118,8 @@
     		
 				else{
                     //alert("Should be green");
-                    document.getElementById(buttonId).innerHTML = "Cancel";
-				    document.getElementById(id).style.color="green";
+                    document.getElementById(buttonId).innerHTML = "No";
+				    document.getElementById(id).style.color="black";
 				myObject.save(null, {
   				success: function(myObject) {
                 }
@@ -138,7 +141,7 @@
     			// The object was retrieved successfully.
     			if (myObject.get("isPaid") == false){
     			//alert("Turning green");
-                document.getElementById(id).style.color="green";
+                document.getElementById(id).style.color="black";
 				myObject.save(null, {
   				success: function(myObject) {
     			myObject.set("isPaid", true);
@@ -146,19 +149,19 @@
     			}	
     			});
     			
-    			document.getElementById(buttonId).innerHTML = "Cancel";
+    			document.getElementById(buttonId).innerHTML = "No";
   			}
   		
             else{
             	//alert("Turning black");
-                document.getElementById(id).style.color="black";
+                document.getElementById(id).style.color="green";
                 myObject.save(null, {
   				success: function(myObject) {
     			myObject.set("isPaid", false);
     			myObject.save();
     			}	
     			});
-    			document.getElementById(buttonId).innerHTML = "Paid";
+    			document.getElementById(buttonId).innerHTML = "Yes";
             }
                 
 
