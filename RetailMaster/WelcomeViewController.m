@@ -12,6 +12,7 @@
 #import "DataManager.h"
 #import "Item.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "DetailsViewController.h"
 
 @interface WelcomeViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -194,6 +195,10 @@
 {
 //    UIImage *item = self.filteredImages[indexPath.row];
 //    self.uploadImageView.image = item;
+    Item *item = self.dealsData[indexPath.row];
+    DetailsViewController *detailVC = [[DetailsViewController alloc] init];
+    detailVC.myObject = item;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
  #pragma mark - Navigation
@@ -203,9 +208,6 @@
  {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
-     
-     
-     
      
      
  }
