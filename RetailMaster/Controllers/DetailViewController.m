@@ -33,6 +33,8 @@
 {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
     UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 44, 320, 180)];
     UIImageView *itemImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 120, 170)];
     UILabel *nameView = [[UILabel alloc] initWithFrame:CGRectMake(135, 10, 50, 10)];
@@ -44,10 +46,12 @@
     [headerView addSubview:nameView];
     [headerView addSubview:priceView];
     [headerView addSubview:buttonView];
+    
+    [self.view addSubview:headerView];
 
     nameView.text = myObject.name;
-    priceView.text = myObject.price;
-    [itemImage sd_setImageWithURL:myObject.imageURL];
+    priceView.text = [NSString stringWithFormat:@"$ %@", myObject.price];
+    [itemImage sd_setImageWithURL:[NSURL URLWithString:myObject.imageURL]];
     CALayer *imgLayer=itemImage.layer;
     [imgLayer setCornerRadius:10];
     [imgLayer setBorderWidth:1];
@@ -81,7 +85,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 11;
+    return self.nutritionArray.count;
 }
 
 
