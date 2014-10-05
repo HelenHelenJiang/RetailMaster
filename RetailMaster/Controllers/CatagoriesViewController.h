@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarSDK.h"
 
-@interface CatagoriesViewController : UIViewController
+@interface CatagoriesViewController : UIViewController < ZBarReaderDelegate >
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

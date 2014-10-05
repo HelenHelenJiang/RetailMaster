@@ -25,6 +25,9 @@
 #import <Simplify/UIColor+Simplify.h>
 #import <Simplify/SIMResponseViewController.h>
 
+// Scan
+#import "ReaderSampleViewController.h"
+
 @interface CheckoutViewController ()<UITableViewDataSource, UITableViewDelegate,SIMChargeCardViewControllerDelegate>
 
 @property (strong, nonatomic) UIToolbar *datePickToolbar;
@@ -368,12 +371,7 @@
 }
 
 - (void)payButtonPressed:(id)sender
-{
-    
-    
-    
-    return;
-    
+{    
     OrderConformationViewController *orderVC = [[OrderConformationViewController alloc] init];
     
     orderVC.orderedItems = self.shoppingLists;

@@ -89,6 +89,33 @@
     }];
 }
 
+- (void)fetchItemsWithBarcode:(NSString *)barcode Completion:(void (^)(BOOL success, NSArray *items))completion
+{
+    PFQuery *query = [PFQuery queryWithClassName:[Item parseClassName]];
+    //    [query orderByDescending:@"termId"];
+    [query whereKey:@"barcode" equalTo:barcode];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"Successfully retrieved %lu items", (unsigned long)objects.count);
+            
+            [objects enumerateObjectsUsingBlock:^(Item *item, NSUInteger index, BOOL *stop){
+                if (!item.orderCount)
+                    item.orderCount = 1;
+            }];
+            
+            if (objects.count == 0)
+                completion(NO, nil);
+            if (completion)
+                completion(YES, objects);
+            
+        } else {
+            NSLog(@"Error In Fetch items: %@ %@", error, [error userInfo]);
+            if (completion)
+                completion(NO, nil);
+        }
+    }];
+}
+
 - (NSString *)parseOrderToString:(Order *)order
 {
     NSMutableArray *array = [NSMutableArray array];
