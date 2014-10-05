@@ -9,7 +9,6 @@
 #import "CatagoriesViewController.h"
 #import "CategoryCollectionViewCell.h"
 #import "ItemsViewController.h"
-#import "ReaderSampleViewController.h"
 #import "MBProgressHUD.h"
 #import "ParseManager.h"
 #import "Item.h"
@@ -85,13 +84,6 @@
     [self.collectionView reloadData];
 }
 
-- (void)scanPressed:(id)sender
-{
-    ReaderSampleViewController *scanVC = [[ReaderSampleViewController alloc] init];
-    [self.navigationController pushViewController:scanVC animated:YES];
-    
-    return;
-}
 
 #pragma mark collectionView delegates
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
