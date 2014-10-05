@@ -18,6 +18,7 @@
 @implementation DetailViewController
 @synthesize DetailTableView;
 @synthesize myObject;
+@synthesize nutritionArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,13 +42,24 @@
     [headerView addSubview:nameView];
     [headerView addSubview:priceView];
     [headerView addSubview:buttonView];
-    ////    [cell.itemImageView sd_setImageWithURL:[NSURL URLWithString:item.imageURL]];
-    //        int score = [[milk objectForKey:@"score"] intValue];
 
-    nameView.text = [myObject objectForKey:@"name"];
-    priceView.text = [myObject objectForKey:@"price"];
-    NSString *urlStr = [myObject objectForKey:@"imageURL"];
-    [itemImage sd_setImageWithURL:@"http://www.indiaretailing.com/uploads/articleimglarg/9646artimg_shutterstock_94240942-d.jpg"];
+    nameView.text = myObject.name;
+    priceView.text = myObject.price;
+    [itemImage sd_setImageWithURL:myObject.imageURL];
+    self.nutritionArray = [[NSMutableArray alloc] init];
+
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Calcium"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Calories"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Carb"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Fat"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Iron"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"Protein"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminA"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminB"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminC"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminD"]];
+    [nutritionArray addObject:[myObject.nutritionFact objectForKey:@"VitaminE"]];
+
     // Do any additional setup after loading the view.
 }
 
@@ -65,41 +77,15 @@
     return 11;
 }
 
--(void)queryByClassName:(NSString *)className{
-    PFQuery *query = [PFQuery queryWithClassName:className];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
-            // Do something with the found objects
-            for (PFObject *object in objects) {
-                myObject = object;
-                
-                NSLog(@"%@", object.objectId);
-                NSLog(@"%@", object.description);
-                break;
-                
-                
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-}
 
-
-
-/*-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"DetailCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell==nil){
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier]];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)[indexPath row]];
+
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",[nutritionArray objectAtIndex:indexPath.row]];
     return cell;
 }
-*/
+
 
 /*
 #pragma mark - Navigation
