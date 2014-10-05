@@ -35,6 +35,15 @@
     // Configure the view for the selected state
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if ([self.delegate respondsToSelector:@selector(didSelectedCell:)])
+    {
+        [self.delegate didSelectedCell:self];
+    }
+    
+    return true;
+}
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     [textField resignFirstResponder];

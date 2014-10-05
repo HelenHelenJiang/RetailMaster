@@ -13,9 +13,10 @@
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-@interface RegisterViewController ()
+@interface RegisterViewController ()<RegisterTableViewCellDelegate>
 
 @property (nonatomic, strong) NSMutableArray *nameTitleArray;
+@property (nonatomic, strong) RegisterTableViewCell *selectedCell;
 
 @end
 
@@ -77,6 +78,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.placeHolder = [self.nameTitleArray objectAtIndex:indexPath.row];
     cell.indexPath = indexPath;
+    cell.delegate = self;
     [cell setIcon];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -98,6 +100,11 @@
     return cell;
 }
 
+- (void)didSelectedCell:(RegisterTableViewCell *)cell
+{
+    self.selectedCell = cell;
+}
+
 - (IBAction)cancelEvent:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -111,10 +118,12 @@
     [self.view resignFirstResponder];
 }
 
--(void) hideKeyboard {
-    
-    [self.view resignFirstResponder];
-    
+-(void) hideKeyboard
+{
+    if (self.selectedCell)
+    {
+        [self.selectedCell.inputTextField resignFirstResponder];
+    }
 }
 
 /*
