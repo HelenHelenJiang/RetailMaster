@@ -94,6 +94,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:YES forKey:@"isRegistered"];
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.view resignFirstResponder];
 }
 
 
