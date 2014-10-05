@@ -62,6 +62,7 @@
     CategoryImages = [[[NSArray alloc] initWithObjects:@"bakery.jpg",@"diary.jpg",@"frozen.jpg",@"fruit.jpg",@"kitchen.jpg",@"rawMeat.jpg",@"seafood.jpg",@"vege.jpg", nil] mutableCopy];
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
+    [self.navigationController.navigationBar setTintColor:RGB(194, 121, 63)];
     [self initCollectionView];
 }
 
