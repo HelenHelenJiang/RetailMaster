@@ -44,6 +44,11 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *array = [[defaults objectForKey:@"customerInfo"] mutableCopy];
+    [array replaceObjectAtIndex:self.indexPath.row withObject:textField.text];
+    [defaults setObject:array forKey:@"customerInfo"];
+    [textField resignFirstResponder];
     return NO;
 }
 

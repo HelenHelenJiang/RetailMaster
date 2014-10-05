@@ -49,7 +49,15 @@
         
     }
     
-    [self.button setTitle:@"Register" forState:UIControlStateNormal];
+    if (isRegistered){
+        
+        [self.button setTitle:@"Edit" forState:UIControlStateNormal];
+        
+    } else {
+        
+        [self.button setTitle:@"Register" forState:UIControlStateNormal];
+    }
+    
     [self.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.button.backgroundColor= [UIColor orangeColor];
     self.button.layer.cornerRadius = 5.0f;

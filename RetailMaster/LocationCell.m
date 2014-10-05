@@ -18,10 +18,17 @@
     }
     return self;
 }
+- (IBAction)setLocation:(id)sender {
+}
 
 - (void)awakeFromNib
 {
     // Initialization code
+    self.setButton.frame = CGRectMake(254, 6, 46, 30);
+    self.setButton.backgroundColor = [UIColor orangeColor];
+    [self.setButton setTitle:@"Set" forState:UIControlStateNormal];
+    [self.setButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.setButton.layer.cornerRadius = 10;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
