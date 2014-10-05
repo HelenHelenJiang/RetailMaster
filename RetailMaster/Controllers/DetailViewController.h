@@ -17,7 +17,7 @@
 @property (nonatomic,retain) UITableView *DetailTableView;
 
 @property (nonatomic,retain) Item *myObject;
-
+@property (nonatomic,retain) NSMutableArray *nutritionArray;
 
 
 @end

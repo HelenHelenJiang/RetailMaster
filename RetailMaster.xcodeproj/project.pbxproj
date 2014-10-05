@@ -28,6 +28,7 @@
 		A408D49119E08259009766E0 /* vege.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A408D49019E08259009766E0 /* vege.jpg */; };
 		A408D49319E082DF009766E0 /* kitchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A408D49219E082DF009766E0 /* kitchen.jpg */; };
 		A408D4A219E0B0E0009766E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A119E0B0E0009766E0 /* DetailViewController.m */; };
+		A408D4A519E0C8F8009766E0 /* DetailCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -126,6 +127,8 @@
 		A408D49219E082DF009766E0 /* kitchen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitchen.jpg; sourceTree = "<group>"; };
 		A408D4A019E0B0E0009766E0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A408D4A119E0B0E0009766E0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A408D4A319E0C8F8009766E0 /* DetailCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCellTableViewCell.h; sourceTree = "<group>"; };
+		A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCellTableViewCell.m; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -305,6 +308,8 @@
 				A4026A9219E05FFA00BF648F /* CategoryViewCell.h */,
 				A4026A9319E05FFA00BF648F /* CategoryViewCell.m */,
 				A4026A7719E04AF400BF648F /* CollectionViewCell.h */,
+				A408D4A319E0C8F8009766E0 /* DetailCellTableViewCell.h */,
+				A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */,
 				A4026A7819E04AF400BF648F /* CollectionViewCell.m */,
 				C345A05919E0852A00041E63 /* OrderHistoryTableViewCell.h */,
 				C345A05A19E0852A00041E63 /* OrderHistoryTableViewCell.m */,
@@ -618,6 +623,7 @@
 				C345A04819E0741C00041E63 /* Order.m in Sources */,
 				C3E01B5619E0B39C009AE24E /* CategoryCollectionViewCell.m in Sources */,
 				9B63F4E619E0B12E001C2074 /* LocationViewController.m in Sources */,
+				A408D4A519E0C8F8009766E0 /* DetailCellTableViewCell.m in Sources */,
 				C345A03919E0667300041E63 /* CheckoutPayButtonTableViewCell.m in Sources */,
 				C345A06119E093A400041E63 /* ItemsViewController.m in Sources */,
 				9BADE8BB19E0777E008732AA /* RegisterViewController.m in Sources */,
