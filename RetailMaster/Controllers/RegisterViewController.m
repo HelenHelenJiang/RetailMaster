@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.nameTitleArray = [[NSMutableArray alloc] initWithObjects:@"Name",@"Address",@"Phone",@"Email",nil];
+    self.nameTitleArray = [[NSMutableArray alloc] initWithObjects:@"Name",@"Address",@"Phone",@"Email",@"Card",nil];
     
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.tableView addGestureRecognizer:gestureRecognizer];
@@ -82,7 +82,7 @@
         
     } else {
         
-        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:@[@"",@"",@"",@""]];
+        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:@[@"",@"",@"",@"",@""]];
         [defaults setObject:array forKey:@"customerInfo"];
         
     }
@@ -103,6 +103,11 @@
     [self.view resignFirstResponder];
 }
 
+-(void) hideKeyboard {
+    
+    [self.view resignFirstResponder];
+    
+}
 
 /*
 #pragma mark - Navigation

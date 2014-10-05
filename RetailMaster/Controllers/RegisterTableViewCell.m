@@ -68,6 +68,8 @@
         imageName = @"phone";
     } else if (index == 3) {
         imageName = @"email";
+    } else if (index == 4) {
+        imageName = @"mastercard";
     }
     
     UIImage *image = [UIImage imageNamed:imageName];
