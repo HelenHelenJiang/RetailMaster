@@ -31,6 +31,8 @@
 		A408D4A519E0C8F8009766E0 /* DetailCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A419E0C8F8009766E0 /* DetailCellTableViewCell.m */; };
 		A408D4A819E0D004009766E0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4A719E0D004009766E0 /* SettingViewController.m */; };
 		A408D4AB19E0D0EF009766E0 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4AA19E0D0EF009766E0 /* SettingTableViewCell.m */; };
+		A408D4AF19E0DAD2009766E0 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408D4AD19E0DAD2009766E0 /* DetailsViewController.m */; };
+		A408D4B019E0DAD2009766E0 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408D4AE19E0DAD2009766E0 /* DetailsViewController.xib */; };
 		ABB6E47187A02A1D3D4D5DB4 /* libPods-RetailMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5994868EBDB8B26FD8EE60DC /* libPods-RetailMaster.a */; };
 		C3153C8D19E03AFF00C7498A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8C19E03AFF00C7498A /* Item.m */; };
 		C3153C9019E03B9E00C7498A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3153C8F19E03B9E00C7498A /* DataManager.m */; };
@@ -136,6 +138,9 @@
 		A408D4A719E0D004009766E0 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		A408D4A919E0D0EF009766E0 /* SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
 		A408D4AA19E0D0EF009766E0 /* SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
+		A408D4AC19E0DAD2009766E0 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		A408D4AD19E0DAD2009766E0 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		A408D4AE19E0DAD2009766E0 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		C3153C8B19E03AFF00C7498A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C3153C8C19E03AFF00C7498A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C3153C8E19E03B9E00C7498A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -461,6 +466,9 @@
 				C345A06819E0B05C00041E63 /* CatagoriesViewController.h */,
 				C345A06919E0B05C00041E63 /* CatagoriesViewController.m */,
 				C345A06A19E0B05C00041E63 /* CatagoriesViewController.xib */,
+				A408D4AC19E0DAD2009766E0 /* DetailsViewController.h */,
+				A408D4AD19E0DAD2009766E0 /* DetailsViewController.m */,
+				A408D4AE19E0DAD2009766E0 /* DetailsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -554,6 +562,7 @@
 				9B63F4EA19E0BB5E001C2074 /* Sobeys.jpg in Resources */,
 				C345A06719E096E300041E63 /* ItemsViewTableViewCell.xib in Resources */,
 				A4026A8719E05DFE00BF648F /* bakery.jpg in Resources */,
+				A408D4B019E0DAD2009766E0 /* DetailsViewController.xib in Resources */,
 				A408D49319E082DF009766E0 /* kitchen.jpg in Resources */,
 				A4026A8F19E05EDB00BF648F /* diary.jpg in Resources */,
 				C3C5328B19E0337600C8A340 /* Simplify.bundle in Resources */,
@@ -649,6 +658,7 @@
 				C3C5326819E0322C00C8A340 /* AppDelegate.m in Sources */,
 				C3C5329019E0356500C8A340 /* SIMProductViewController.m in Sources */,
 				C345A05719E0849E00041E63 /* HistoryViewController.m in Sources */,
+				A408D4AF19E0DAD2009766E0 /* DetailsViewController.m in Sources */,
 				A4026A8519E0548B00BF648F /* CategoryViewController.m in Sources */,
 				A408D4A219E0B0E0009766E0 /* DetailViewController.m in Sources */,
 				C3C5326519E0322C00C8A340 /* main.m in Sources */,

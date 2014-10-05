@@ -12,6 +12,7 @@
 #import "ItemsViewTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DetailViewController.h"
+#import "DetailsViewController.h"
 
 @interface ItemsViewController ()
 
@@ -99,7 +100,7 @@
     //    [self.navigationController pushViewController:subjectsVC animated:YES];
     
     Item *item = self.items[indexPath.row];
-    DetailViewController *detailVC = [[DetailViewController alloc] init];
+    DetailsViewController *detailVC = [[DetailsViewController alloc] init];
     detailVC.myObject = item;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
