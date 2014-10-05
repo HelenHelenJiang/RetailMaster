@@ -9,6 +9,7 @@
 #import "DetailsViewController.h"
 #import "Item.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "DetailsTableViewCell.h"
 #import "DataManager.h"
 
 @interface DetailsViewController ()
@@ -64,7 +65,6 @@
     self.headerNameLabel.text = myObject.itemDescription;
     self.headerPriceLabel.text = [NSString stringWithFormat:@"$ %0.2f", [myObject.price doubleValue]];
     [self.addToCartButton addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
-    
     
     self.tableview.backgroundColor = [UIColor colorWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1.0f];
     
