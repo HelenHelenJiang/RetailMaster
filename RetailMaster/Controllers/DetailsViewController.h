@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class Item;
 
 @interface DetailsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>

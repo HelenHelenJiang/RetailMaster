@@ -27,7 +27,16 @@
 
 - (void)addToShoppingList:(Item *)item
 {
-    [self.shoppingLists addObject:item];
+    if ([self.shoppingLists containsObject:item])
+    {
+        item.orderCount++;
+    }
+    else
+    {
+        item.orderCount = 1;
+        [self.shoppingLists addObject:item];
+    }
+    
 }
 
 -(void)setPhoneNumber:(NSString *)phoneNumber {
