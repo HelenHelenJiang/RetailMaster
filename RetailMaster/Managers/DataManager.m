@@ -30,4 +30,8 @@
     [self.shoppingLists addObject:item];
 }
 
+-(void)setPhoneNumber:(NSString *)phoneNumber {
+    
+}
+
 @end

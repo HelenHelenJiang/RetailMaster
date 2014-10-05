@@ -65,6 +65,9 @@
         
         [self.button setTitle:@"Edit" forState:UIControlStateNormal];
         
+        //Populate Data
+        
+        
     } else {
         
         [self.button setTitle:@"Register" forState:UIControlStateNormal];
