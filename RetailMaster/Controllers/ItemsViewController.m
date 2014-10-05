@@ -34,6 +34,7 @@
     self.navigationItem.title = self.catName;
     
     self.tableview.delaysContentTouches = NO;
+    self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // Do any additional setup after loading the view from its nib.
     self.items = [NSMutableArray array];
@@ -81,8 +82,9 @@
     [cell.itemImageView sd_setImageWithURL:[NSURL URLWithString:item.imageURL]];
     cell.itemNameLabel.text = item.itemDescription;
     cell.itemPriceLabel.text = [NSString stringWithFormat:@"$ %0.2f", [item.price doubleValue]];
+//    cell.backgroundView.backgroundColor = [UIColor whiteColor];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
