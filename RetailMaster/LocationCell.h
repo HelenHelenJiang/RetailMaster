@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface LocationCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *thumnil;
+
+@property (strong, nonatomic) IBOutlet UIImageView *thumnil;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (weak, nonatomic) IBOutlet UIButton *setButton;
+@property (nonatomic, strong) NSString *imageName;
 
 
+-(void) assignImage;
 @end
