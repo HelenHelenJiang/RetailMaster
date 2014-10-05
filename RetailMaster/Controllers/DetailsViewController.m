@@ -46,6 +46,7 @@
     NSString *VitaminD = [[NSString alloc] initWithFormat:@"VitaminD %@",[myObject.nutritionFact objectForKey:@"VitaminD"]];
     NSString *VitaminE = [[NSString alloc] initWithFormat:@"VitaminE %@",[myObject.nutritionFact objectForKey:@"VitaminE"]];
     
+    [self.nutritionArray addObject:@"Nutrition Info"];
     [self.nutritionArray addObject:Calcium];
     [self.nutritionArray addObject:Calories];
     [self.nutritionArray addObject:Carb];
@@ -64,6 +65,8 @@
     self.headerPriceLabel.text = [NSString stringWithFormat:@"$ %0.2f", [myObject.price doubleValue]];
     [self.addToCartButton addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    self.tableview.backgroundColor = [UIColor colorWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1.0f];
     
     [self.tableview setTableHeaderView:self.header];
 }
@@ -85,19 +88,32 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell;
+//    UITableViewCell *cell;
+//    
+//    static NSString *cellIdentifier = @"DetailCell";
+//    
+//    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+//    
+//    if(cell == nil) {
+//        
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+//    }
     
-    static NSString *cellIdentifier = @"detailCell";
+    static NSString *CellIdentifier = @"CellIdentifier";
+    DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if(cell == nil) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DetailsTableViewCell" owner:self options:nil];
+        cell = (DetailsTableViewCell *)[nib objectAtIndex:0];
     }
     
     
     //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    if (indexPath.row == 0){
+        cell.font = [UIFont boldSystemFontOfSize:20.0];
+    }
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@",[nutritionArray objectAtIndex:indexPath.row]];
     return cell;
