@@ -9,6 +9,7 @@
 #import "CheckoutViewController.h"
 #import "Item.h"
 #import "ParseManager.h"
+#import "DataManager.h"
 #import "CheckoutItemTableViewCell.h"
 #import "PickupTimeTableViewCell.h"
 #import "CheckoutPayButtonTableViewCell.h"
@@ -60,13 +61,15 @@
     
     //    self.tableView.backgroundColor = [UIColor blackColor];
     
-    [[ParseManager sharedManager] fetchItemsWithCatagory:@"Bakery" Limit:10 Skip:0 Completion:^(BOOL success, NSArray *items){
-        if (success)
-        {
-            self.shoppingLists = [items mutableCopy];
-            [self.tableView reloadData];
-        }
-    }];
+//    [[ParseManager sharedManager] fetchItemsWithCatagory:@"Bakery" Limit:10 Skip:0 Completion:^(BOOL success, NSArray *items){
+//        if (success)
+//        {
+//            self.shoppingLists = [items mutableCopy];
+//            [self.tableView reloadData];
+//        }
+//    }];
+    
+    [self loadData];
 }
 
 - (NSDate*)nextHourDate:(NSDate*)inDate
@@ -77,12 +80,23 @@
     return [calendar dateFromComponents:comps];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self loadData];
+}
+
+- (void)loadData
+{
+    self.shoppingLists = [DataManager sharedManager].shoppingLists;
+    [self.tableView reloadData];
+}
+
 - (float)getTotalPrice
 {
     __block float totalPrice = 0;
     
     [self.shoppingLists enumerateObjectsUsingBlock:^(Item *item, NSUInteger index, BOOL *stop){
-        totalPrice += [item.price doubleValue];
+        totalPrice += [item.price doubleValue] * item.orderCount;
     }];
     
     return totalPrice;
@@ -176,7 +190,7 @@
         //    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
         
         cell.itemNameLabel.text = item.name;
-        cell.orderQuantityLabel.text = @"1";
+        cell.orderQuantityLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)item.orderCount];
         cell.orderPriceLabel.text = [NSString stringWithFormat:@"%@", item.price];
         
         //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

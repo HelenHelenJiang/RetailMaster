@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class Item;
+
 @interface DataManager : NSObject
 
 + (instancetype)sharedManager;
@@ -17,5 +19,6 @@
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *address;
 
+- (void)addToShoppingList:(Item *)item;
 
 @end
