@@ -93,7 +93,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //    Department *item = self.departments[indexPath.row];
     //    SubjectsViewController *subjectsVC = [[SubjectsViewController alloc] init];
     //    subjectsVC.department = item;

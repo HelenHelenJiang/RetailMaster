@@ -12,4 +12,10 @@
 
 + (instancetype)sharedManager;
 
+@property (nonatomic, strong) NSMutableArray *shoppingLists;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *phoneNumber;
+@property (nonatomic, strong) NSString *address;
+
+
 @end

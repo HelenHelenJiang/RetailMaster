@@ -7,6 +7,31 @@
 //
 
 #import "DataManager.h"
+#import "Item.h"
 
 @implementation DataManager
+
++ (instancetype)sharedManager
+{
+    static DataManager *sharedManager;
+    
+    @synchronized(self)
+    {
+        if (!sharedManager) {
+            sharedManager = [[DataManager alloc] init];
+            sharedManager.shoppingLists = [NSMutableArray array];
+        }
+        return sharedManager;
+    }
+}
+
+- (void)addToShoppingList:(Item *)item
+{
+    [self.shoppingLists addObject:item];
+}
+
+-(void)setPhoneNumber:(NSString *)phoneNumber {
+    
+}
+
 @end
