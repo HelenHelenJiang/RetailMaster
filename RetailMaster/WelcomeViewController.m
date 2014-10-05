@@ -14,6 +14,9 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DetailsViewController.h"
 
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @interface WelcomeViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @end
@@ -97,7 +100,10 @@
     if (isRegistered) {
         self.button.hidden = YES;
     }
-
+    
+    self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
+    self.tabBarController.tabBar.barTintColor = RGBA(238, 220, 137,0.3);
+    [self.tabBarController.tabBar setTintColor:RGBA(238, 195, 54, 1)];
 }
 
 - (void)createCollectionView
