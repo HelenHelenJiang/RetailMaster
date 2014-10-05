@@ -72,14 +72,14 @@
     
     [self.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.button.backgroundColor= [UIColor orangeColor];
-    self.button.layer.cornerRadius = 5.0f;
+    self.button.layer.cornerRadius = 2.5f;
     [self.view addSubview:self.button];
     //[self.view addSubview:locationLabel];
     
     [self.setLocationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.setLocationButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
     [self.setLocationButton setBackgroundColor:[UIColor orangeColor]];
-    self.setLocationButton.layer.cornerRadius = 5.0f;
+    self.setLocationButton.layer.cornerRadius = 2.5f;
     [self.view addSubview:self.setLocationButton];
     
     NSString *location = [defualts objectForKey:@"isLocationRegistered"];
@@ -87,7 +87,7 @@
     if (location) {
         [self.setLocationButton setTitle:location forState:UIControlStateNormal];
     } else {
-        [self.setLocationButton setTitle:@"Pick a Location" forState:UIControlStateNormal];
+        [self.setLocationButton setTitle:@"Pick Store" forState:UIControlStateNormal];
     }
     
     if (isRegistered) {
