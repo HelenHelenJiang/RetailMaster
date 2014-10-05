@@ -9,7 +9,7 @@
 #import "LocationViewController.h"
 #import "LocationCell.h"
 
-@interface LocationViewController () {
+@interface LocationViewController ()<LocationCellDelegate> {
     NSMutableArray *locationArray;
 }
 
@@ -56,6 +56,7 @@
     [zehrs setObject:@"Zehrs.png" forKey:@"image"];
     [locationArray addObject:zehrs];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissController) name:@"dismiss" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,6 +72,7 @@
 }
 - (IBAction)cancelHit:(id)sender {
     
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -99,12 +101,18 @@
     cell.nameLabel.text = [locationDic objectForKey:@"name"];
     cell.detailLabel.text = [locationDic objectForKey:@"location"];
     cell.imageName = [locationDic objectForKey:@"image"];
+    cell.indexPath = indexPath;
+    cell.delegate = self;
     NSLog(@"Name: %@",cell.imageName);
     
     [cell assignImage];
     return cell;
 }
 
+- (void)setLocationPressed:(NSIndexPath *)indexPath
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 /*

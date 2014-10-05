@@ -12,5 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UIButton *setLocationButton;
+@property (strong, nonatomic) IBOutlet UIView *dealsContainer;
+@property (strong, nonatomic) UICollectionView *collectionView;
+
+@property (strong, nonatomic) NSMutableArray *dealsData;
 
 @end
