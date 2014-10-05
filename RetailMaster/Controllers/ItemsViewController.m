@@ -11,6 +11,7 @@
 #import "Item.h"
 #import "ItemsViewTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "DetailViewController.h"
 
 @interface ItemsViewController ()
 
@@ -96,6 +97,11 @@
     //    SubjectsViewController *subjectsVC = [[SubjectsViewController alloc] init];
     //    subjectsVC.department = item;
     //    [self.navigationController pushViewController:subjectsVC animated:YES];
+    
+    Item *item = self.items[indexPath.row];
+    DetailViewController *detailVC = [[DetailViewController alloc] init];
+    detailVC.myObject = item;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (BOOL)touchesShouldCancelInContentView:(UIView *)view
