@@ -9,6 +9,9 @@
 #import "LocationViewController.h"
 #import "LocationCell.h"
 
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @interface LocationViewController ()<LocationCellDelegate> {
     NSMutableArray *locationArray;
 }
@@ -56,7 +59,7 @@
     [zehrs setObject:@"Zehrs.png" forKey:@"image"];
     [locationArray addObject:zehrs];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissController) name:@"dismiss" object:nil];
+    self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
 }
 
 - (void)didReceiveMemoryWarning

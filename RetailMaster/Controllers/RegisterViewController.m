@@ -9,6 +9,10 @@
 #import "RegisterViewController.h"
 #import "RegisterTableViewCell.h"
 #import "WelcomeViewController.h"
+
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @interface RegisterViewController ()
 
 @property (nonatomic, strong) NSMutableArray *nameTitleArray;
@@ -34,6 +38,8 @@
     
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.tableView addGestureRecognizer:gestureRecognizer];
+    
+    self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
     
 }
 

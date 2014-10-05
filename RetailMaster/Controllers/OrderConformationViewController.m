@@ -13,6 +13,9 @@
 #import "MBProgressHUD.h"
 #import "CheckoutViewController.h"
 
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @interface OrderConformationViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
@@ -55,6 +58,7 @@
     [self.view addSubview:self.tableViewBottomView];
     
     self.totalPriceLabel.text = [NSString stringWithFormat:@"$%0.2f", [self getTotalPrice]];
+    self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -469,7 +469,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukv-VB-qoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="-456.76666666666665"/>
+            <point key="canvasLocation" x="1012" y="-457"/>
         </scene>
         <!--Catagories View Controller-->
         <scene sceneID="m8q-zi-HcC">
@@ -479,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tH-X6-gHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="376.30000000000001"/>
+            <point key="canvasLocation" x="1012" y="372.5"/>
         </scene>
         <!--Item View Controller - Shop-->
         <scene sceneID="ZWD-UE-QY2">
@@ -543,7 +543,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFy-KI-0Hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="-442.56666666666666"/>
+            <point key="canvasLocation" x="1471" y="-492.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="v8l-Y5-tco">
@@ -605,7 +605,7 @@
             </objects>
             <point key="canvasLocation" x="1449" y="389.31666666666666"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register View Controller - Setting-->
         <scene sceneID="les-sI-Tu1">
             <objects>
                 <tableViewController id="tJb-Ob-qer" customClass="RegisterViewController" sceneMemberID="viewController">
@@ -644,7 +644,7 @@
                             <outlet property="delegate" destination="tJb-Ob-qer" id="Ans-hB-fpD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8oh-iU-59Z"/>
+                    <navigationItem key="navigationItem" title="Setting" id="8oh-iU-59Z"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xo4-ZB-VP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

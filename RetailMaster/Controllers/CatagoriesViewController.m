@@ -15,6 +15,9 @@
 #import "Item.h"
 #import "DetailsViewController.h"
 
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @interface CatagoriesViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 {
     NSMutableArray *CategoryNames;
@@ -58,6 +61,7 @@
     CategoryNames = [[[NSArray alloc] initWithObjects:@"Bakery",@"Dairy",@"FastFood",@"Fruit",@"Kitchen",@"Raw Meat",@"Sea Food",@"Vegetable", nil] mutableCopy];
     CategoryImages = [[[NSArray alloc] initWithObjects:@"bakery.jpg",@"diary.jpg",@"frozen.jpg",@"fruit.jpg",@"kitchen.jpg",@"rawMeat.jpg",@"seafood.jpg",@"vege.jpg", nil] mutableCopy];
     // Do any additional setup after loading the view from its nib.
+    self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
     [self initCollectionView];
 }
 

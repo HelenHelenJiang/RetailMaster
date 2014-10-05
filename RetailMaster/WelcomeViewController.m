@@ -103,7 +103,7 @@
     
     self.navigationController.navigationBar.barTintColor = RGB(238, 220, 137);
     self.tabBarController.tabBar.barTintColor = RGBA(238, 220, 137,0.3);
-    [self.tabBarController.tabBar setTintColor:RGBA(238, 195, 54, 1)];
+    [self.tabBarController.tabBar setTintColor:RGBA(194, 121, 63, 1)];
 }
 
 - (void)createCollectionView
